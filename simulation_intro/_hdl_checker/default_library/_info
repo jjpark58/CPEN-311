@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dc:/Users/Admin/Documents/GitHub/CPEN-311/simulation_intro
+vmajority3
+!s110 1684812915
+!i10b 1
+!s100 E>@MkE2c064ZzlU_CiVEY0
+IWzgmI5MZLEL1oG[]@8NJH1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1684288830
+8c:\Users\Admin\Documents\GitHub\CPEN-311\simulation_intro\majority3.v
+Fc:\Users\Admin\Documents\GitHub\CPEN-311\simulation_intro\majority3.v
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1684812915.000000
+!s107 c:\Users\Admin\Documents\GitHub\CPEN-311\simulation_intro\majority3.v|
+!s90 -modelsimini|c:\Users\Admin\Documents\GitHub\CPEN-311\simulation_intro\_hdl_checker\modelsim.ini|-quiet|-work|c:\Users\Admin\Documents\GitHub\CPEN-311\simulation_intro\_hdl_checker\default_library|-lint|-hazards|-pedanticerrors|-L|default_library|c:\Users\Admin\Documents\GitHub\CPEN-311\simulation_intro\majority3.v|
+!i113 1
+o-quiet -work {c:\Users\Admin\Documents\GitHub\CPEN-311\simulation_intro\_hdl_checker\default_library} -lint -hazards -pedanticerrors -L default_library
+tCvgOpt 0

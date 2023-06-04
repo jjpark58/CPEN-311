@@ -1,0 +1,23 @@
+[rules]
+default_nettype_none = true
+keyword_forbidden_wire_reg = true
+blocking_assignment_in_always_ff = true
+case_default = true
+eventlist_comma_always_ff = true
+explicit_case_default = true
+function_same_as_system_function = true
+keyword_forbidden_always = true
+level_sensitive_always = true
+multiline_for_begin = true
+multiline_if_begin = true
+non_ansi_module = true
+non_blocking_assignment_in_always_comb = true
+parameter_default_value = true
+sequential_block_in_always_comb = true
+style_keyword_1space = true
+style_keyword_construct = true
+style_operator_arithmetic = true
+style_operator_boolean = true
+style_operator_integer = true
+style_operator_unary = true
+style_indent = true

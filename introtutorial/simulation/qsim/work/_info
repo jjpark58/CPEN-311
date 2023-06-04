@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Documents/GitHub/CPEN-311/introtutorial/simulation/qsim
+vlight
+Z1 !s110 1684286199
+!i10b 1
+!s100 1MDEGziB?iL6`9`mDL5aF1
+IEEo2[fh?>Uc7oEO1550NQ0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1684286198
+8light.vo
+Flight.vo
+L0 32
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1684286199.000000
+!s107 light.vo|
+!s90 -work|work|light.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vlight_vlg_vec_tst
+R1
+!i10b 1
+!s100 0:8oCmPce:QMjfn02<3643
+IhbjhBNWhRKzlaJ>f=_fKl0
+R2
+R0
+w1684286197
+8light.vwf.vt
+Flight.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 light.vwf.vt|
+!s90 -work|work|light.vwf.vt|
+!i113 1
+R5
+R6
