@@ -1,0 +1,160 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Admin/Documents/GitHub/CPEN-211/Lab7
+vClk_Divider
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1685430900
+!i10b 1
+!s100 VN02=5Y>on[efEShaB0DO1
+IBdHlz6?34hcf>En2cPM7K2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 Clk_Divider_sv_unit
+S1
+Z3 dC:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc
+w1685429717
+8C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/Clk_Divider.sv
+FC:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/Clk_Divider.sv
+L0 3
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1685430900.000000
+!s107 C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/Clk_Divider.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/Clk_Divider.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+n@clk_@divider
+vLED_side2side
+R0
+R1
+!i10b 1
+!s100 F?=lD5J:eaBVOaY]OfFzY2
+Ia`8RIaLO@@LTcW;0gh5Qd3
+R2
+!s105 LED_side2side_sv_unit
+S1
+R3
+w1685429663
+8C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/LED_side2side.sv
+FC:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/LED_side2side.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/LED_side2side.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/LED_side2side.sv|
+!i113 1
+R6
+R7
+n@l@e@d_side2side
+vtb_Clk_Divider
+R0
+R1
+!i10b 1
+!s100 6gLYDoOjW7U9AcKD>:=;f1
+I[IS135MaG;7g4]U2HI73F1
+R2
+!s105 tb_Clk_Divider_sv_unit
+S1
+R3
+w1685426115
+8C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/tb_Clk_Divider.sv
+FC:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/tb_Clk_Divider.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/tb_Clk_Divider.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/tb_Clk_Divider.sv|
+!i113 1
+R6
+R7
+ntb_@clk_@divider
+vtb_LED_side2side
+R0
+R1
+!i10b 1
+!s100 hm][=CL_ziU<fJhHib<3_1
+Im0JBTIhojXc:]j^Tz@WW_2
+R2
+!s105 tb_LED_side2side_sv_unit
+S1
+R3
+w1685426905
+8C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/tb_LED_side2side.sv
+FC:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/tb_LED_side2side.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/tb_LED_side2side.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/tb_LED_side2side.sv|
+!i113 1
+R6
+R7
+ntb_@l@e@d_side2side
+vtb_Tone_Organ
+R0
+R1
+!i10b 1
+!s100 OT7W@KI<NDd7HkJnTEDcZ3
+ILW@djDOR0HJTNV6^b:RLS2
+R2
+!s105 tb_Tone_Organ_sv_unit
+S1
+R3
+w1685430706
+8C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/tb_Tone_Organ.sv
+FC:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/tb_Tone_Organ.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/tb_Tone_Organ.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/tb_Tone_Organ.sv|
+!i113 1
+R6
+R7
+ntb_@tone_@organ
+vTone_Organ
+R0
+R1
+!i10b 1
+!s100 5_46emn[CKCO7ONW8OKQ90
+I[RmQ9O_m@No6WUH?g=WUO0
+R2
+!s105 Tone_Organ_sv_unit
+S1
+R3
+w1685429936
+8C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/Tone_Organ.sv
+FC:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/Tone_Organ.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/Tone_Organ.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc/Tone_Organ.sv|
+!i113 1
+R6
+R7
+n@tone_@organ

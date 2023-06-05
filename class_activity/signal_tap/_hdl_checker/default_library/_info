@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dc:/Users/Admin/Documents/GitHub/CPEN-311/signal_tap
+vkeys
+!s110 1684510973
+!i10b 1
+!s100 idT3W`igAKF[ISANz?Fo=1
+IDTfzdj2VM=ni>UZQQ9J<K1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1684510973
+8c:\Users\Admin\Documents\GitHub\CPEN-311\signal_tap\keys.v
+Fc:\Users\Admin\Documents\GitHub\CPEN-311\signal_tap\keys.v
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1684510973.000000
+!s107 c:\Users\Admin\Documents\GitHub\CPEN-311\signal_tap\keys.v|
+!s90 -modelsimini|c:\Users\Admin\Documents\GitHub\CPEN-311\signal_tap\_hdl_checker\modelsim.ini|-quiet|-work|c:\Users\Admin\Documents\GitHub\CPEN-311\signal_tap\_hdl_checker\default_library|-lint|-hazards|-pedanticerrors|-L|default_library|c:\Users\Admin\Documents\GitHub\CPEN-311\signal_tap\keys.v|
+!i113 1
+o-quiet -work {c:\Users\Admin\Documents\GitHub\CPEN-311\signal_tap\_hdl_checker\default_library} -lint -hazards -pedanticerrors -L default_library
+tCvgOpt 0
