@@ -1,0 +1,756 @@
+{
+ "builder": {
+  "_version": "10.5b",
+  "_modelsim_ini": {
+   "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\_hdl_checker\\modelsim.ini",
+   "__class__": "Path"
+  },
+  "_logger": "hdl_checker.builders.msim",
+  "_work_folder": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\_hdl_checker",
+  "_builtin_libraries": [
+   {
+    "name": "stratixv_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "verilog",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cyclone10lp",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "sgate",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "std",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriav",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "fiftyfivenm_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "maxii_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cycloneiv_hssi",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriav_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "twentynm_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "twentynm_hssi_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriaiigz_hssi",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "maxii",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "ieee",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "stratixiv_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriavgz",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "maxv",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "altera_mf",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "twentynm_hip",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriaii_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cycloneiv_pcie_hip",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriaiigz_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriaii_pcie_hip",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "synopsys",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "std_developerskit",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "fiftyfivenm",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "altera",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "stratixv_hssi",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "stratixiv_hssi",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriavgz_hssi_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cycloneiv_pcie_hip_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriaiigz",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "lpm",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriavgz_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cyclonev_pcie_hip_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "stratixiv_pcie_hip_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriav_pcie_hip_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cycloneiv_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "220model_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "modelsim_lib",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "lpm_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cyclonev_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriavgz_pcie_hip",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "altera_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cycloneive",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriaiigz_pcie_hip",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriaiigz_pcie_hip_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "altera_lnsim",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cycloneiv_hssi_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cyclone10lp_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cyclonev",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cycloneive_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriaii",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "stratixv_pcie_hip_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "stratixv_pcie_hip",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "stratixiv_hssi_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cyclonev_hssi_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "altera_lnsim_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "twentynm_hip_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "twentynm",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "stratixv_hssi_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriaiigz_hssi_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "cycloneiv",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriavgz_pcie_hip_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "sgate_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriaii_hssi",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "maxv_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "sv_std",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "220model",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriavgz_hssi",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "stratixiv_pcie_hip",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriaii_pcie_hip_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "stratixv",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "twentynm_hssi",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "vital2000",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "altera_mf_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "stratixiv",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriaii_hssi_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "arriav_hssi_ver",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   }
+  ],
+  "_added_libraries": [
+   {
+    "name": "default_library",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   }
+  ],
+  "__class__": "MSim"
+ },
+ "config_file": [
+  {
+   "name": "C:\\Users\\Admin\\AppData\\Local\\Temp\\hdl_checker_project_pid20428_l5rremgz.json",
+   "__class__": "Path"
+  },
+  1685121045.2311318,
+  "generated"
+ ],
+ "database": {
+  "sources": [
+   {
+    "path": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\db\\ip\\sld59a4f0a5\\submodules\\alt_sld_fab_alt_sld_fab_ident.sv",
+     "__class__": "Path"
+    },
+    "mtime": 1684513875.8261795,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\Basic_Organ_Solution.v",
+     "__class__": "Path"
+    },
+    "mtime": 1462726184.0,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\doublesync.v",
+     "__class__": "Path"
+    },
+    "mtime": 1460577992.0,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\scope_capture.v",
+     "__class__": "Path"
+    },
+    "mtime": 1460577992.0,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\LCD_Scope_Encapsulated_pacoblaze_wrapper.v",
+     "__class__": "Path"
+    },
+    "mtime": 1462691686.0,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\db\\ip\\sld59a4f0a5\\alt_sld_fab.v",
+     "__class__": "Path"
+    },
+    "mtime": 1684513874.2311158,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\db\\ip\\sld59a4f0a5\\submodules\\alt_sld_fab_alt_sld_fab_splitter.sv",
+     "__class__": "Path"
+    },
+    "mtime": 1684513875.62224,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\db\\ip\\sld59a4f0a5\\submodules\\alt_sld_fab_alt_sld_fab_presplit.sv",
+     "__class__": "Path"
+    },
+    "mtime": 1684513875.4395099,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\db\\ip\\sld59a4f0a5\\submodules\\alt_sld_fab_alt_sld_fab_sldfabric.vhd",
+     "__class__": "Path"
+    },
+    "mtime": 1684513875.8052256,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\widereg.v",
+     "__class__": "Path"
+    },
+    "mtime": 1460577992.0,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\db\\ip\\sld59a4f0a5\\submodules\\alt_sld_fab_alt_sld_fab.v",
+     "__class__": "Path"
+    },
+    "mtime": 1684513875.3030667,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\Generate_Arbitrary_Divided_Clk32.v",
+     "__class__": "Path"
+    },
+    "mtime": 1460577992.0,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   }
+  ],
+  "inferred_libraries": [
+   {
+    "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\Basic_Organ_Solution.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\Generate_Arbitrary_Divided_Clk32.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\doublesync.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\scope_capture.v",
+    "__class__": "Path"
+   }
+  ],
+  "design_units": [
+   {
+    "owner": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\db\\ip\\sld59a4f0a5\\submodules\\alt_sld_fab_alt_sld_fab_ident.sv",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "alt_sld_fab_alt_sld_fab_ident",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      32,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\widereg.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "widereg",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\doublesync.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "doublesync",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\scope_capture.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "scope_capture",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\Basic_Organ_Solution.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "Basic_Organ_Solution",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      1,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\LCD_Scope_Encapsulated_pacoblaze_wrapper.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "LCD_Scope_Encapsulated_pacoblaze_wrapper",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Admin\\Documents\\GitHub\\CPEN-311\\lab1_de1soc\\Generate_Arbitrary_Divided_Clk32.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "Generate_Arbitrary_Divided_Clk32",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      1,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   }
+  ],
+  "__class__": "Database"
+ },
+ "__version__": "0.7.4"
+}

@@ -1,0 +1,74 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dc:/Users/Admin/Documents/GitHub/CPEN-311/lab1_de1soc
+vdoublesync
+!s110 1684525216
+!i10b 1
+!s100 :]4kH]XZk__N?:B8:_0<J0
+IK;g0S;@YF8M^@bB>M96:41
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z2 w1460577992
+8c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\doublesync.v
+Fc:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\doublesync.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1684525216.000000
+!s107 c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\doublesync.v|
+!s90 -modelsimini|c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\_hdl_checker\modelsim.ini|-quiet|-work|c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\_hdl_checker\default_library|-lint|-hazards|-pedanticerrors|-L|default_library|c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\doublesync.v|
+!i113 1
+Z4 o-quiet -work {c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\_hdl_checker\default_library} -lint -hazards -pedanticerrors -L default_library
+Z5 tCvgOpt 0
+vGenerate_Arbitrary_Divided_Clk32
+!s110 1684533994
+!i10b 1
+!s100 8=iGlzck0b@NKb_VFN7YH2
+IT3KMOOc9MFG37D0a>m4EB3
+R1
+R0
+R2
+8c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\Generate_Arbitrary_Divided_Clk32.v
+Fc:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\Generate_Arbitrary_Divided_Clk32.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1684533994.000000
+!s107 c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\Generate_Arbitrary_Divided_Clk32.v|
+!s90 -modelsimini|c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\_hdl_checker\modelsim.ini|-quiet|-work|c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\_hdl_checker\default_library|-lint|-hazards|-pedanticerrors|-L|default_library|c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\Generate_Arbitrary_Divided_Clk32.v|
+!i113 1
+R4
+R5
+n@generate_@arbitrary_@divided_@clk32
+vscope_capture
+!s110 1684525218
+!i10b 1
+!s100 ?c8@nJ?GNKKPRC43[lbc>3
+IFEIKL3ZWKLBdA>WE0:haB2
+R1
+R0
+R2
+8c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\scope_capture.v
+Fc:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\scope_capture.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1684525218.000000
+!s107 c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\scope_capture.v|
+!s90 -modelsimini|c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\_hdl_checker\modelsim.ini|-quiet|-work|c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\_hdl_checker\default_library|-lint|-hazards|-pedanticerrors|-L|default_library|c:\Users\Admin\Documents\GitHub\CPEN-311\lab1_de1soc\scope_capture.v|
+!i113 1
+R4
+R5

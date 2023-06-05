@@ -1,0 +1,169 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Intel and sold by Intel or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition"
+
+// DATE "05/23/2023 00:01:39"
+
+// 
+// Device: Altera 5CSEMA5F31C6 Package FBGA896
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module HW1 (
+	outclk,
+	async_sig,
+	out_sync_sig);
+input 	outclk;
+input 	async_sig;
+output 	out_sync_sig;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \out_sync_sig~output_o ;
+wire \outclk~input_o ;
+wire \async_sig~input_o ;
+wire \FDC_1_Q~q ;
+wire \FDC_Q1~q ;
+wire \FDC_Q2~q ;
+wire \out_sync_sig~reg0_q ;
+
+
+cyclonev_io_obuf \out_sync_sig~output (
+	.i(\out_sync_sig~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\out_sync_sig~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \out_sync_sig~output .bus_hold = "false";
+defparam \out_sync_sig~output .open_drain_output = "false";
+defparam \out_sync_sig~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_ibuf \outclk~input (
+	.i(outclk),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\outclk~input_o ));
+// synopsys translate_off
+defparam \outclk~input .bus_hold = "false";
+defparam \outclk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \async_sig~input (
+	.i(async_sig),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\async_sig~input_o ));
+// synopsys translate_off
+defparam \async_sig~input .bus_hold = "false";
+defparam \async_sig~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas FDC_1_Q(
+	.clk(!\outclk~input_o ),
+	.d(\out_sync_sig~reg0_q ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FDC_1_Q~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam FDC_1_Q.is_wysiwyg = "true";
+defparam FDC_1_Q.power_up = "low";
+// synopsys translate_on
+
+dffeas FDC_Q1(
+	.clk(\async_sig~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\FDC_1_Q~q ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FDC_Q1~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam FDC_Q1.is_wysiwyg = "true";
+defparam FDC_Q1.power_up = "low";
+// synopsys translate_on
+
+dffeas FDC_Q2(
+	.clk(\outclk~input_o ),
+	.d(\FDC_Q1~q ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FDC_Q2~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam FDC_Q2.is_wysiwyg = "true";
+defparam FDC_Q2.power_up = "low";
+// synopsys translate_on
+
+dffeas \out_sync_sig~reg0 (
+	.clk(\outclk~input_o ),
+	.d(\FDC_Q2~q ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\out_sync_sig~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \out_sync_sig~reg0 .is_wysiwyg = "true";
+defparam \out_sync_sig~reg0 .power_up = "low";
+// synopsys translate_on
+
+assign out_sync_sig = \out_sync_sig~output_o ;
+
+endmodule

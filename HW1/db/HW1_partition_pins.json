@@ -1,0 +1,21 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "out_sync_sig",
+					"strict" : false
+				},
+				{
+					"name" : "outclk",
+					"strict" : false
+				},
+				{
+					"name" : "async_sig",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

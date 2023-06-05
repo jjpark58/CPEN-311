@@ -1,0 +1,8 @@
+|HW1
+outclk => out_sync_sig~reg0.CLK
+outclk => FDC_Q2.CLK
+outclk => FDC_1_Q.CLK
+async_sig => FDC_Q1.CLK
+out_sync_sig << out_sync_sig~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
