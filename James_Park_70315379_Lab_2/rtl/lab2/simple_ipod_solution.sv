@@ -227,8 +227,6 @@ wire Sample_Clk_Signal;
 //
 
 
-
-
 wire            flash_mem_read;
 wire            flash_mem_waitrequest;
 wire    [22:0]  flash_mem_address;
@@ -236,9 +234,10 @@ wire    [31:0]  flash_mem_readdata;
 wire            flash_mem_readdatavalid;
 wire    [3:0]   flash_mem_byteenable;
 
-always_ff @(posedge CLOCK_50) begin
-  
-end
+logic    [22:0]  flash_mem_next_address = 0;
+
+assign flash_mem_read = 1'b1;
+assign flash_mem_byteenable = 4'b1111;
 
 flash flash_inst (
     .clk_clk                 (CLK_50M),
@@ -248,18 +247,76 @@ flash flash_inst (
     .flash_mem_waitrequest   (flash_mem_waitrequest),   // out
     .flash_mem_read          (flash_mem_read),          // in
     .flash_mem_address       (flash_mem_address),       // in
-    .flash_mem_writedata     (),                        // in
+    .flash_mem_writedata     (32'b0),
     .flash_mem_readdata      (flash_mem_readdata),      // out
     .flash_mem_readdatavalid (flash_mem_readdatavalid), // out
     .flash_mem_byteenable    (flash_mem_byteenable)     // in
 );
             
+// LED move left and right
+
+LED_side2side
+leds2s (
+  .clk(Clock_1Hz),
+  .LED(LED)
+);
+
+// audio
+
+logic startA = 0;
+logic finishedA = 1;
+
+logic audio_play;
+logic forward = 1;
+
+controller mod_control (
+  .inclk(CLOCK_50),
+  .flash_mem_waitrequest(flash_mem_waitrequest),
+  .kbd_received_ascii_code(kbd_received_ascii_code),
+  .finishedA(finishedA),
+  .flash_mem_address(flash_mem_address),
+  .audio_play(audio_play),
+  .forward(forward),
+  .startA(startA)
+);
+
+logic audio_22KHz_clk;
+parameter [15:0] default_audio_clk_count = 32'h265;
+logic [15:0] audio_clk_count;
+
+always_ff @(posedge CLK_50M) begin
+  if (speed_up_event) audio_clk_count <= audio_clk_count - 1;
+  if (speed_down_event) audio_clk_count <= audio_clk_count + 1;
+  if (speed_reset_event) audio_clk_count <= default_audio_clk_count;
+end 
+
+Clk_Divider Generate_audio_Clk(
+.inclk(TD_CLK27),
+.outclk(audio_22KHz_clk),
+.outclk_Not(),
+.div_clk_count({{16{audio_clk_count[15]}},audio_clk_count}),
+.Reset(1'h1));
+
+
+logic [15:0] audio_sample;
+
+
+audio_player mod_audio (
+  .clk_22KHz(audio_22KHz_clk),
+  .flash_mem_readdata(flash_mem_readdata),
+  .start(startA),
+  .forward(forward),
+  .play(audio_play),
+  .finished(finishedA),
+  .audio_sample(audio_sample)
+);
+
 
 assign Sample_Clk_Signal = Clock_1KHz;
 
 //Audio Generation Signal
 //Note that the audio needs signed data - so convert 1 bit to 8 bits signed
-wire [7:0] audio_data = {~Sample_Clk_Signal,{7{Sample_Clk_Signal}}}; //generate signed sample audio signal
+wire [7:0] audio_data = audio_sample[15:8]; //generate signed sample audio signal
 
 
 
@@ -361,7 +418,7 @@ doublesync user_scope_enable_sync1(.indata(scope_enable_source),
                   .reset(1'b1)); 
 
 //Generate the oscilloscope clock
-Generate_Arbitrary_Divided_Clk32 
+Clk_Divider 
 Generate_LCD_scope_Clk(
 .inclk(CLK_50M),
 .outclk(scope_clk),
@@ -405,13 +462,13 @@ LCD_Scope_Encapsulated_pacoblaze_wrapper LCD_LED_scope(
                 
                         //LCD Display values
                       .InH(8'hAA),
-                      .InG(8'hBB),
-                      .InF(8'h01),
-                       .InE(8'h23),
-                      .InD(8'h45),
-                      .InC(8'h67),
-                      .InB(8'h89),
-                     .InA(8'h00),
+                      .InG(SW[7:0]),
+                      .InF(8'h00),
+                       .InE({1'b0, flash_mem_address[22:16]}),
+                      .InD(flash_mem_address[15:8]),
+                      .InC(flash_mem_address[7:0]),
+                      .InB(8'h00),
+                     .InA(audio_data),
                           
                      //LCD display information signals
                          .InfoH({scope_info15,scope_info14}),
@@ -450,13 +507,14 @@ LCD_Scope_Encapsulated_pacoblaze_wrapper LCD_LED_scope(
 wire speed_up_event, speed_down_event;
 
 //Generate 1 KHz Clock
-Generate_Arbitrary_Divided_Clk32 
+Clk_Divider 
 Gen_1KHz_clk
 (
 .inclk(CLK_50M),
 .outclk(Clock_1KHz),
 .outclk_Not(),
 .div_clk_count(32'h61A6), //change this if necessary to suit your module
+// .div_clk_count(32'h8E0), //change this if necessary to suit your module
 .Reset(1'h1)); 
 
 wire speed_up_raw;
@@ -581,7 +639,7 @@ assign HEX5 = Seven_Seg_Val[5];
             
 wire Clock_2Hz;
             
-Generate_Arbitrary_Divided_Clk32 
+Clk_Divider 
 Gen_2Hz_clk
 (.inclk(CLK_50M),
 .outclk(Clock_2Hz),
@@ -607,7 +665,8 @@ assign Seven_Seg_Data[3] = regd_actual_7seg_output[15:12];
 assign Seven_Seg_Data[4] = regd_actual_7seg_output[19:16];
 assign Seven_Seg_Data[5] = regd_actual_7seg_output[23:20];
     
-assign actual_7seg_output =  scope_sampling_clock_count;
+assign actual_7seg_output =  audio_clk_count << 2;
+// assign actual_7seg_output =  scope_sampling_clock_count;
 
 
 
