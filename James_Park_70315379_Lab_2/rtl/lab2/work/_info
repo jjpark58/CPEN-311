@@ -1,0 +1,106 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+vaudio_player
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1686104334
+!i10b 1
+!s100 h5YCbZV]>RaA1oEXnbQ5A1
+IeTlHd76m9zkNQ5DhV@BCS0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 audio_player_sv_unit
+S1
+Z3 dC:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_2/rtl/lab2
+w1686101263
+8C:\Users\Admin\Documents\GitHub\CPEN-311\James_Park_70315379_Lab_2\rtl\lab2\audio_player.sv
+FC:\Users\Admin\Documents\GitHub\CPEN-311\James_Park_70315379_Lab_2\rtl\lab2\audio_player.sv
+L0 2
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1686104333.000000
+!s107 C:\Users\Admin\Documents\GitHub\CPEN-311\James_Park_70315379_Lab_2\rtl\lab2\audio_player.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Admin\Documents\GitHub\CPEN-311\James_Park_70315379_Lab_2\rtl\lab2\audio_player.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+vcontroller
+R0
+R1
+!i10b 1
+!s100 TzQUE7H^lnm4A?XkJb=T[2
+Id9MTNjB=;Zg_NhCE]SN^S1
+R2
+!s105 controller_sv_unit
+S1
+R3
+w1686102977
+8C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_2/rtl/lab2/controller.sv
+FC:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_2/rtl/lab2/controller.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z8 !s108 1686104334.000000
+!s107 C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_2/rtl/lab2/controller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_2/rtl/lab2/controller.sv|
+!i113 1
+R6
+R7
+vtb_audio_player
+R0
+!s110 1686104333
+!i10b 1
+!s100 ^M<lMYNhYb;[AdkJZh:0Y0
+IJNS5PXSo`UePhTNEG>0_^0
+R2
+!s105 tb_audio_player_sv_unit
+S1
+R3
+w1686104328
+8C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_2/rtl/lab2/tb_audio_player.sv
+FC:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_2/rtl/lab2/tb_audio_player.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_2/rtl/lab2/tb_audio_player.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_2/rtl/lab2/tb_audio_player.sv|
+!i113 1
+R6
+R7
+vtb_controller
+R0
+R1
+!i10b 1
+!s100 fEHKI]gZKX5XlA2mX:]jI2
+IlJBI8liV[60=^e7=8nCaV3
+R2
+!s105 tb_controller_sv_unit
+S1
+R3
+w1686104135
+8C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_2/rtl/lab2/tb_controller.sv
+FC:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_2/rtl/lab2/tb_controller.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_2/rtl/lab2/tb_controller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_2/rtl/lab2/tb_controller.sv|
+!i113 1
+R6
+R7

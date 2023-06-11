@@ -1,0 +1,108 @@
+Assembler report for Picoblaze_Practice
+Fri Jun 09 12:06:19 2023
+Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Assembler Summary
+  3. Assembler Settings
+  4. Assembler Generated Files
+  5. Assembler Device Options: C:/Users/Admin/Documents/GitHub/CPEN-311/class_activity/picoblaze/Picoblaze_Practice.sof
+  6. Assembler Device Options: C:/Users/Admin/Documents/GitHub/CPEN-311/class_activity/picoblaze/Picoblaze_Practice.pof
+  7. Assembler Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; Assembler Summary                                             ;
++-----------------------+---------------------------------------+
+; Assembler Status      ; Successful - Fri Jun 09 12:06:19 2023 ;
+; Revision Name         ; Picoblaze_Practice                    ;
+; Top-level Entity Name ; Picoblaze_Practice                    ;
+; Family                ; Cyclone V                             ;
+; Device                ; 5CSEMA5F31C6                          ;
++-----------------------+---------------------------------------+
+
+
++----------------------------------+
+; Assembler Settings               ;
++--------+---------+---------------+
+; Option ; Setting ; Default Value ;
++--------+---------+---------------+
+
+
++------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                ;
++------------------------------------------------------------------------------------------+
+; File Name                                                                                ;
++------------------------------------------------------------------------------------------+
+; C:/Users/Admin/Documents/GitHub/CPEN-311/class_activity/picoblaze/Picoblaze_Practice.sof ;
+; C:/Users/Admin/Documents/GitHub/CPEN-311/class_activity/picoblaze/Picoblaze_Practice.pof ;
++------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Admin/Documents/GitHub/CPEN-311/class_activity/picoblaze/Picoblaze_Practice.sof ;
++----------------+---------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                           ;
++----------------+---------------------------------------------------------------------------------------------------+
+; Device         ; 5CSEMA5F31C6                                                                                      ;
+; JTAG usercode  ; 0x00D20953                                                                                        ;
+; Checksum       ; 0x00D20953                                                                                        ;
++----------------+---------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Admin/Documents/GitHub/CPEN-311/class_activity/picoblaze/Picoblaze_Practice.pof ;
++--------------------+-----------------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                                       ;
++--------------------+-----------------------------------------------------------------------------------------------+
+; Device             ; EPCS128                                                                                       ;
+; JTAG usercode      ; 0x00000000                                                                                    ;
+; Checksum           ; 0xE2C702B3                                                                                    ;
+; Compression Ratio  ; 3                                                                                             ;
++--------------------+-----------------------------------------------------------------------------------------------+
+
+
++--------------------+
+; Assembler Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+    Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+    Info: Processing started: Fri Jun 09 12:06:06 2023
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Picoblaze_Practice -c Picoblaze_Practice
+Warning (125092): Tcl Script File flash/flash.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE flash/flash.qip
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Fri Jun 09 12:06:19 2023
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:09
+
+
