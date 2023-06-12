@@ -323,8 +323,7 @@ wire [3:0] sync_SW;
 wire [23:0] sseg;
 
 //pacoblaze led control
-picoblaze_template
-#( .clk_freq_in_hz(25000000) ) 
+picoblaze_template #( .clk_freq_in_hz(25000000) ) 
 picoblaze_template_inst(
   .led(LEDR[9:0]),
   .clk(CLK_50M),

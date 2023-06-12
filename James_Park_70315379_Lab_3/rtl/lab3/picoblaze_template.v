@@ -8,7 +8,7 @@ parameter clk_freq_in_hz = 25000000
 				output reg[9:0] led,
 				input clk,
 				input [7:0] input_data,
-			   output wire [23:0] sseg
+			  output wire [23:0] sseg
 
 			     );
 
@@ -102,15 +102,14 @@ pacoblaze3 led_8seg_kcpsm
 
  always @ (posedge clk or posedge interrupt_ack)  //FF with clock "clk" and reset "interrupt_ack"
  begin
-      if (interrupt_ack) //if we get reset, reset interrupt in order to wait for next clock.
-            interrupt <= 0;
+    if (interrupt_ack) //if we get reset, reset interrupt in order to wait for next clock.
+          interrupt <= 0;
+    else begin 
+      if (event_1hz)   //clock enable
+        interrupt <= 1;
       else
-		begin 
-		      if (event_1hz)   //clock enable
-      		      interrupt <= 1;
-          		else
-		            interrupt <= interrupt;
-      end
+        interrupt <= interrupt;
+    end
  end
 
 //  --
