@@ -100,15 +100,23 @@ pacoblaze3 led_8seg_kcpsm
       end
  end
 
+ reg prev_input;
+ reg curr_input;
+
+ always @ (posedge clk) begin
+  curr_input <= input_data;
+  prev_input <= curr_input;
+ end
+
  always @ (posedge clk or posedge interrupt_ack)  //FF with clock "clk" and reset "interrupt_ack"
  begin
     if (interrupt_ack) //if we get reset, reset interrupt in order to wait for next clock.
           interrupt <= 0;
     else begin 
-      if (event_1hz)   //clock enable
+      if (prev_input != curr_input)   //clock enable
         interrupt <= 1;
       else
-        interrupt <= interrupt;
+        interrupt <= 0;
     end
  end
 
@@ -147,7 +155,7 @@ end
 
         //port 40 hex 
         if (write_strobe & port_id[6])  //clock enable 
-          led[0] <= out_port[0];
+          led[1:0] <= out_port[1:0];
 			      
 		  // //port 20 hex 
 		  // if (write_strobe & port_id[5])  //clock enable 

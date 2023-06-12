@@ -236,7 +236,6 @@ wire    [3:0]   flash_mem_byteenable;
 
 logic    [22:0]  flash_mem_next_address = 0;
 
-assign flash_mem_read = 1'b1;
 assign flash_mem_byteenable = 4'b1111;
 
 flash flash_inst (
@@ -253,42 +252,8 @@ flash flash_inst (
     .flash_mem_byteenable    (flash_mem_byteenable)     // in
 );
             
-// LED move left and right
-
-// LED_side2side leds2s (
-//   .clk(Clock_1Hz),
-//   .LED(LED)
-// );
 
 // audio
-
-logic startA = 0;
-logic finishedA = 1;
-
-logic audio_play;
-logic forward = 1;
-
-controller mod_control (
-  .inclk(CLOCK_50),
-  .flash_mem_waitrequest(flash_mem_waitrequest), 
-  .kbd_received_ascii_code(kbd_received_ascii_code), // keyboard input
-  .finishedA(finishedA), // signal input when audio player finishes reading data
-  .flash_mem_address(flash_mem_address), // data for audio player to read from
-  .audio_play(audio_play), // signal output to play audio
-  .forward(forward), // signal output for direction
-  .startA(startA) // signal output to start audio 
-);
-
-logic audio_22KHz_clk;
-parameter [15:0] default_audio_clk_count = 32'h265; // count for 22KHz clock from 27MHz
-logic [15:0] audio_clk_count;
-
-// speed control
-always_ff @(posedge CLK_50M) begin
-  if (speed_up_event) audio_clk_count <= audio_clk_count - 1; // speed up, decrease clock count
-  if (speed_down_event) audio_clk_count <= audio_clk_count + 1; // speed down, increase clock count
-  if (speed_reset_event) audio_clk_count <= default_audio_clk_count; // speed reset
-end 
 
 // create 22KHz clock
 Clk_Divider Generate_audio_Clk(
@@ -298,18 +263,45 @@ Clk_Divider Generate_audio_Clk(
 .div_clk_count({{16{audio_clk_count[15]}},audio_clk_count}),
 .Reset(1'h1));
 
+logic audio_22KHz_clk;
+parameter [15:0] default_audio_clk_count = 16'h4CA; // count for 22KHz clock from 27MHz
+logic [15:0] audio_clk_count;
 
+// speed control
+logic device_first_start = 1;
+
+always_ff @(posedge CLOCK_50) begin
+  if (device_first_start) begin 
+    audio_clk_count <= default_audio_clk_count;
+    device_first_start <= 0;
+  end else begin
+    if (speed_up_event) audio_clk_count <= audio_clk_count - 1; // speed up, decrease clock count
+    if (speed_down_event) audio_clk_count <= audio_clk_count + 1; // speed down, increase clock count
+    if (speed_reset_event) audio_clk_count <= default_audio_clk_count; // speed reset
+  end
+end 
+
+logic startA = 0;
+logic finishedA = 1;
+
+logic audio_play;
+logic backward = 1;
+
+
+logic [31:0] hold_flash_mem_readdata;
 logic [15:0] audio_sample;
 
-// output audio signal from flash mem input
-audio_player mod_audio (
-  .clk_22KHz(audio_22KHz_clk),
-  .flash_mem_readdata(flash_mem_readdata), // flash mem to read
-  .start(startA), // signal to start reading flash mem
-  .forward(forward), // signal input for direction
-  .play(audio_play), // signal input to play
-  .finished(finishedA), // signal when finished reading both samples from flash mem
-  .audio_sample(audio_sample) // audio output
+controller controller (
+  .inclk(CLOCK_50),
+  .async_in(audio_22KHz_clk),
+  .flash_mem_waitrequest(flash_mem_waitrequest),
+  .flash_mem_readdatavalid(flash_mem_readdatavalid),
+  .flash_mem_readdata(flash_mem_readdata),
+  .kbd_received_ascii_code(kbd_received_ascii_code), // keyboard input
+  .flash_mem_read(flash_mem_read),
+  .flash_mem_address(flash_mem_address),
+  .hold_flash_mem_readdata(hold_flash_mem_readdata),
+  .audio_out(audio_sample)
 );
 
 
@@ -327,7 +319,7 @@ picoblaze_template #( .clk_freq_in_hz(25000000) )
 picoblaze_template_inst(
   .led(LEDR[9:0]),
   .clk(CLK_50M),
-  .input_data(audio_data),
+  .input_data(hold_flash_mem_readdata[7:0]),
   .sseg(24'b0)
 );
 
@@ -679,7 +671,7 @@ assign Seven_Seg_Data[3] = regd_actual_7seg_output[15:12];
 assign Seven_Seg_Data[4] = regd_actual_7seg_output[19:16];
 assign Seven_Seg_Data[5] = regd_actual_7seg_output[23:20];
     
-assign actual_7seg_output =  audio_clk_count << 2;
+assign actual_7seg_output =  audio_clk_count >> 1;
 // assign actual_7seg_output =  scope_sampling_clock_count;
 
 
