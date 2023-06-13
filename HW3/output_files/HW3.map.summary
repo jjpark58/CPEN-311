@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Jun 12 22:38:31 2023
+Analysis & Synthesis Status : Successful - Mon Jun 12 23:38:26 2023
 Quartus Prime Version : 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 Revision Name : HW3
 Top-level Entity Name : shared_access_to_one_state_machine
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 24
+Total registers : 27
 Total pins : 130
 Total virtual pins : 0
 Total block memory bits : 0

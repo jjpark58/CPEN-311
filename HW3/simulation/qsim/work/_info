@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Documents/GitHub/CPEN-311/HW3/simulation/qsim
+vshared_access_to_one_state_machine
+Z1 !s110 1686638589
+!i10b 1
+!s100 Ne`Lg3?X<2oDhlj7co11L1
+IZ[e^=1JhiI4j82K8f<Y?l0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1686638588
+8HW3.vo
+FHW3.vo
+L0 32
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1686638588.000000
+!s107 HW3.vo|
+!s90 -work|work|HW3.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vshared_access_to_one_state_machine_vlg_vec_tst
+R1
+!i10b 1
+!s100 @]hz:]WbTXi[lAI:1MESz2
+IJS`^OnkA[A7;f7OQM3bCj3
+R2
+R0
+w1686638587
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+!s108 1686638589.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+R5

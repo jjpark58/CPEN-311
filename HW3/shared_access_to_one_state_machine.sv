@@ -59,7 +59,6 @@ always_ff @( posedge sm_clk or posedge reset ) begin
                       else state <= check_start_a;
 
       give_start_a: state <= wait_for_finish_a;
-
       give_start_b: state <= wait_for_finish_b;
 
       wait_for_finish_a:  if (target_state_machine_finished) state <= register_data_a;
@@ -68,8 +67,10 @@ always_ff @( posedge sm_clk or posedge reset ) begin
       wait_for_finish_b:  if (target_state_machine_finished) state <= register_data_b;
                           else state <= wait_for_finish_b;
       
-      give_finish_a: state <= check_start_b;
+      register_data_a: state <= give_finish_a;
+      register_data_b: state <= give_finish_b;
 
+      give_finish_a: state <= check_start_b;
       give_finish_b: state <= check_start_a;
       default: state <= check_start_a;
     endcase

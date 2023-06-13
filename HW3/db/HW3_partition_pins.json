@@ -136,6 +136,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "finish_a",
+					"strict" : false
+				},
+				{
+					"name" : "finish_b",
+					"strict" : false
+				},
+				{
 					"name" : "reset_start_request_a",
 					"strict" : false
 				},

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HW3
-Mon Jun 12 22:38:31 2023
+Mon Jun 12 23:38:26 2023
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -45,13 +45,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jun 12 22:38:31 2023       ;
+; Analysis & Synthesis Status     ; Successful - Mon Jun 12 23:38:26 2023       ;
 ; Quartus Prime Version           ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                   ; HW3                                         ;
 ; Top-level Entity Name           ; shared_access_to_one_state_machine          ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 24                                          ;
+; Total registers                 ; 27                                          ;
 ; Total pins                      ; 130                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -157,15 +157,15 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -183,25 +183,25 @@ agreement for further details.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimate of Logic utilization (ALMs needed) ; 26       ;
+; Estimate of Logic utilization (ALMs needed) ; 33       ;
 ;                                             ;          ;
-; Combinational ALUT usage for logic          ; 43       ;
-;     -- 7 input functions                    ; 0        ;
-;     -- 6 input functions                    ; 4        ;
-;     -- 5 input functions                    ; 2        ;
-;     -- 4 input functions                    ; 5        ;
-;     -- <=3 input functions                  ; 32       ;
+; Combinational ALUT usage for logic          ; 52       ;
+;     -- 7 input functions                    ; 1        ;
+;     -- 6 input functions                    ; 11       ;
+;     -- 5 input functions                    ; 6        ;
+;     -- 4 input functions                    ; 1        ;
+;     -- <=3 input functions                  ; 33       ;
 ;                                             ;          ;
-; Dedicated logic registers                   ; 24       ;
+; Dedicated logic registers                   ; 27       ;
 ;                                             ;          ;
 ; I/O pins                                    ; 130      ;
 ;                                             ;          ;
 ; Total DSP Blocks                            ; 0        ;
 ;                                             ;          ;
 ; Maximum fan-out node                        ; state[0] ;
-; Maximum fan-out                             ; 41       ;
-; Total fan-out                               ; 403      ;
-; Average fan-out                             ; 1.23     ;
+; Maximum fan-out                             ; 46       ;
+; Total fan-out                               ; 470      ;
+; Average fan-out                             ; 1.39     ;
 +---------------------------------------------+----------+
 
 
@@ -210,20 +210,19 @@ agreement for further details.
 +-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+------------------------------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name                        ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+------------------------------------+--------------+
-; |shared_access_to_one_state_machine ; 43 (43)             ; 24 (24)                   ; 0                 ; 0          ; 130  ; 0            ; |shared_access_to_one_state_machine ; shared_access_to_one_state_machine ; work         ;
+; |shared_access_to_one_state_machine ; 52 (52)             ; 27 (27)                   ; 0                 ; 0          ; 130  ; 0            ; |shared_access_to_one_state_machine ; shared_access_to_one_state_machine ; work         ;
 +-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; state[4,5,11]                         ; Stuck at GND due to stuck port data_in ;
-; state[8]                              ; Merged with state[0]                   ;
-; Total Number of Removed Registers = 4 ;                                        ;
-+---------------------------------------+----------------------------------------+
++--------------------------------------------------------------+
+; Registers Removed During Synthesis                           ;
++---------------------------------------+----------------------+
+; Register name                         ; Reason for Removal   ;
++---------------------------------------+----------------------+
+; state[8]                              ; Merged with state[0] ;
+; Total Number of Removed Registers = 1 ;                      ;
++---------------------------------------+----------------------+
 
 
 +------------------------------------------------------+
@@ -231,10 +230,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 24    ;
+; Total registers                              ; 27    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Clear ; 11    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
@@ -257,20 +256,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 24                          ;
-;     CLR               ; 8                           ;
+; arriav_ff             ; 27                          ;
+;     CLR               ; 11                          ;
 ;     ENA               ; 16                          ;
-; arriav_lcell_comb     ; 44                          ;
-;     normal            ; 44                          ;
-;         0 data inputs ; 1                           ;
-;         3 data inputs ; 32                          ;
-;         4 data inputs ; 5                           ;
-;         5 data inputs ; 2                           ;
-;         6 data inputs ; 4                           ;
+; arriav_lcell_comb     ; 52                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 51                          ;
+;         3 data inputs ; 33                          ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 6                           ;
+;         6 data inputs ; 11                          ;
 ; boundary_port         ; 130                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Average LUT depth     ; 1.19                        ;
 +-----------------------+-----------------------------+
 
 
@@ -289,29 +289,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Mon Jun 12 22:38:20 2023
+    Info: Processing started: Mon Jun 12 23:38:20 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HW3 -c HW3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file trap_edge.sv
     Info (12023): Found entity 1: trap_edge File: C:/Users/Admin/Documents/GitHub/CPEN-311/HW3/trap_edge.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file shared_access_to_one_state_machine.sv
     Info (12023): Found entity 1: shared_access_to_one_state_machine File: C:/Users/Admin/Documents/GitHub/CPEN-311/HW3/shared_access_to_one_state_machine.sv Line: 2
 Info (12127): Elaborating entity "shared_access_to_one_state_machine" for the top level hierarchy
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "finish_a" is stuck at GND File: C:/Users/Admin/Documents/GitHub/CPEN-311/HW3/shared_access_to_one_state_machine.sv Line: 12
-    Warning (13410): Pin "finish_b" is stuck at GND File: C:/Users/Admin/Documents/GitHub/CPEN-311/HW3/shared_access_to_one_state_machine.sv Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 189 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 199 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 77 input pins
     Info (21059): Implemented 53 output pins
-    Info (21061): Implemented 59 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4885 megabytes
-    Info: Processing ended: Mon Jun 12 22:38:31 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:11
+    Info (21061): Implemented 69 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4863 megabytes
+    Info: Processing ended: Mon Jun 12 23:38:26 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 

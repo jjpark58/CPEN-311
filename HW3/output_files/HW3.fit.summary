@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Jun 12 22:39:49 2023
+Fitter Status : Successful - Mon Jun 12 23:39:04 2023
 Quartus Prime Version : 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 Revision Name : HW3
 Top-level Entity Name : shared_access_to_one_state_machine
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 24 / 32,070 ( < 1 % )
-Total registers : 25
+Logic utilization (in ALMs) : 33 / 32,070 ( < 1 % )
+Total registers : 31
 Total pins : 130 / 457 ( 28 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
