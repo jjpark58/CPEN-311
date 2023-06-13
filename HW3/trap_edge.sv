@@ -26,5 +26,5 @@ end
 
 assign trapped_edge = ff3;
 
-endmodule;
+endmodule
 `default_nettype wire

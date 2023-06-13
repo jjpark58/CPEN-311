@@ -22,7 +22,6 @@ module shared_access_to_one_state_machine #(
 );
 
 logic select_b_output_parameters;
-logic start_target_state_machine;
 logic register_data_a_enable;
 logic register_data_b_enable;
 
