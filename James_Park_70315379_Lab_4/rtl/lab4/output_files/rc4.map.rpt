@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rc4
-Fri Jun 16 13:42:45 2023
+Sun Jun 18 02:21:47 2023
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -23,7 +23,7 @@ Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
  15. Source assignments for s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated|altsyncram_dsp2:altsyncram1
  16. Parameter Settings for User Entity Instance: s_memory:s_memory_inst|altsyncram:altsyncram_component
  17. altsyncram Parameter Settings by Entity Instance
- 18. Port Connectivity Checks: "s_memory:s_memory_inst"
+ 18. Port Connectivity Checks: "fsm:fsm_inst"
  19. Port Connectivity Checks: "SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst"
  20. In-System Memory Content Editor Settings
  21. Post-Synthesis Netlist Statistics for Top Partition
@@ -55,13 +55,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jun 16 13:42:45 2023       ;
+; Analysis & Synthesis Status     ; Successful - Sun Jun 18 02:21:47 2023       ;
 ; Quartus Prime Version           ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                   ; rc4                                         ;
 ; Top-level Entity Name           ; ksa                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 135                                         ;
+; Total registers                 ; 136                                         ;
 ; Total pins                      ; 67                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,048                                       ;
@@ -83,6 +83,7 @@ agreement for further details.
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
 ; Top-level entity name                                                           ; ksa                ; rc4                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
 ; Verilog Show LMF Mapping Messages                                               ; Off                ;                    ;
 ; Verilog Version                                                                 ; SystemVerilog_2005 ; Verilog_2001       ;
 ; Extract Verilog State Machines                                                  ; Off                ; On                 ;
@@ -177,15 +178,15 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -194,6 +195,7 @@ agreement for further details.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                                   ; Library     ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; fsm.sv                                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/fsm.sv                                                             ;             ;
 ; ksa.sv                                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv                                                             ;             ;
 ; s_memory.v                                                         ; yes             ; User Wizard-Generated File                   ; C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/s_memory.v                                                         ;             ;
 ; sevensegmentdisplaydecoder.v                                       ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/sevensegmentdisplaydecoder.v                                       ;             ;
@@ -228,16 +230,16 @@ agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 95                       ;
+; Estimate of Logic utilization (ALMs needed) ; 100                      ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 156                      ;
+; Combinational ALUT usage for logic          ; 162                      ;
 ;     -- 7 input functions                    ; 1                        ;
-;     -- 6 input functions                    ; 21                       ;
-;     -- 5 input functions                    ; 29                       ;
-;     -- 4 input functions                    ; 27                       ;
-;     -- <=3 input functions                  ; 78                       ;
+;     -- 6 input functions                    ; 25                       ;
+;     -- 5 input functions                    ; 32                       ;
+;     -- 4 input functions                    ; 31                       ;
+;     -- <=3 input functions                  ; 73                       ;
 ;                                             ;                          ;
-; Dedicated logic registers                   ; 135                      ;
+; Dedicated logic registers                   ; 136                      ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 67                       ;
 ; Total MLAB memory bits                      ; 0                        ;
@@ -247,8 +249,8 @@ agreement for further details.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 156                      ;
-; Total fan-out                               ; 1279                     ;
-; Average fan-out                             ; 2.89                     ;
+; Total fan-out                               ; 1322                     ;
+; Average fan-out                             ; 2.94                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -257,7 +259,8 @@ agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |ksa                                                                                                                                    ; 156 (14)            ; 135 (11)                  ; 2048              ; 0          ; 67   ; 0            ; |ksa                                                                                                                                                                                                                                                                                                                                            ; ksa                               ; work         ;
+; |ksa                                                                                                                                    ; 162 (1)             ; 136 (0)                   ; 2048              ; 0          ; 67   ; 0            ; |ksa                                                                                                                                                                                                                                                                                                                                            ; ksa                               ; work         ;
+;    |fsm:fsm_inst|                                                                                                                       ; 19 (19)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |ksa|fsm:fsm_inst                                                                                                                                                                                                                                                                                                                               ; fsm                               ; work         ;
 ;    |s_memory:s_memory_inst|                                                                                                             ; 41 (0)              ; 37 (0)                    ; 2048              ; 0          ; 0    ; 0            ; |ksa|s_memory:s_memory_inst                                                                                                                                                                                                                                                                                                                     ; s_memory                          ; work         ;
 ;       |altsyncram:altsyncram_component|                                                                                                 ; 41 (0)              ; 37 (0)                    ; 2048              ; 0          ; 0    ; 0            ; |ksa|s_memory:s_memory_inst|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                     ; altsyncram                        ; work         ;
 ;          |altsyncram_2d32:auto_generated|                                                                                               ; 41 (0)              ; 37 (0)                    ; 2048              ; 0          ; 0    ; 0            ; |ksa|s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated                                                                                                                                                                                                                                                      ; altsyncram_2d32                   ; work         ;
@@ -304,18 +307,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
 ; Register name                                                                                                                                  ; Reason for Removal                     ;
 +------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
-; state[0,1]                                                                                                                                     ; Stuck at GND due to stuck port data_in ;
-; state[3]                                                                                                                                       ; Merged with wren                       ;
-; data[0]                                                                                                                                        ; Merged with address[0]                 ;
-; data[1]                                                                                                                                        ; Merged with address[1]                 ;
-; data[2]                                                                                                                                        ; Merged with address[2]                 ;
-; data[3]                                                                                                                                        ; Merged with address[3]                 ;
-; data[4]                                                                                                                                        ; Merged with address[4]                 ;
-; data[5]                                                                                                                                        ; Merged with address[5]                 ;
-; data[6]                                                                                                                                        ; Merged with address[6]                 ;
-; data[7]                                                                                                                                        ; Merged with address[7]                 ;
+; fsm:fsm_inst|state[3]                                                                                                                          ; Merged with fsm:fsm_inst|state[0]      ;
+; fsm:fsm_inst|data[7]                                                                                                                           ; Merged with fsm:fsm_inst|address[7]    ;
+; fsm:fsm_inst|data[6]                                                                                                                           ; Merged with fsm:fsm_inst|address[6]    ;
+; fsm:fsm_inst|data[5]                                                                                                                           ; Merged with fsm:fsm_inst|address[5]    ;
+; fsm:fsm_inst|data[4]                                                                                                                           ; Merged with fsm:fsm_inst|address[4]    ;
+; fsm:fsm_inst|data[3]                                                                                                                           ; Merged with fsm:fsm_inst|address[3]    ;
+; fsm:fsm_inst|data[2]                                                                                                                           ; Merged with fsm:fsm_inst|address[2]    ;
+; fsm:fsm_inst|data[1]                                                                                                                           ; Merged with fsm:fsm_inst|address[1]    ;
+; fsm:fsm_inst|data[0]                                                                                                                           ; Merged with fsm:fsm_inst|address[0]    ;
 ; s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 12                                                                                                         ;                                        ;
+; Total Number of Removed Registers = 10                                                                                                         ;                                        ;
 +------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
 
 
@@ -324,10 +326,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 135   ;
-; Number of registers using Synchronous Clear  ; 15    ;
+; Total registers                              ; 136   ;
+; Number of registers using Synchronous Clear  ; 7     ;
 ; Number of registers using Synchronous Load   ; 17    ;
-; Number of registers using Asynchronous Clear ; 54    ;
+; Number of registers using Asynchronous Clear ; 66    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 100   ;
 ; Number of registers using Preset             ; 0     ;
@@ -339,9 +341,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; fsm:fsm_inst|state[2]                                                                                                                                                                                                                                                                                                           ; 6       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 3       ;
-; Total number of inverted registers = 2                                                                                                                                                                                                                                                                                          ;         ;
+; Total number of inverted registers = 3                                                                                                                                                                                                                                                                                          ;         ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -350,12 +353,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ksa|s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[7]                                                ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ksa|s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ksa|s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[7]                                                ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |ksa|address[0]                                                                                                                                                                         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ksa|s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ksa|s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ksa|s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]                                                ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |ksa|s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 40 LEs               ; 28 LEs                 ; Yes        ; |ksa|s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 40 LEs               ; 28 LEs                 ; Yes        ; |ksa|s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[3]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -449,13 +451,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+--------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "s_memory:s_memory_inst"                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "fsm:fsm_inst"               ;
++-----------+--------+----------+------------------------+
+; Port      ; Type   ; Severity ; Details                ;
++-----------+--------+----------+------------------------+
+; address_d ; Output ; Info     ; Explicitly unconnected ;
+; data_d    ; Output ; Info     ; Explicitly unconnected ;
+; wren_d    ; Output ; Info     ; Explicitly unconnected ;
+; q_m       ; Input  ; Info     ; Explicitly unconnected ;
+; address_m ; Output ; Info     ; Explicitly unconnected ;
++-----------+--------+----------+------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------+
@@ -481,31 +487,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 48                          ;
-;     CLR               ; 5                           ;
+; arriav_ff             ; 49                          ;
+;     CLR               ; 9                           ;
 ;     ENA               ; 9                           ;
-;     ENA CLR           ; 7                           ;
+;     ENA CLR           ; 15                          ;
 ;     ENA CLR SLD       ; 8                           ;
-;     ENA SCLR          ; 8                           ;
 ;     ENA SLD           ; 8                           ;
-;     plain             ; 3                           ;
-; arriav_lcell_comb     ; 55                          ;
-;     arith             ; 16                          ;
-;         1 data inputs ; 16                          ;
+; arriav_lcell_comb     ; 62                          ;
+;     arith             ; 15                          ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 1                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 38                          ;
+;     normal            ; 46                          ;
 ;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 2                           ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 10                          ;
-;         5 data inputs ; 10                          ;
-;         6 data inputs ; 6                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 14                          ;
+;         5 data inputs ; 13                          ;
+;         6 data inputs ; 10                          ;
 ; boundary_port         ; 94                          ;
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.22                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.49                        ;
 +-----------------------+-----------------------------+
 
 
@@ -524,19 +530,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Fri Jun 16 13:42:23 2023
+    Info: Processing started: Sun Jun 18 02:21:30 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rc4 -c rc4
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
+    Info (12023): Found entity 1: fsm File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/fsm.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file ksa.sv
     Info (12023): Found entity 1: ksa File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file s_memory.v
     Info (12023): Found entity 1: s_memory File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/s_memory.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file m_memory.v
+    Info (12023): Found entity 1: m_memory File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/m_memory.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file d_memory.v
+    Info (12023): Found entity 1: d_memory File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/d_memory.v Line: 40
 Info (12127): Elaborating entity "ksa" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at ksa.sv(27): object "clk" assigned a value but never read File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 27
-Warning (10036): Verilog HDL or VHDL warning at ksa.sv(27): object "reset_n" assigned a value but never read File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 27
-Warning (10036): Verilog HDL or VHDL warning at ksa.sv(32): object "device_start" assigned a value but never read File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 32
-Warning (10036): Verilog HDL or VHDL warning at ksa.sv(33): object "s_memory_filled" assigned a value but never read File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 33
 Warning (10034): Output port "LEDR[9..8]" at ksa.sv(6) has no driver File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 6
 Warning (10034): Output port "HEX0" at ksa.sv(7) has no driver File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 7
 Warning (10034): Output port "HEX1" at ksa.sv(8) has no driver File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 8
@@ -547,7 +554,12 @@ Warning (10034): Output port "HEX5" at ksa.sv(13) has no driver File: C:/Users/A
 Warning (12125): Using design file sevensegmentdisplaydecoder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: SevenSegmentDisplayDecoder File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/sevensegmentdisplaydecoder.v Line: 1
 Info (12128): Elaborating entity "SevenSegmentDisplayDecoder" for hierarchy "SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 25
-Info (12128): Elaborating entity "s_memory" for hierarchy "s_memory:s_memory_inst" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 81
+Info (12128): Elaborating entity "fsm" for hierarchy "fsm:fsm_inst" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 51
+Warning (10034): Output port "address_d" at fsm.sv(9) has no driver File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/fsm.sv Line: 9
+Warning (10034): Output port "data_d" at fsm.sv(10) has no driver File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/fsm.sv Line: 10
+Warning (10034): Output port "address_m" at fsm.sv(13) has no driver File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/fsm.sv Line: 13
+Warning (10034): Output port "wren_d" at fsm.sv(11) has no driver File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/fsm.sv Line: 11
+Info (12128): Elaborating entity "s_memory" for hierarchy "s_memory:s_memory_inst" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 59
 Info (12128): Elaborating entity "altsyncram" for hierarchy "s_memory:s_memory_inst|altsyncram:altsyncram_component" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/s_memory.v Line: 86
 Info (12130): Elaborated megafunction instantiation "s_memory:s_memory_inst|altsyncram:altsyncram_component" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/s_memory.v Line: 86
 Info (12133): Instantiated megafunction "s_memory:s_memory_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/s_memory.v Line: 86
@@ -587,7 +599,7 @@ Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "s_me
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "s_memory:s_memory_inst|altsyncram:altsyncram_component|altsyncram_2d32:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.06.16.13:42:38 Progress: Loading sld73f98f60/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.06.18.02:21:40 Progress: Loading sld73f98f60/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -611,6 +623,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld73f98f60/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/db/ip/sld73f98f60/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 6
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 6
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 6
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 6
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 6
     Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 7
@@ -659,23 +674,22 @@ Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (15752): Ignored 12 Virtual Pin logic option assignments
-    Warning (15751): Ignored Virtual Pin assignment to "LCD_DATA[1]".
+    Warning (15751): Ignored Virtual Pin assignment to "LCD_EN".
+    Warning (15751): Ignored Virtual Pin assignment to "LCD_RS".
     Warning (15751): Ignored Virtual Pin assignment to "LCD_DATA[4]".
     Warning (15751): Ignored Virtual Pin assignment to "LCD_DATA[7]".
     Warning (15751): Ignored Virtual Pin assignment to "LCD_ON".
-    Warning (15751): Ignored Virtual Pin assignment to "LCD_EN".
-    Warning (15751): Ignored Virtual Pin assignment to "LCD_DATA[0]".
-    Warning (15751): Ignored Virtual Pin assignment to "LCD_RS".
-    Warning (15751): Ignored Virtual Pin assignment to "LCD_RW".
-    Warning (15751): Ignored Virtual Pin assignment to "LCD_DATA[5]".
     Warning (15751): Ignored Virtual Pin assignment to "LCD_DATA[3]".
+    Warning (15751): Ignored Virtual Pin assignment to "LCD_DATA[1]".
     Warning (15751): Ignored Virtual Pin assignment to "LCD_DATA[6]".
     Warning (15751): Ignored Virtual Pin assignment to "LCD_DATA[2]".
-Warning (21074): Design contains 14 input pin(s) that do not drive logic
+    Warning (15751): Ignored Virtual Pin assignment to "LCD_RW".
+    Warning (15751): Ignored Virtual Pin assignment to "LCD_DATA[0]".
+    Warning (15751): Ignored Virtual Pin assignment to "LCD_DATA[5]".
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 4
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 4
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 4
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 4
     Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 5
     Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 5
     Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 5
@@ -686,15 +700,15 @@ Warning (21074): Design contains 14 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 5
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 5
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/ksa.sv Line: 5
-Info (21057): Implemented 279 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 286 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 53 output pins
-    Info (21061): Implemented 199 logic cells
+    Info (21061): Implemented 206 logic cells
     Info (21064): Implemented 8 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 86 warnings
-    Info: Peak virtual memory: 4901 megabytes
-    Info: Processing ended: Fri Jun 16 13:42:45 2023
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 87 warnings
+    Info: Peak virtual memory: 4925 megabytes
+    Info: Processing ended: Sun Jun 18 02:21:47 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:10
 
 

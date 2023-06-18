@@ -24,19 +24,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[5]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[6]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[7]",
-					"strict" : false
-				},
-				{
 					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[3]",
 					"strict" : false
 				}
 			]
