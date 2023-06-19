@@ -27,10 +27,18 @@ logic clk, reset_n;
 assign clk = CLOCK_50;
 assign reset_n = KEY[3];
 
+logic [23:0] secret_key;
+assign secret_key = {{13{1'b0}}, SW};
+
 logic [7:0] address;
 logic [7:0] data;
 logic wren;
 logic [7:0] q_out;
+logic [7:0] address_m;
+logic [7:0] q_m;
+logic [7:0] address_d;
+logic [7:0] data_d;
+logic wren_d;
 
 logic [7:0] debug;
 
@@ -39,24 +47,39 @@ assign LEDR[7:0] = debug;
 fsm fsm_inst (
   .clk(clk),
   .reset_n(reset_n),
-  .wen(wren),
-  .q(q_out),
-  .data(data),
+  .secret_key(secret_key),
   .address(address),
-  .address_d(),
-  .data_d(),
-  .wren_d(),
-  .q_m(),
-  .address_m(),
+  .data(data),
+  .wren(wren),
+  .q(q_out),
+  .address_d(address_d),
+  .data_d(data_d),
+  .wren_d(wren_d),
+  .address_m(address_m),
+  .q_m(q_m),
   .debug(debug)
 );
 
 s_memory s_memory_inst (
 	.address(address),
-	.clock(CLOCK_50),
+	.clock(clk),
 	.data(data),
 	.wren(wren),
 	.q(q_out)
+);
+
+m_memory m_memory_inst (
+	.address(address_m),
+	.clock(clk),
+	.q(q_m)
+);
+
+d_memory d_memory_inst (
+  .address(address_d),
+	.clock(clk),
+	.data(data_d),
+	.wren(wren_d),
+	.q()
 );
 
 endmodule

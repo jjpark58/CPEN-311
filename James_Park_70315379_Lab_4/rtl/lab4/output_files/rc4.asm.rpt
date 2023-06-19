@@ -1,5 +1,5 @@
 Assembler report for rc4
-Sun Jun 18 02:22:30 2023
+Mon Jun 19 13:31:54 2023
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Jun 18 02:22:30 2023 ;
+; Assembler Status      ; Successful - Mon Jun 19 13:31:54 2023 ;
 ; Revision Name         ; rc4                                   ;
 ; Top-level Entity Name ; ksa                                   ;
 ; Family                ; Cyclone V                             ;
@@ -79,8 +79,8 @@ agreement for further details.
 ; Option         ; Setting                                                                                                   ;
 +----------------+-----------------------------------------------------------------------------------------------------------+
 ; Device         ; 5CSEMA5F31C6                                                                                              ;
-; JTAG usercode  ; 0x00B8B4B8                                                                                                ;
-; Checksum       ; 0x00B8B4B8                                                                                                ;
+; JTAG usercode  ; 0x00CEA044                                                                                                ;
+; Checksum       ; 0x00CEA044                                                                                                ;
 +----------------+-----------------------------------------------------------------------------------------------------------+
 
 
@@ -90,12 +90,12 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Sun Jun 18 02:22:25 2023
+    Info: Processing started: Mon Jun 19 13:31:49 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off rc4 -c rc4
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Sun Jun 18 02:22:30 2023
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Mon Jun 19 13:31:54 2023
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:03
 

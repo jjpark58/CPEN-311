@@ -2,92 +2,468 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
-Slack : 12.288
-TNS   : 0.000
-
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : 14.460
+Slack : 8.240
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.383
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 9.804
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[2]'
+Slack : 11.061
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[5]'
+Slack : 11.111
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[3]'
+Slack : 11.134
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[6]'
+Slack : 11.149
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[3]'
+Slack : 25.414
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[1]'
+Slack : 32.456
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[4]'
+Slack : 34.268
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fsm:fsm_inst|loop_1:loop_1_inst|state[1]'
+Slack : 35.841
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[10]'
+Slack : 36.434
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[7]'
+Slack : 36.438
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[8]'
+Slack : 37.601
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
-Slack : 0.457
+Slack : 0.289
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.371
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[8]'
+Slack : 0.479
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[7]'
+Slack : 0.593
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[4]'
+Slack : 0.661
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[10]'
+Slack : 0.709
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[1]'
+Slack : 0.714
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[3]'
+Slack : 0.748
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fsm:fsm_inst|loop_1:loop_1_inst|state[1]'
+Slack : 0.902
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[6]'
+Slack : 4.571
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[5]'
+Slack : 4.712
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[3]'
+Slack : 4.798
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[2]'
+Slack : 4.871
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
-Slack : 30.196
+Slack : 29.757
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
-Slack : 1.072
+Slack : 0.864
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.964
+Slack : 8.829
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.238
+Slack : 15.176
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
-Slack : 12.346
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[4]'
+Slack : 19.332
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[6]'
+Slack : 19.384
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[10]'
+Slack : 19.385
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_1:loop_1_inst|state[1]'
+Slack : 19.397
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[3]'
+Slack : 19.404
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[7]'
+Slack : 19.404
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[1]'
+Slack : 19.404
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[3]'
+Slack : 19.404
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[8]'
+Slack : 19.404
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|state[0]'
+Slack : 19.407
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[2]'
+Slack : 19.408
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[5]'
+Slack : 19.409
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|state[1]'
+Slack : 19.415
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|state[2]'
+Slack : 19.431
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : 14.572
+Slack : 8.641
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 9.950
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[2]'
+Slack : 10.979
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[5]'
+Slack : 11.014
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[3]'
+Slack : 11.045
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[6]'
+Slack : 11.053
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[3]'
+Slack : 24.994
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[1]'
+Slack : 32.704
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[4]'
+Slack : 34.324
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fsm:fsm_inst|loop_1:loop_1_inst|state[1]'
+Slack : 35.810
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[7]'
+Slack : 36.416
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[10]'
+Slack : 36.534
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[8]'
+Slack : 37.668
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.381
+Slack : 0.158
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.469
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[8]'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[7]'
+Slack : 0.568
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[10]'
+Slack : 0.670
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[4]'
+Slack : 0.679
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[1]'
+Slack : 0.717
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[3]'
+Slack : 0.767
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fsm:fsm_inst|loop_1:loop_1_inst|state[1]'
+Slack : 0.891
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[6]'
+Slack : 4.688
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[5]'
+Slack : 4.813
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[3]'
+Slack : 4.926
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[2]'
+Slack : 4.963
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 30.272
+Slack : 29.815
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
-Slack : 1.019
+Slack : 0.801
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.994
+Slack : 8.826
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.239
+Slack : 15.169
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
-Slack : 14.363
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[4]'
+Slack : 19.349
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[10]'
+Slack : 19.368
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[6]'
+Slack : 19.371
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_1:loop_1_inst|state[1]'
+Slack : 19.377
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[3]'
+Slack : 19.387
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[7]'
+Slack : 19.389
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[1]'
+Slack : 19.392
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[3]'
+Slack : 19.392
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[8]'
+Slack : 19.392
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[2]'
+Slack : 19.393
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[5]'
+Slack : 19.394
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|state[0]'
+Slack : 19.397
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|state[1]'
+Slack : 19.406
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|state[2]'
+Slack : 19.423
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : 16.385
+Slack : 11.540
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 12.820
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[2]'
+Slack : 14.296
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[3]'
+Slack : 14.368
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[5]'
+Slack : 14.370
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[6]'
+Slack : 14.381
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[3]'
+Slack : 31.823
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[1]'
+Slack : 34.579
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[4]'
+Slack : 36.195
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fsm:fsm_inst|loop_1:loop_1_inst|state[1]'
+Slack : 37.362
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[10]'
+Slack : 37.516
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[7]'
+Slack : 37.656
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[8]'
+Slack : 38.234
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
-Slack : 0.173
+Slack : 0.102
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[8]'
+Slack : 0.106
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[4]'
+Slack : 0.120
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[3]'
+Slack : 0.162
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.183
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[7]'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[10]'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[1]'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fsm:fsm_inst|loop_1:loop_1_inst|state[1]'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[6]'
+Slack : 2.527
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[5]'
+Slack : 2.613
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[3]'
+Slack : 2.643
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[2]'
+Slack : 2.720
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
-Slack : 31.280
+Slack : 30.974
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
-Slack : 0.547
+Slack : 0.426
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
@@ -95,31 +471,175 @@ Slack : 8.529
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 14.914
+Slack : 14.860
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
-Slack : 14.673
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[4]'
+Slack : 19.564
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[10]'
+Slack : 19.626
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[6]'
+Slack : 19.626
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_1:loop_1_inst|state[1]'
+Slack : 19.632
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[7]'
+Slack : 19.643
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[1]'
+Slack : 19.643
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[3]'
+Slack : 19.643
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[8]'
+Slack : 19.644
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[5]'
+Slack : 19.645
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[2]'
+Slack : 19.646
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[3]'
+Slack : 19.646
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|state[0]'
+Slack : 19.646
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|state[1]'
+Slack : 19.648
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm:fsm_inst|state[2]'
+Slack : 19.663
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : 16.744
+Slack : 12.785
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 13.302
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[2]'
+Slack : 14.622
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[3]'
+Slack : 14.683
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[5]'
+Slack : 14.684
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[6]'
+Slack : 14.692
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[3]'
+Slack : 32.245
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[1]'
+Slack : 35.202
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[4]'
+Slack : 36.554
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fsm:fsm_inst|loop_1:loop_1_inst|state[1]'
+Slack : 37.570
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[10]'
+Slack : 37.741
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fsm:fsm_inst|loop_2:loop_2_inst|state[7]'
+Slack : 37.808
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fsm:fsm_inst|loop_3:loop_3_inst|state[8]'
+Slack : 38.385
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[8]'
+Slack : 0.052
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.156
+Slack : 0.084
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[4]'
+Slack : 0.084
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[3]'
+Slack : 0.125
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.175
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[7]'
+Slack : 0.277
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[10]'
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[1]'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fsm:fsm_inst|loop_1:loop_1_inst|state[1]'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[6]'
+Slack : 2.424
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[5]'
+Slack : 2.497
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fsm:fsm_inst|loop_3:loop_3_inst|state[3]'
+Slack : 2.530
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fsm:fsm_inst|loop_2:loop_2_inst|state[2]'
+Slack : 2.596
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 31.482
+Slack : 31.164
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.492
+Slack : 0.374
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
@@ -127,7 +647,63 @@ Slack : 8.482
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 14.883
+Slack : 14.834
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[4]'
+Slack : 19.588
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[10]'
+Slack : 19.627
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[6]'
+Slack : 19.628
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_1:loop_1_inst|state[1]'
+Slack : 19.632
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[3]'
+Slack : 19.641
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[7]'
+Slack : 19.642
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[1]'
+Slack : 19.642
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[3]'
+Slack : 19.642
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[5]'
+Slack : 19.643
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_3:loop_3_inst|state[8]'
+Slack : 19.644
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|loop_2:loop_2_inst|state[2]'
+Slack : 19.646
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|state[0]'
+Slack : 19.646
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|state[1]'
+Slack : 19.647
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm:fsm_inst|state[2]'
+Slack : 19.662
 TNS   : 0.000
 
 ------------------------------------------------------------

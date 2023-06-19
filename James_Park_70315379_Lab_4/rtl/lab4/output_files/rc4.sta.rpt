@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for rc4
-Sun Jun 18 02:22:35 2023
+Mon Jun 19 13:32:01 2023
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -103,22 +103,22 @@ agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.29        ;
+; Average used               ; 1.82        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.9%      ;
-;     Processor 3            ;   2.8%      ;
-;     Processor 4            ;   2.8%      ;
-;     Processor 5            ;   2.6%      ;
-;     Processor 6            ;   2.6%      ;
-;     Processor 7            ;   2.6%      ;
-;     Processor 8            ;   2.6%      ;
-;     Processor 9            ;   2.5%      ;
-;     Processor 10           ;   2.5%      ;
-;     Processor 11           ;   2.5%      ;
-;     Processor 12           ;   2.5%      ;
+;     Processor 2            ;   7.9%      ;
+;     Processor 3            ;   7.8%      ;
+;     Processor 4            ;   7.7%      ;
+;     Processor 5            ;   7.3%      ;
+;     Processor 6            ;   7.3%      ;
+;     Processor 7            ;   7.3%      ;
+;     Processor 8            ;   7.3%      ;
+;     Processor 9            ;   7.3%      ;
+;     Processor 10           ;   7.3%      ;
+;     Processor 11           ;   7.3%      ;
+;     Processor 12           ;   7.3%      ;
 +----------------------------+-------------+
 
 
@@ -127,28 +127,48 @@ agreement for further details.
 +------------------------+--------+--------------------------+
 ; SDC File Path          ; Status ; Read at                  ;
 +------------------------+--------+--------------------------+
-; timing_constraints.sdc ; OK     ; Sun Jun 18 02:22:31 2023 ;
+; timing_constraints.sdc ; OK     ; Mon Jun 19 13:31:56 2023 ;
 +------------------------+--------+--------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                   ;
-+---------------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
-; Clock Name          ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                 ;
-+---------------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
-; altera_reserved_tck ; Base ; 33.333 ; 30.0 MHz  ; 0.000 ; 16.666 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { altera_reserved_tck } ;
-; CLOCK_50            ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 }            ;
-+---------------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                               ;
++-------------------------------------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------+
+; Clock Name                                ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                       ;
++-------------------------------------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------+
+; altera_reserved_tck                       ; Base ; 33.333 ; 30.0 MHz  ; 0.000 ; 16.666 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { altera_reserved_tck }                       ;
+; CLOCK_50                                  ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 }                                  ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|loop_1:loop_1_inst|state[1] }  ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|loop_2:loop_2_inst|state[2] }  ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|loop_2:loop_2_inst|state[3] }  ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|loop_2:loop_2_inst|state[5] }  ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|loop_2:loop_2_inst|state[7] }  ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|loop_3:loop_3_inst|state[1] }  ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|loop_3:loop_3_inst|state[3] }  ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|loop_3:loop_3_inst|state[4] }  ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|loop_3:loop_3_inst|state[6] }  ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|loop_3:loop_3_inst|state[8] }  ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|loop_3:loop_3_inst|state[10] } ;
+; fsm:fsm_inst|state[0]                     ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|state[0] }                     ;
+; fsm:fsm_inst|state[1]                     ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|state[1] }                     ;
+; fsm:fsm_inst|state[2]                     ; Base ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm:fsm_inst|state[2] }                     ;
++-------------------------------------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------+
 
 
-+-----------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                        ;
-+------------+-----------------+---------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
-+------------+-----------------+---------------------+------+
-; 114.19 MHz ; 114.19 MHz      ; altera_reserved_tck ;      ;
-; 180.51 MHz ; 180.51 MHz      ; CLOCK_50            ;      ;
-+------------+-----------------+---------------------+------+
++---------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                              ;
++------------+-----------------+-------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                ; Note ;
++------------+-----------------+-------------------------------------------+------+
+; 72.86 MHz  ; 72.86 MHz       ; altera_reserved_tck                       ;      ;
+; 85.03 MHz  ; 85.03 MHz       ; CLOCK_50                                  ;      ;
+; 113.91 MHz ; 113.91 MHz      ; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ;      ;
+; 132.56 MHz ; 132.56 MHz      ; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ;      ;
+; 174.46 MHz ; 174.46 MHz      ; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ;      ;
+; 240.44 MHz ; 240.44 MHz      ; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ;      ;
+; 280.43 MHz ; 280.43 MHz      ; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ;      ;
+; 280.74 MHz ; 280.74 MHz      ; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ;      ;
++------------+-----------------+-------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -158,24 +178,46 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+----------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary          ;
-+---------------------+--------+---------------+
-; Clock               ; Slack  ; End Point TNS ;
-+---------------------+--------+---------------+
-; altera_reserved_tck ; 12.288 ; 0.000         ;
-; CLOCK_50            ; 14.460 ; 0.000         ;
-+---------------------+--------+---------------+
++--------------------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                                ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; CLOCK_50                                  ; 8.240  ; 0.000         ;
+; altera_reserved_tck                       ; 9.804  ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 11.061 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 11.111 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 11.134 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 11.149 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 25.414 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 32.456 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 34.268 ; 0.000         ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 35.841 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 36.434 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 36.438 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 37.601 ; 0.000         ;
++-------------------------------------------+--------+---------------+
 
 
-+---------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary          ;
-+---------------------+-------+---------------+
-; Clock               ; Slack ; End Point TNS ;
-+---------------------+-------+---------------+
-; CLOCK_50            ; 0.383 ; 0.000         ;
-; altera_reserved_tck ; 0.457 ; 0.000         ;
-+---------------------+-------+---------------+
++-------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                ;
++-------------------------------------------+-------+---------------+
+; Clock                                     ; Slack ; End Point TNS ;
++-------------------------------------------+-------+---------------+
+; altera_reserved_tck                       ; 0.289 ; 0.000         ;
+; CLOCK_50                                  ; 0.371 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 0.479 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 0.593 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 0.661 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 0.709 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 0.714 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 0.748 ; 0.000         ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 0.902 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 4.571 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 4.712 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 4.798 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 4.871 ; 0.000         ;
++-------------------------------------------+-------+---------------+
 
 
 +----------------------------------------------+
@@ -183,7 +225,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 30.196 ; 0.000         ;
+; altera_reserved_tck ; 29.757 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -192,18 +234,32 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 1.072 ; 0.000         ;
+; altera_reserved_tck ; 0.864 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
-+---------------------------------------------------+
-; Slow 1100mV 85C Model Minimum Pulse Width Summary ;
-+---------------------+--------+--------------------+
-; Clock               ; Slack  ; End Point TNS      ;
-+---------------------+--------+--------------------+
-; CLOCK_50            ; 8.964  ; 0.000              ;
-; altera_reserved_tck ; 15.238 ; 0.000              ;
-+---------------------+--------+--------------------+
++--------------------------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary                  ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; CLOCK_50                                  ; 8.829  ; 0.000         ;
+; altera_reserved_tck                       ; 15.176 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 19.332 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 19.384 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 19.385 ; 0.000         ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 19.397 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 19.404 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 19.404 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 19.404 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 19.404 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 19.404 ; 0.000         ;
+; fsm:fsm_inst|state[0]                     ; 19.407 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 19.408 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 19.409 ; 0.000         ;
+; fsm:fsm_inst|state[1]                     ; 19.415 ; 0.000         ;
+; fsm:fsm_inst|state[2]                     ; 19.431 ; 0.000         ;
++-------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
@@ -212,35 +268,63 @@ HTML report is unavailable in plain text report export.
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                         ;
-+------------+-----------------+---------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
-+------------+-----------------+---------------------+------+
-; 115.73 MHz ; 115.73 MHz      ; altera_reserved_tck ;      ;
-; 184.23 MHz ; 184.23 MHz      ; CLOCK_50            ;      ;
-+------------+-----------------+---------------------+------+
++---------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                               ;
++------------+-----------------+-------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                ; Note ;
++------------+-----------------+-------------------------------------------+------+
+; 74.44 MHz  ; 74.44 MHz       ; altera_reserved_tck                       ;      ;
+; 88.04 MHz  ; 88.04 MHz       ; CLOCK_50                                  ;      ;
+; 116.97 MHz ; 116.97 MHz      ; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ;      ;
+; 137.06 MHz ; 137.06 MHz      ; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ;      ;
+; 176.18 MHz ; 176.18 MHz      ; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ;      ;
+; 238.66 MHz ; 238.66 MHz      ; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ;      ;
+; 279.02 MHz ; 279.02 MHz      ; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ;      ;
+; 288.52 MHz ; 288.52 MHz      ; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ;      ;
++------------+-----------------+-------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+----------------------------------------------+
-; Slow 1100mV 0C Model Setup Summary           ;
-+---------------------+--------+---------------+
-; Clock               ; Slack  ; End Point TNS ;
-+---------------------+--------+---------------+
-; altera_reserved_tck ; 12.346 ; 0.000         ;
-; CLOCK_50            ; 14.572 ; 0.000         ;
-+---------------------+--------+---------------+
++--------------------------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary                                 ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; CLOCK_50                                  ; 8.641  ; 0.000         ;
+; altera_reserved_tck                       ; 9.950  ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 10.979 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 11.014 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 11.045 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 11.053 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 24.994 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 32.704 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 34.324 ; 0.000         ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 35.810 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 36.416 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 36.534 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 37.668 ; 0.000         ;
++-------------------------------------------+--------+---------------+
 
 
-+---------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary           ;
-+---------------------+-------+---------------+
-; Clock               ; Slack ; End Point TNS ;
-+---------------------+-------+---------------+
-; CLOCK_50            ; 0.381 ; 0.000         ;
-; altera_reserved_tck ; 0.469 ; 0.000         ;
-+---------------------+-------+---------------+
++-------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                 ;
++-------------------------------------------+-------+---------------+
+; Clock                                     ; Slack ; End Point TNS ;
++-------------------------------------------+-------+---------------+
+; CLOCK_50                                  ; 0.158 ; 0.000         ;
+; altera_reserved_tck                       ; 0.285 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 0.430 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 0.568 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 0.670 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 0.679 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 0.717 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 0.767 ; 0.000         ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 0.891 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 4.688 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 4.813 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 4.926 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 4.963 ; 0.000         ;
++-------------------------------------------+-------+---------------+
 
 
 +----------------------------------------------+
@@ -248,7 +332,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 30.272 ; 0.000         ;
+; altera_reserved_tck ; 29.815 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -257,18 +341,32 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 1.019 ; 0.000         ;
+; altera_reserved_tck ; 0.801 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
-+--------------------------------------------------+
-; Slow 1100mV 0C Model Minimum Pulse Width Summary ;
-+---------------------+--------+-------------------+
-; Clock               ; Slack  ; End Point TNS     ;
-+---------------------+--------+-------------------+
-; CLOCK_50            ; 8.994  ; 0.000             ;
-; altera_reserved_tck ; 15.239 ; 0.000             ;
-+---------------------+--------+-------------------+
++--------------------------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary                   ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; CLOCK_50                                  ; 8.826  ; 0.000         ;
+; altera_reserved_tck                       ; 15.169 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 19.349 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 19.368 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 19.371 ; 0.000         ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 19.377 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 19.387 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 19.389 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 19.392 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 19.392 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 19.392 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 19.393 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 19.394 ; 0.000         ;
+; fsm:fsm_inst|state[0]                     ; 19.397 ; 0.000         ;
+; fsm:fsm_inst|state[1]                     ; 19.406 ; 0.000         ;
+; fsm:fsm_inst|state[2]                     ; 19.423 ; 0.000         ;
++-------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -277,24 +375,46 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 No synchronizer chains to report.
 
 
-+----------------------------------------------+
-; Fast 1100mV 85C Model Setup Summary          ;
-+---------------------+--------+---------------+
-; Clock               ; Slack  ; End Point TNS ;
-+---------------------+--------+---------------+
-; altera_reserved_tck ; 14.363 ; 0.000         ;
-; CLOCK_50            ; 16.385 ; 0.000         ;
-+---------------------+--------+---------------+
++--------------------------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                                ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; CLOCK_50                                  ; 11.540 ; 0.000         ;
+; altera_reserved_tck                       ; 12.820 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 14.296 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 14.368 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 14.370 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 14.381 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 31.823 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 34.579 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 36.195 ; 0.000         ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 37.362 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 37.516 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 37.656 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 38.234 ; 0.000         ;
++-------------------------------------------+--------+---------------+
 
 
-+---------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary          ;
-+---------------------+-------+---------------+
-; Clock               ; Slack ; End Point TNS ;
-+---------------------+-------+---------------+
-; altera_reserved_tck ; 0.173 ; 0.000         ;
-; CLOCK_50            ; 0.183 ; 0.000         ;
-+---------------------+-------+---------------+
++-------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                ;
++-------------------------------------------+-------+---------------+
+; Clock                                     ; Slack ; End Point TNS ;
++-------------------------------------------+-------+---------------+
+; altera_reserved_tck                       ; 0.102 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 0.106 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 0.120 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 0.162 ; 0.000         ;
+; CLOCK_50                                  ; 0.181 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 0.308 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 0.356 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 0.358 ; 0.000         ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 0.466 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 2.527 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 2.613 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 2.643 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 2.720 ; 0.000         ;
++-------------------------------------------+-------+---------------+
 
 
 +----------------------------------------------+
@@ -302,7 +422,7 @@ No synchronizer chains to report.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 31.280 ; 0.000         ;
+; altera_reserved_tck ; 30.974 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -311,18 +431,32 @@ No synchronizer chains to report.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.547 ; 0.000         ;
+; altera_reserved_tck ; 0.426 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
-+---------------------------------------------------+
-; Fast 1100mV 85C Model Minimum Pulse Width Summary ;
-+---------------------+--------+--------------------+
-; Clock               ; Slack  ; End Point TNS      ;
-+---------------------+--------+--------------------+
-; CLOCK_50            ; 8.529  ; 0.000              ;
-; altera_reserved_tck ; 14.914 ; 0.000              ;
-+---------------------+--------+--------------------+
++--------------------------------------------------------------------+
+; Fast 1100mV 85C Model Minimum Pulse Width Summary                  ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; CLOCK_50                                  ; 8.529  ; 0.000         ;
+; altera_reserved_tck                       ; 14.860 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 19.564 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 19.626 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 19.626 ; 0.000         ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 19.632 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 19.643 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 19.643 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 19.643 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 19.644 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 19.645 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 19.646 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 19.646 ; 0.000         ;
+; fsm:fsm_inst|state[0]                     ; 19.646 ; 0.000         ;
+; fsm:fsm_inst|state[1]                     ; 19.648 ; 0.000         ;
+; fsm:fsm_inst|state[2]                     ; 19.663 ; 0.000         ;
++-------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
@@ -331,24 +465,46 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------+
-; Fast 1100mV 0C Model Setup Summary           ;
-+---------------------+--------+---------------+
-; Clock               ; Slack  ; End Point TNS ;
-+---------------------+--------+---------------+
-; altera_reserved_tck ; 14.673 ; 0.000         ;
-; CLOCK_50            ; 16.744 ; 0.000         ;
-+---------------------+--------+---------------+
++--------------------------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                                 ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; CLOCK_50                                  ; 12.785 ; 0.000         ;
+; altera_reserved_tck                       ; 13.302 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 14.622 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 14.683 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 14.684 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 14.692 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 32.245 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 35.202 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 36.554 ; 0.000         ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 37.570 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 37.741 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 37.808 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 38.385 ; 0.000         ;
++-------------------------------------------+--------+---------------+
 
 
-+---------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary           ;
-+---------------------+-------+---------------+
-; Clock               ; Slack ; End Point TNS ;
-+---------------------+-------+---------------+
-; altera_reserved_tck ; 0.156 ; 0.000         ;
-; CLOCK_50            ; 0.175 ; 0.000         ;
-+---------------------+-------+---------------+
++-------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                 ;
++-------------------------------------------+-------+---------------+
+; Clock                                     ; Slack ; End Point TNS ;
++-------------------------------------------+-------+---------------+
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 0.052 ; 0.000         ;
+; altera_reserved_tck                       ; 0.084 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 0.084 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 0.125 ; 0.000         ;
+; CLOCK_50                                  ; 0.171 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 0.277 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 0.314 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 0.329 ; 0.000         ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 0.428 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 2.424 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 2.497 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 2.530 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 2.596 ; 0.000         ;
++-------------------------------------------+-------+---------------+
 
 
 +----------------------------------------------+
@@ -356,7 +512,7 @@ No synchronizer chains to report.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 31.482 ; 0.000         ;
+; altera_reserved_tck ; 31.164 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -365,18 +521,32 @@ No synchronizer chains to report.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.492 ; 0.000         ;
+; altera_reserved_tck ; 0.374 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
-+--------------------------------------------------+
-; Fast 1100mV 0C Model Minimum Pulse Width Summary ;
-+---------------------+--------+-------------------+
-; Clock               ; Slack  ; End Point TNS     ;
-+---------------------+--------+-------------------+
-; CLOCK_50            ; 8.482  ; 0.000             ;
-; altera_reserved_tck ; 14.883 ; 0.000             ;
-+---------------------+--------+-------------------+
++--------------------------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary                   ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; CLOCK_50                                  ; 8.482  ; 0.000         ;
+; altera_reserved_tck                       ; 14.834 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 19.588 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 19.627 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 19.628 ; 0.000         ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 19.632 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 19.641 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 19.642 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 19.642 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 19.642 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 19.643 ; 0.000         ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 19.644 ; 0.000         ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 19.646 ; 0.000         ;
+; fsm:fsm_inst|state[0]                     ; 19.646 ; 0.000         ;
+; fsm:fsm_inst|state[1]                     ; 19.647 ; 0.000         ;
+; fsm:fsm_inst|state[2]                     ; 19.662 ; 0.000         ;
++-------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -385,18 +555,46 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                              ;
-+----------------------+--------+-------+----------+---------+---------------------+
-; Clock                ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+----------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack     ; 12.288 ; 0.156 ; 30.196   ; 0.492   ; 8.482               ;
-;  CLOCK_50            ; 14.460 ; 0.175 ; N/A      ; N/A     ; 8.482               ;
-;  altera_reserved_tck ; 12.288 ; 0.156 ; 30.196   ; 0.492   ; 14.883              ;
-; Design-wide TNS      ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
-;  CLOCK_50            ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  altera_reserved_tck ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
-+----------------------+--------+-------+----------+---------+---------------------+
++--------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                    ;
++--------------------------------------------+--------+-------+----------+---------+---------------------+
+; Clock                                      ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack                           ; 8.240  ; 0.052 ; 29.757   ; 0.374   ; 8.482               ;
+;  CLOCK_50                                  ; 8.240  ; 0.158 ; N/A      ; N/A     ; 8.482               ;
+;  altera_reserved_tck                       ; 9.804  ; 0.084 ; 29.757   ; 0.374   ; 14.834              ;
+;  fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 35.810 ; 0.428 ; N/A      ; N/A     ; 19.377              ;
+;  fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 10.979 ; 2.596 ; N/A      ; N/A     ; 19.393              ;
+;  fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 24.994 ; 0.125 ; N/A      ; N/A     ; 19.387              ;
+;  fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 11.014 ; 2.497 ; N/A      ; N/A     ; 19.394              ;
+;  fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 36.416 ; 0.277 ; N/A      ; N/A     ; 19.389              ;
+;  fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 36.434 ; 0.314 ; N/A      ; N/A     ; 19.368              ;
+;  fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 32.456 ; 0.329 ; N/A      ; N/A     ; 19.392              ;
+;  fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 11.045 ; 2.530 ; N/A      ; N/A     ; 19.392              ;
+;  fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 34.268 ; 0.084 ; N/A      ; N/A     ; 19.332              ;
+;  fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 11.053 ; 2.424 ; N/A      ; N/A     ; 19.371              ;
+;  fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 37.601 ; 0.052 ; N/A      ; N/A     ; 19.392              ;
+;  fsm:fsm_inst|state[0]                     ; N/A    ; N/A   ; N/A      ; N/A     ; 19.397              ;
+;  fsm:fsm_inst|state[1]                     ; N/A    ; N/A   ; N/A      ; N/A     ; 19.406              ;
+;  fsm:fsm_inst|state[2]                     ; N/A    ; N/A   ; N/A      ; N/A     ; 19.423              ;
+; Design-wide TNS                            ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLOCK_50                                  ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  altera_reserved_tck                       ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
+;  fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  fsm:fsm_inst|state[0]                     ; N/A    ; N/A   ; N/A      ; N/A     ; 0.000               ;
+;  fsm:fsm_inst|state[1]                     ; N/A    ; N/A   ; N/A      ; N/A     ; 0.000               ;
+;  fsm:fsm_inst|state[2]                     ; N/A    ; N/A   ; N/A      ; N/A     ; 0.000               ;
++--------------------------------------------+--------+-------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -469,18 +667,18 @@ No synchronizer chains to report.
 ; KEY[0]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY[1]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY[2]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[0]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[1]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[2]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; CLOCK_50            ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; KEY[3]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[6]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[7]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[3]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[4]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[5]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[6]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[7]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[0]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[8]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[1]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[9]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; CLOCK_50            ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; KEY[3]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[2]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; altera_reserved_tms ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; altera_reserved_tck ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; altera_reserved_tdi ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
@@ -736,25 +934,81 @@ No synchronizer chains to report.
 +---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Setup Transfers                                                                       ;
-+---------------------+---------------------+----------+----------+----------+----------+
-; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 1181     ; 0        ; 37       ; 0        ;
-; CLOCK_50            ; CLOCK_50            ; 199      ; 0        ; 0        ; 0        ;
-+---------------------+---------------------+----------+----------+----------+----------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                   ;
++-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
+; From Clock                                ; To Clock                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
+; altera_reserved_tck                       ; altera_reserved_tck                       ; 2809     ; 0        ; 82       ; 0        ;
+; CLOCK_50                                  ; CLOCK_50                                  ; 1423     ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; CLOCK_50                                  ; 23       ; 7        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; CLOCK_50                                  ; 37       ; 29       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; CLOCK_50                                  ; 101      ; 29       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; CLOCK_50                                  ; 38       ; 30       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; CLOCK_50                                  ; 101      ; 29       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; CLOCK_50                                  ; 147      ; 43       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; CLOCK_50                                  ; 87       ; 43       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; CLOCK_50                                  ; 115      ; 43       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; CLOCK_50                                  ; 87       ; 43       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; CLOCK_50                                  ; 63       ; 53       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; CLOCK_50                                  ; 43       ; 43       ; 0        ; 0        ;
+; fsm:fsm_inst|state[0]                     ; CLOCK_50                                  ; 56       ; 51       ; 0        ; 0        ;
+; fsm:fsm_inst|state[1]                     ; CLOCK_50                                  ; 80       ; 67       ; 0        ; 0        ;
+; fsm:fsm_inst|state[2]                     ; CLOCK_50                                  ; 72       ; 56       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 42       ; 0        ; 0        ; 0        ;
+; CLOCK_50                                  ; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 8        ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 57       ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 57       ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 338199   ; 0        ; 0        ; 0        ;
+; CLOCK_50                                  ; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 8        ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 44       ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 42       ; 0        ; 0        ; 0        ;
+; CLOCK_50                                  ; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 8        ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 36       ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 36       ; 0        ; 0        ; 0        ;
+; CLOCK_50                                  ; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 8        ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 5        ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 22       ; 0        ; 0        ; 0        ;
++-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+---------------------------------------------------------------------------------------+
-; Hold Transfers                                                                        ;
-+---------------------+---------------------+----------+----------+----------+----------+
-; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 1181     ; 0        ; 37       ; 0        ;
-; CLOCK_50            ; CLOCK_50            ; 199      ; 0        ; 0        ; 0        ;
-+---------------------+---------------------+----------+----------+----------+----------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                    ;
++-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
+; From Clock                                ; To Clock                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
+; altera_reserved_tck                       ; altera_reserved_tck                       ; 2809     ; 0        ; 82       ; 0        ;
+; CLOCK_50                                  ; CLOCK_50                                  ; 1423     ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; CLOCK_50                                  ; 23       ; 7        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; CLOCK_50                                  ; 37       ; 29       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; CLOCK_50                                  ; 101      ; 29       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; CLOCK_50                                  ; 38       ; 30       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; CLOCK_50                                  ; 101      ; 29       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; CLOCK_50                                  ; 147      ; 43       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; CLOCK_50                                  ; 87       ; 43       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; CLOCK_50                                  ; 115      ; 43       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; CLOCK_50                                  ; 87       ; 43       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; CLOCK_50                                  ; 63       ; 53       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; CLOCK_50                                  ; 43       ; 43       ; 0        ; 0        ;
+; fsm:fsm_inst|state[0]                     ; CLOCK_50                                  ; 56       ; 51       ; 0        ; 0        ;
+; fsm:fsm_inst|state[1]                     ; CLOCK_50                                  ; 80       ; 67       ; 0        ; 0        ;
+; fsm:fsm_inst|state[2]                     ; CLOCK_50                                  ; 72       ; 56       ; 0        ; 0        ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; 42       ; 0        ; 0        ; 0        ;
+; CLOCK_50                                  ; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; 8        ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 57       ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 57       ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; 338199   ; 0        ; 0        ; 0        ;
+; CLOCK_50                                  ; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; 8        ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; 44       ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; 42       ; 0        ; 0        ; 0        ;
+; CLOCK_50                                  ; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; 8        ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 36       ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; 36       ; 0        ; 0        ; 0        ;
+; CLOCK_50                                  ; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; 8        ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; 5        ; 0        ; 0        ; 0        ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; 22       ; 0        ; 0        ; 0        ;
++-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -763,7 +1017,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 63       ; 0        ; 0        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 151      ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -773,7 +1027,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 63       ; 0        ; 0        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 151      ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -797,21 +1051,35 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 62    ; 62   ;
-; Unconstrained Output Ports      ; 6     ; 6    ;
-; Unconstrained Output Port Paths ; 10    ; 10   ;
+; Unconstrained Input Ports       ; 13    ; 13   ;
+; Unconstrained Input Port Paths  ; 275   ; 275  ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 5     ; 5    ;
 +---------------------------------+-------+------+
 
 
-+----------------------------------------------------------------+
-; Clock Status Summary                                           ;
-+---------------------+---------------------+------+-------------+
-; Target              ; Clock               ; Type ; Status      ;
-+---------------------+---------------------+------+-------------+
-; CLOCK_50            ; CLOCK_50            ; Base ; Constrained ;
-; altera_reserved_tck ; altera_reserved_tck ; Base ; Constrained ;
-+---------------------+---------------------+------+-------------+
++------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                       ;
++-------------------------------------------+-------------------------------------------+------+-------------+
+; Target                                    ; Clock                                     ; Type ; Status      ;
++-------------------------------------------+-------------------------------------------+------+-------------+
+; CLOCK_50                                  ; CLOCK_50                                  ; Base ; Constrained ;
+; altera_reserved_tck                       ; altera_reserved_tck                       ; Base ; Constrained ;
+; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; fsm:fsm_inst|loop_1:loop_1_inst|state[1]  ; Base ; Constrained ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; fsm:fsm_inst|loop_2:loop_2_inst|state[2]  ; Base ; Constrained ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; fsm:fsm_inst|loop_2:loop_2_inst|state[3]  ; Base ; Constrained ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; fsm:fsm_inst|loop_2:loop_2_inst|state[5]  ; Base ; Constrained ;
+; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; fsm:fsm_inst|loop_2:loop_2_inst|state[7]  ; Base ; Constrained ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; fsm:fsm_inst|loop_3:loop_3_inst|state[1]  ; Base ; Constrained ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; fsm:fsm_inst|loop_3:loop_3_inst|state[3]  ; Base ; Constrained ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; fsm:fsm_inst|loop_3:loop_3_inst|state[4]  ; Base ; Constrained ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; fsm:fsm_inst|loop_3:loop_3_inst|state[6]  ; Base ; Constrained ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; fsm:fsm_inst|loop_3:loop_3_inst|state[8]  ; Base ; Constrained ;
+; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; fsm:fsm_inst|loop_3:loop_3_inst|state[10] ; Base ; Constrained ;
+; fsm:fsm_inst|state[0]                     ; fsm:fsm_inst|state[0]                     ; Base ; Constrained ;
+; fsm:fsm_inst|state[1]                     ; fsm:fsm_inst|state[1]                     ; Base ; Constrained ;
+; fsm:fsm_inst|state[2]                     ; fsm:fsm_inst|state[2]                     ; Base ; Constrained ;
++-------------------------------------------+-------------------------------------------+------+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -820,6 +1088,16 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Input Port          ; Comment                                                                              ;
 +---------------------+--------------------------------------------------------------------------------------+
 ; KEY[3]              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[0]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[1]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[2]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[3]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[4]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[5]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[6]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[7]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[8]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[9]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; altera_reserved_tdi ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; altera_reserved_tms ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------------+--------------------------------------------------------------------------------------+
@@ -830,11 +1108,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------+---------------------------------------------------------------------------------------+
 ; Output Port         ; Comment                                                                               ;
 +---------------------+---------------------------------------------------------------------------------------+
-; LEDR[0]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[1]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[2]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[3]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[4]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; altera_reserved_tdo ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------------+---------------------------------------------------------------------------------------+
 
@@ -845,6 +1118,16 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Input Port          ; Comment                                                                              ;
 +---------------------+--------------------------------------------------------------------------------------+
 ; KEY[3]              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[0]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[1]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[2]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[3]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[4]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[5]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[6]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[7]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[8]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[9]               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; altera_reserved_tdi ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; altera_reserved_tms ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------------+--------------------------------------------------------------------------------------+
@@ -855,11 +1138,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------+---------------------------------------------------------------------------------------+
 ; Output Port         ; Comment                                                                               ;
 +---------------------+---------------------------------------------------------------------------------------+
-; LEDR[0]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[1]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[2]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[3]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[4]             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; altera_reserved_tdo ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------------+---------------------------------------------------------------------------------------+
 
@@ -870,7 +1148,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Sun Jun 18 02:22:30 2023
+    Info: Processing started: Mon Jun 19 13:31:55 2023
 Info: Command: quartus_sta rc4 -c rc4
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -882,119 +1160,277 @@ Info (332164): Evaluating HDL-embedded SDC commands
         Info (332166): if { [string equal quartus_fit $::TimeQuestInfo(nameofexecutable)] } { set_max_delay -to [get_ports { altera_reserved_tdo } ] 0 }
         Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
 Info (332104): Reading SDC File: 'timing_constraints.sdc'
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|loop_3:loop_3_inst|state[8] fsm:fsm_inst|loop_3:loop_3_inst|state[8]
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|state[2] fsm:fsm_inst|state[2]
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|loop_3:loop_3_inst|state[1] fsm:fsm_inst|loop_3:loop_3_inst|state[1]
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|state[0] fsm:fsm_inst|state[0]
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|state[1] fsm:fsm_inst|state[1]
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|loop_2:loop_2_inst|state[7] fsm:fsm_inst|loop_2:loop_2_inst|state[7]
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|loop_2:loop_2_inst|state[3] fsm:fsm_inst|loop_2:loop_2_inst|state[3]
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|loop_2:loop_2_inst|state[2] fsm:fsm_inst|loop_2:loop_2_inst|state[2]
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|loop_3:loop_3_inst|state[4] fsm:fsm_inst|loop_3:loop_3_inst|state[4]
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|loop_3:loop_3_inst|state[3] fsm:fsm_inst|loop_3:loop_3_inst|state[3]
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|loop_3:loop_3_inst|state[6] fsm:fsm_inst|loop_3:loop_3_inst|state[6]
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|loop_1:loop_1_inst|state[1] fsm:fsm_inst|loop_1:loop_1_inst|state[1]
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|loop_2:loop_2_inst|state[5] fsm:fsm_inst|loop_2:loop_2_inst|state[5]
+    Info (332105): create_clock -period 40.000 -name fsm:fsm_inst|loop_3:loop_3_inst|state[10] fsm:fsm_inst|loop_3:loop_3_inst|state[10]
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
-Info (332146): Worst-case setup slack is 12.288
+Info (332146): Worst-case setup slack is 8.240
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    12.288               0.000 altera_reserved_tck 
-    Info (332119):    14.460               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.383
+    Info (332119):     8.240               0.000 CLOCK_50 
+    Info (332119):     9.804               0.000 altera_reserved_tck 
+    Info (332119):    11.061               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[2] 
+    Info (332119):    11.111               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[5] 
+    Info (332119):    11.134               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[3] 
+    Info (332119):    11.149               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[6] 
+    Info (332119):    25.414               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[3] 
+    Info (332119):    32.456               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[1] 
+    Info (332119):    34.268               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[4] 
+    Info (332119):    35.841               0.000 fsm:fsm_inst|loop_1:loop_1_inst|state[1] 
+    Info (332119):    36.434               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[10] 
+    Info (332119):    36.438               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[7] 
+    Info (332119):    37.601               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[8] 
+Info (332146): Worst-case hold slack is 0.289
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.383               0.000 CLOCK_50 
-    Info (332119):     0.457               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 30.196
+    Info (332119):     0.289               0.000 altera_reserved_tck 
+    Info (332119):     0.371               0.000 CLOCK_50 
+    Info (332119):     0.479               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[8] 
+    Info (332119):     0.593               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[7] 
+    Info (332119):     0.661               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[4] 
+    Info (332119):     0.709               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[10] 
+    Info (332119):     0.714               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[1] 
+    Info (332119):     0.748               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[3] 
+    Info (332119):     0.902               0.000 fsm:fsm_inst|loop_1:loop_1_inst|state[1] 
+    Info (332119):     4.571               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[6] 
+    Info (332119):     4.712               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[5] 
+    Info (332119):     4.798               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[3] 
+    Info (332119):     4.871               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[2] 
+Info (332146): Worst-case recovery slack is 29.757
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    30.196               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 1.072
+    Info (332119):    29.757               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.864
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.072               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 8.964
+    Info (332119):     0.864               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 8.829
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.964               0.000 CLOCK_50 
-    Info (332119):    15.238               0.000 altera_reserved_tck 
+    Info (332119):     8.829               0.000 CLOCK_50 
+    Info (332119):    15.176               0.000 altera_reserved_tck 
+    Info (332119):    19.332               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[4] 
+    Info (332119):    19.384               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[6] 
+    Info (332119):    19.385               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[10] 
+    Info (332119):    19.397               0.000 fsm:fsm_inst|loop_1:loop_1_inst|state[1] 
+    Info (332119):    19.404               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[3] 
+    Info (332119):    19.404               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[7] 
+    Info (332119):    19.404               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[1] 
+    Info (332119):    19.404               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[3] 
+    Info (332119):    19.404               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[8] 
+    Info (332119):    19.407               0.000 fsm:fsm_inst|state[0] 
+    Info (332119):    19.408               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[2] 
+    Info (332119):    19.409               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[5] 
+    Info (332119):    19.415               0.000 fsm:fsm_inst|state[1] 
+    Info (332119):    19.431               0.000 fsm:fsm_inst|state[2] 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 12.346
+Info (332146): Worst-case setup slack is 8.641
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    12.346               0.000 altera_reserved_tck 
-    Info (332119):    14.572               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.381
+    Info (332119):     8.641               0.000 CLOCK_50 
+    Info (332119):     9.950               0.000 altera_reserved_tck 
+    Info (332119):    10.979               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[2] 
+    Info (332119):    11.014               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[5] 
+    Info (332119):    11.045               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[3] 
+    Info (332119):    11.053               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[6] 
+    Info (332119):    24.994               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[3] 
+    Info (332119):    32.704               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[1] 
+    Info (332119):    34.324               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[4] 
+    Info (332119):    35.810               0.000 fsm:fsm_inst|loop_1:loop_1_inst|state[1] 
+    Info (332119):    36.416               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[7] 
+    Info (332119):    36.534               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[10] 
+    Info (332119):    37.668               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[8] 
+Info (332146): Worst-case hold slack is 0.158
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.381               0.000 CLOCK_50 
-    Info (332119):     0.469               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 30.272
+    Info (332119):     0.158               0.000 CLOCK_50 
+    Info (332119):     0.285               0.000 altera_reserved_tck 
+    Info (332119):     0.430               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[8] 
+    Info (332119):     0.568               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[7] 
+    Info (332119):     0.670               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[10] 
+    Info (332119):     0.679               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[4] 
+    Info (332119):     0.717               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[1] 
+    Info (332119):     0.767               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[3] 
+    Info (332119):     0.891               0.000 fsm:fsm_inst|loop_1:loop_1_inst|state[1] 
+    Info (332119):     4.688               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[6] 
+    Info (332119):     4.813               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[5] 
+    Info (332119):     4.926               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[3] 
+    Info (332119):     4.963               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[2] 
+Info (332146): Worst-case recovery slack is 29.815
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    30.272               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 1.019
+    Info (332119):    29.815               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.801
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.019               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 8.994
+    Info (332119):     0.801               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 8.826
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.994               0.000 CLOCK_50 
-    Info (332119):    15.239               0.000 altera_reserved_tck 
+    Info (332119):     8.826               0.000 CLOCK_50 
+    Info (332119):    15.169               0.000 altera_reserved_tck 
+    Info (332119):    19.349               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[4] 
+    Info (332119):    19.368               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[10] 
+    Info (332119):    19.371               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[6] 
+    Info (332119):    19.377               0.000 fsm:fsm_inst|loop_1:loop_1_inst|state[1] 
+    Info (332119):    19.387               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[3] 
+    Info (332119):    19.389               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[7] 
+    Info (332119):    19.392               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[1] 
+    Info (332119):    19.392               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[3] 
+    Info (332119):    19.392               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[8] 
+    Info (332119):    19.393               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[2] 
+    Info (332119):    19.394               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[5] 
+    Info (332119):    19.397               0.000 fsm:fsm_inst|state[0] 
+    Info (332119):    19.406               0.000 fsm:fsm_inst|state[1] 
+    Info (332119):    19.423               0.000 fsm:fsm_inst|state[2] 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 14.363
+Info (332146): Worst-case setup slack is 11.540
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.363               0.000 altera_reserved_tck 
-    Info (332119):    16.385               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.173
+    Info (332119):    11.540               0.000 CLOCK_50 
+    Info (332119):    12.820               0.000 altera_reserved_tck 
+    Info (332119):    14.296               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[2] 
+    Info (332119):    14.368               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[3] 
+    Info (332119):    14.370               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[5] 
+    Info (332119):    14.381               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[6] 
+    Info (332119):    31.823               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[3] 
+    Info (332119):    34.579               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[1] 
+    Info (332119):    36.195               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[4] 
+    Info (332119):    37.362               0.000 fsm:fsm_inst|loop_1:loop_1_inst|state[1] 
+    Info (332119):    37.516               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[10] 
+    Info (332119):    37.656               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[7] 
+    Info (332119):    38.234               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[8] 
+Info (332146): Worst-case hold slack is 0.102
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.173               0.000 altera_reserved_tck 
-    Info (332119):     0.183               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is 31.280
+    Info (332119):     0.102               0.000 altera_reserved_tck 
+    Info (332119):     0.106               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[8] 
+    Info (332119):     0.120               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[4] 
+    Info (332119):     0.162               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[3] 
+    Info (332119):     0.181               0.000 CLOCK_50 
+    Info (332119):     0.308               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[7] 
+    Info (332119):     0.356               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[10] 
+    Info (332119):     0.358               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[1] 
+    Info (332119):     0.466               0.000 fsm:fsm_inst|loop_1:loop_1_inst|state[1] 
+    Info (332119):     2.527               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[6] 
+    Info (332119):     2.613               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[5] 
+    Info (332119):     2.643               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[3] 
+    Info (332119):     2.720               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[2] 
+Info (332146): Worst-case recovery slack is 30.974
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    31.280               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.547
+    Info (332119):    30.974               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.426
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.547               0.000 altera_reserved_tck 
+    Info (332119):     0.426               0.000 altera_reserved_tck 
 Info (332146): Worst-case minimum pulse width slack is 8.529
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     8.529               0.000 CLOCK_50 
-    Info (332119):    14.914               0.000 altera_reserved_tck 
+    Info (332119):    14.860               0.000 altera_reserved_tck 
+    Info (332119):    19.564               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[4] 
+    Info (332119):    19.626               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[10] 
+    Info (332119):    19.626               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[6] 
+    Info (332119):    19.632               0.000 fsm:fsm_inst|loop_1:loop_1_inst|state[1] 
+    Info (332119):    19.643               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[7] 
+    Info (332119):    19.643               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[1] 
+    Info (332119):    19.643               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[3] 
+    Info (332119):    19.644               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[8] 
+    Info (332119):    19.645               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[5] 
+    Info (332119):    19.646               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[2] 
+    Info (332119):    19.646               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[3] 
+    Info (332119):    19.646               0.000 fsm:fsm_inst|state[0] 
+    Info (332119):    19.648               0.000 fsm:fsm_inst|state[1] 
+    Info (332119):    19.663               0.000 fsm:fsm_inst|state[2] 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 14.673
+Info (332146): Worst-case setup slack is 12.785
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.673               0.000 altera_reserved_tck 
-    Info (332119):    16.744               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.156
+    Info (332119):    12.785               0.000 CLOCK_50 
+    Info (332119):    13.302               0.000 altera_reserved_tck 
+    Info (332119):    14.622               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[2] 
+    Info (332119):    14.683               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[3] 
+    Info (332119):    14.684               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[5] 
+    Info (332119):    14.692               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[6] 
+    Info (332119):    32.245               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[3] 
+    Info (332119):    35.202               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[1] 
+    Info (332119):    36.554               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[4] 
+    Info (332119):    37.570               0.000 fsm:fsm_inst|loop_1:loop_1_inst|state[1] 
+    Info (332119):    37.741               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[10] 
+    Info (332119):    37.808               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[7] 
+    Info (332119):    38.385               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[8] 
+Info (332146): Worst-case hold slack is 0.052
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.156               0.000 altera_reserved_tck 
-    Info (332119):     0.175               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is 31.482
+    Info (332119):     0.052               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[8] 
+    Info (332119):     0.084               0.000 altera_reserved_tck 
+    Info (332119):     0.084               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[4] 
+    Info (332119):     0.125               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[3] 
+    Info (332119):     0.171               0.000 CLOCK_50 
+    Info (332119):     0.277               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[7] 
+    Info (332119):     0.314               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[10] 
+    Info (332119):     0.329               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[1] 
+    Info (332119):     0.428               0.000 fsm:fsm_inst|loop_1:loop_1_inst|state[1] 
+    Info (332119):     2.424               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[6] 
+    Info (332119):     2.497               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[5] 
+    Info (332119):     2.530               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[3] 
+    Info (332119):     2.596               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[2] 
+Info (332146): Worst-case recovery slack is 31.164
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    31.482               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.492
+    Info (332119):    31.164               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.374
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.492               0.000 altera_reserved_tck 
+    Info (332119):     0.374               0.000 altera_reserved_tck 
 Info (332146): Worst-case minimum pulse width slack is 8.482
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     8.482               0.000 CLOCK_50 
-    Info (332119):    14.883               0.000 altera_reserved_tck 
+    Info (332119):    14.834               0.000 altera_reserved_tck 
+    Info (332119):    19.588               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[4] 
+    Info (332119):    19.627               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[10] 
+    Info (332119):    19.628               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[6] 
+    Info (332119):    19.632               0.000 fsm:fsm_inst|loop_1:loop_1_inst|state[1] 
+    Info (332119):    19.641               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[3] 
+    Info (332119):    19.642               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[7] 
+    Info (332119):    19.642               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[1] 
+    Info (332119):    19.642               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[3] 
+    Info (332119):    19.643               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[5] 
+    Info (332119):    19.644               0.000 fsm:fsm_inst|loop_3:loop_3_inst|state[8] 
+    Info (332119):    19.646               0.000 fsm:fsm_inst|loop_2:loop_2_inst|state[2] 
+    Info (332119):    19.646               0.000 fsm:fsm_inst|state[0] 
+    Info (332119):    19.647               0.000 fsm:fsm_inst|state[1] 
+    Info (332119):    19.662               0.000 fsm:fsm_inst|state[2] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 5267 megabytes
-    Info: Processing ended: Sun Jun 18 02:22:35 2023
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 5276 megabytes
+    Info: Processing ended: Mon Jun 19 13:32:01 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 

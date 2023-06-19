@@ -3,134 +3,111 @@ module fsm (
   input clk,
   input reset_n,
   input [23:0] secret_key,
-  output logic wen,
+  output [7:0] address,
+  output [7:0] data,
+  output wren,
   input [7:0] q,
-  output logic [7:0] data,
-  output logic [7:0] address,
-  output logic [7:0] address_d,
-  output logic [7:0] data_d,
-  output logic wren_d,
+  output [7:0] address_d,
+  output [7:0] data_d,
+  output wren_d,
+  output [7:0] address_m,
   input [7:0] q_m,
-  output logic [7:0] address_m,
-  output logic [7:0] debug
+  output [7:0] debug
 );
 
-logic incr;
-logic s_memory_filled;
-logic write_finish;
+localparam START  = 6'b000_000;
+localparam LOOP_1 = 6'b001_001;
+localparam LOOP_2 = 6'b010_010;
+localparam LOOP_3 = 6'b011_100;
+localparam FINISH = 6'b100_000;
 
-logic [11:0] state;
+logic [5:0] state;
 
-logic [7:0] index_i;
-logic [7:0] index_j;
-logic [7:0] s_i;
-logic [7:0] s_j;
-logic ren_s_i;
-logic ren_s_j;
-logic s_i_reg;
-logic s_j_reg;
-logic index_j_reg;
-logic addr_i;
-logic incr2;
-logic [7:0] i_mod_keylength;
+logic start_loop_1;
+logic start_loop_2;
+logic start_loop_3;
+logic finish_loop_1;
+logic finish_loop_2;
+logic finish_loop_3;
 
-localparam [3:0] KEY_LENGTH = 4'h3;
+assign start_loop_1 = state[0];
+assign start_loop_2 = state[1];
+assign start_loop_3 = state[2];
 
-                            //  1098_765432_10
-localparam START          = 12'b0000_000000_00; // loop 1
-localparam WRITE          = 12'b0001_000000_01;
-localparam INCREMENT      = 12'b0010_000000_10;
-localparam FINISH_LOOP_1  = 12'b0011_000000_00;
-localparam READ_S_I       = 12'b0100_000001_00; // address = i, data = ?, q = ?
-localparam STORE_S_I      = 12'b0101_000010_00; // address = i, data = s_i, 
-localparam UPDATE_J       = 12'b0110_000100_00; // address = index_j updated
-localparam READ_S_J       = 12'b0111_001000_00; // address = j, data = s[i], q = ?
-localparam STORE_S_J      = 12'b1000_010000_00; // address = j, data = s[i], q = s[j]
-localparam WRITE_S_J      = 12'b1001_000000_01; // address = j, data = s[i], wen
-localparam ADDRESS_I      = 12'b1010_100000_00; // address = i, data = s[j]
-localparam WRITE_S_I      = 12'b1011_000000_01; // address = i, data = s[j], wen
+logic [7:0] address_1;
+logic [7:0] address_2;
+logic [7:0] address_3;
+logic [7:0] data_1;
+logic [7:0] data_2;
+logic [7:0] data_3;
+logic wren_1;
+logic wren_2;
+logic wren_3;
 
-// read s[i]
-// store s[i] to s_i
-// new j value is j + temp + secret_key[i mod keylength] // 1clk
-// read s[j] to temp2 // 1clk
-// write temp to s[j] // 1clk
-// write temp2 to s[i] // 1clk
+always_comb
+  case (state)
+    LOOP_1 : {address, data, wren} = {address_1, data_1, wren_1}; 
+    LOOP_2 : {address, data, wren} = {address_2, data_2, wren_2};
+    LOOP_3 : {address, data, wren} = {address_3, data_3, wren_3};
+    default : {address, data, wren} = {8'h00, 8'h00, 1'b0};
+  endcase
 
-assign write_finish = q == data;
-assign s_memory_filled = &q;
-
-assign wen = state[0];
-assign incr = state[1];
-assign ren_s_i = state[2];
-assign s_i_reg = state[3];
-assign index_j_reg = state[4];
-assign ren_s_j = state[5];
-assign s_j_reg = state[6];
-assign addr_i = state[7];
-assign incr2 = 0;
-
-assign i_mod_keylength = index_i % KEY_LENGTH;
-
-assign debug = {{1'b0}, state};
-
-always_ff @( posedge clk or negedge reset_n ) begin
+always_ff @( posedge clk or negedge reset_n) begin
   if (~reset_n) begin
     state <= START;
   end else begin
     case (state)
-      START         : state <= WRITE;
-      WRITE         : if (write_finish) state <= INCREMENT;
-                      else state <= WRITE;
-      INCREMENT     : if (!s_memory_filled) state <= START;
-                      else state <= FINISH_LOOP_1;
-      FINISH_LOOP_1 : state <= READ_S_I;
-      READ_S_I      : state <= STORE_S_I; // read s[i]
-      STORE_S_I     : state <= UPDATE_J; // store s[i]
-      UPDATE_J      : state <= READ_S_J; // get index j
-      READ_S_J      : state <= STORE_S_J; // read s[j]
-      STORE_S_J     : state <= WRITE_S_J; // store s[j]
-      WRITE_S_J     : state <=            // s[j] = stored value s[i]
-      default       : state <= START;
+      START   : state <= LOOP_1;
+      LOOP_1  : if (finish_loop_1) state <= LOOP_2;
+                else state <= LOOP_1;
+      LOOP_2  : if (finish_loop_2) state <= LOOP_3;
+                else state <= LOOP_2;
+      LOOP_3  : if (finish_loop_3) state <= FINISH;
+                else state <= LOOP_3;
+      FINISH  : state <= FINISH;
+      default : state <= START;
     endcase
   end
 end
 
-// always_ff @( posedge clk or negedge reset_n ) begin
-//   if (~reset_n) begin
-//     index_i <= 8'h00;
-//     index_j <= 8'h00;
-//   end else if (incr2) begin
-//     index_i <= index_i + 8'h01;
-//     index_j <= index_j + 8'h01;
-//   end
-// end
+loop_1 loop_1_inst (
+  .start(start_loop_1),
+  .finish(finish_loop_1),
+  .clk(clk),
+  .reset_n(reset_n),
+  .address(address_1),
+  .data(data_1),
+  .wren(wren_1),
+  .q(q)
+);
 
-always_ff @( posedge clk or negedge reset_n ) begin
-  if (~reset_n) begin
-    address <= 8'h00;
-    data <= 8'h00;
-  end else begin
-    if (incr) {address, data} <= {address + 8'h01, data + 8'h01};
-    else if (ren_s_i) {address, data} <= {index_i, data};
-    else if (ren_s_j) {address, data} <= {index_j, s_i};
-    else if (addr_i) {address, data} <= {index_i, s_j};
-    
-    else {address, data} <= {address, data};
-  end
-end
+loop_2 loop_2_inst (
+  .start(start_loop_2),
+  .finish(finish_loop_2),
+  .clk(clk),
+  .reset_n(reset_n),
+  .secret_key(secret_key),
+  .address(address_2),
+  .data(data_2),
+  .wren(wren_2),
+  .q(q)
+);
 
-always_ff @( posedge index_j_reg ) begin
-  index_j <= index_j + s_i + secret_key[23-8*i_mod_keylength:16-8*i_mod_keylength];
-end
-
-always_ff @( posedge s_i_reg ) begin
-  s_i <= q;
-end
-
-always_ff @( posedge s_j_reg ) begin
-  s_j <= q;
-end
+loop_3 loop_3_inst (
+  .start(start_loop_3),
+  .finish(finish_loop_3),
+  .clk(clk),
+  .reset_n(reset_n),
+  .address(address_3),
+  .data(data_3),
+  .wren(wren_3),
+  .q(q),
+  .address_d(address_d),
+  .data_d(data_d),
+  .wren_d(wren_d),
+  .address_m(address_m),
+  .q_m(q_m)
+);
 
 endmodule
 `default_nettype wire
