@@ -3,45 +3,52 @@ module fsm (
   input clk,
   input reset_n,
   input [23:0] secret_key,
-  output wen,
+  output logic wen,
   input [7:0] q,
-  output [7:0] data,
-  output [7:0] address,
-  output [7:0] address_d,
-  output [7:0] data_d,
-  output wren_d,
+  output logic [7:0] data,
+  output logic [7:0] address,
+  output logic [7:0] address_d,
+  output logic [7:0] data_d,
+  output logic wren_d,
   input [7:0] q_m,
-  output [7:0] address_m,
-  output [7:0] debug
+  output logic [7:0] address_m,
+  output logic [7:0] debug
 );
 
 logic incr;
-logic s_memory_filled = 0;
+logic s_memory_filled;
 logic write_finish;
 
-logic [6:0] state;
+logic [11:0] state;
 
 logic [7:0] index_i;
 logic [7:0] index_j;
 logic [7:0] s_i;
 logic [7:0] s_j;
-logic read_s_i;
+logic ren_s_i;
+logic ren_s_j;
 logic s_i_reg;
+logic s_j_reg;
 logic index_j_reg;
+logic addr_i;
 logic incr2;
 logic [7:0] i_mod_keylength;
 
 localparam [3:0] KEY_LENGTH = 4'h3;
 
-localparam START          = 10'b000_00000_00; // loop 1
-localparam WRITE          = 10'b001_00000_01;
-localparam INCREMENT      = 10'b010_00000_10;
-localparam FINISH_LOOP_1  = 10'b011_00000_00;
-// localparam START_LOOP_2   = 10'b100_00001_00;
-localparam READ_S_I       = 10'b101_00001_00; //loop 2
-localparam STORE_S_I      = 10'b110_00010_00;
-localparam UPDATE_J       = 10'b111_00100_00;
-localparam STORE_S_J      = 10'b111_00100_00;
+                            //  1098_765432_10
+localparam START          = 12'b0000_000000_00; // loop 1
+localparam WRITE          = 12'b0001_000000_01;
+localparam INCREMENT      = 12'b0010_000000_10;
+localparam FINISH_LOOP_1  = 12'b0011_000000_00;
+localparam READ_S_I       = 12'b0100_000001_00; // address = i, data = ?, q = ?
+localparam STORE_S_I      = 12'b0101_000010_00; // address = i, data = s_i, 
+localparam UPDATE_J       = 12'b0110_000100_00; // address = index_j updated
+localparam READ_S_J       = 12'b0111_001000_00; // address = j, data = s[i], q = ?
+localparam STORE_S_J      = 12'b1000_010000_00; // address = j, data = s[i], q = s[j]
+localparam WRITE_S_J      = 12'b1001_000000_01; // address = j, data = s[i], wen
+localparam ADDRESS_I      = 12'b1010_100000_00; // address = i, data = s[j]
+localparam WRITE_S_I      = 12'b1011_000000_01; // address = i, data = s[j], wen
 
 // read s[i]
 // store s[i] to s_i
@@ -55,9 +62,12 @@ assign s_memory_filled = &q;
 
 assign wen = state[0];
 assign incr = state[1];
-assign read_s_i = state[2];
+assign ren_s_i = state[2];
 assign s_i_reg = state[3];
 assign index_j_reg = state[4];
+assign ren_s_j = state[5];
+assign s_j_reg = state[6];
+assign addr_i = state[7];
 assign incr2 = 0;
 
 assign i_mod_keylength = index_i % KEY_LENGTH;
@@ -75,9 +85,12 @@ always_ff @( posedge clk or negedge reset_n ) begin
       INCREMENT     : if (!s_memory_filled) state <= START;
                       else state <= FINISH_LOOP_1;
       FINISH_LOOP_1 : state <= READ_S_I;
-      READ_S_I      : state <= STORE_S_I;
-      STORE_S_I     : state <= UPDATE_J;
-      UPDATE_J      : state <= STORE_S_J;
+      READ_S_I      : state <= STORE_S_I; // read s[i]
+      STORE_S_I     : state <= UPDATE_J; // store s[i]
+      UPDATE_J      : state <= READ_S_J; // get index j
+      READ_S_J      : state <= STORE_S_J; // read s[j]
+      STORE_S_J     : state <= WRITE_S_J; // store s[j]
+      WRITE_S_J     : state <=            // s[j] = stored value s[i]
       default       : state <= START;
     endcase
   end
@@ -99,7 +112,10 @@ always_ff @( posedge clk or negedge reset_n ) begin
     data <= 8'h00;
   end else begin
     if (incr) {address, data} <= {address + 8'h01, data + 8'h01};
-    else if (read_s_i) {address, data} <= {index_i, data};
+    else if (ren_s_i) {address, data} <= {index_i, data};
+    else if (ren_s_j) {address, data} <= {index_j, s_i};
+    else if (addr_i) {address, data} <= {index_i, s_j};
+    
     else {address, data} <= {address, data};
   end
 end
@@ -110,6 +126,10 @@ end
 
 always_ff @( posedge s_i_reg ) begin
   s_i <= q;
+end
+
+always_ff @( posedge s_j_reg ) begin
+  s_j <= q;
 end
 
 endmodule
