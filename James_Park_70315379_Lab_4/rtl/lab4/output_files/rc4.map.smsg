@@ -1,3 +1,4 @@
 Info (10281): Verilog HDL Declaration information at loop_3.sv(3): object "start" differs only in case from object "START" in the same scope File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/loop_3.sv Line: 3
 Info (10281): Verilog HDL Declaration information at loop_2.sv(3): object "start" differs only in case from object "START" in the same scope File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/loop_2.sv Line: 3
 Info (10281): Verilog HDL Declaration information at loop_1.sv(3): object "start" differs only in case from object "START" in the same scope File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/loop_1.sv Line: 3
+Info (10281): Verilog HDL Declaration information at fsm.sv(26): object "FINISH" differs only in case from object "finish" in the same scope File: C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/fsm.sv Line: 26

@@ -45,7 +45,8 @@ assign index_i_reg = state[7];
 assign finish      = state[8];
 
 logic start_reg;
-logic [1:0] read_counter;
+logic [1:0] delay;
+logic write_finish;
 
 logic [7:0] s_i;
 logic [7:0] s_j;
@@ -56,6 +57,7 @@ logic [7:0] i_mod_keylength;
 logic all_swap_finished;
 assign i_mod_keylength = index_i % KEY_LENGTH[7:0];
 assign all_swap_finished = &address;
+assign write_finish = q == data;
 
 always_ff @( posedge start or negedge reset_n ) begin
   if (~reset_n) begin
@@ -71,16 +73,19 @@ always_ff @( posedge clk or negedge reset_n ) begin
   end else if (start_reg & ~finish) begin
     case (state)
       START       : state <= READ_S_I;
-      READ_S_I    : if (read_counter == 2'b10) state <= STORE_S_I;
+      READ_S_I    : if (delay == 2'b10) state <= STORE_S_I;
                     else state <= READ_S_I;
       STORE_S_I   : state <= UPDATE_J;
-      UPDATE_J    : state <= READ_S_J;
-      READ_S_J    : if (read_counter == 2'b10) state <= STORE_S_J;
+      UPDATE_J    : if (delay == 2'b10) state <= READ_S_J;
+                    else state <= UPDATE_J;
+      READ_S_J    : if (delay == 2'b10) state <= STORE_S_J;
                     else state <= READ_S_J;
       STORE_S_J   : state <= WRITE_S_J;
-      WRITE_S_J   : state <= ADDRESS_I;
+      WRITE_S_J   : if (write_finish) state <= ADDRESS_I;
+                    else state <= WRITE_S_J;
       ADDRESS_I   : state <= WRITE_S_I;
-      WRITE_S_I   : state <= INCREMENT_I;
+      WRITE_S_I   : if (write_finish) state <= INCREMENT_I;
+                    else state <= WRITE_S_I;
       INCREMENT_I : if (!all_swap_finished) state <= READ_S_I;
                     else state <= FINISH_LOOP;
       FINISH_LOOP : state <= FINISH_LOOP;
@@ -111,7 +116,7 @@ always_comb
   case (address)
     index_i : data = s_j;
     index_j : data = s_i;
-    default : data = 8'hzz;
+    default : data = 8'h00;
   endcase
 
 always_ff @( posedge index_i_reg or negedge reset_n ) begin
@@ -132,11 +137,11 @@ end
 
 always_ff @( posedge clk or negedge reset_n ) begin
   if (~reset_n) begin
-    read_counter <= 2'b00;
-  end else if (ren_s_i | ren_s_j) begin
-    read_counter <= read_counter + 2'b01;
+    delay <= 2'b00;
+  end else if (ren_s_i | ren_s_j | index_j_reg) begin
+    delay <= delay + 2'b01;
   end else begin
-    read_counter <= 2'b00;
+    delay <= 2'b00;
   end
 end
 

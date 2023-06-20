@@ -4,6 +4,7 @@ module loop_3 #(parameter MESSAGE_LENGTH = 32) (
   output finish,
   input clk,
   input reset_n,
+  output invalid_key,
   output [7:0] address,
   output [7:0] data,
   output wren,
@@ -30,11 +31,13 @@ localparam READ_F      = 16'b1010_0001_0000_0000; // also read encrypted_input[k
 localparam WRITE_OUT   = 16'b1011_0010_0000_0000;
 localparam INCREMENT_K = 16'b1100_0100_0000_0000;
 localparam FINISH_LOOP = 16'b1101_1000_0000_0000;
+localparam HALT        = 16'b1110_0000_0000_0000;
 
 logic [15:0] state;
 
 logic start_reg;
-logic [1:0] read_counter;
+logic [1:0] delay;
+logic write_finish;
 
 logic [7:0] index_i;
 logic [7:0] index_j;
@@ -50,8 +53,11 @@ logic addr_i;
 logic index_i_reg;
 logic index_j_reg;
 logic index_k_reg;
+logic [7:0] f;
 
 assign data_d = (q ^ q_m);
+assign f = s_i + s_j;
+assign write_finish = q == data;
 
 logic decrypt_finished;
 assign decrypt_finished = index_i == MESSAGE_LENGTH[7:0];
@@ -69,9 +75,6 @@ assign wren_d      = state[9];
 assign index_k_reg = state[10];
 assign finish      = state[11];
 
-// assign debug = data_d;
-// assign debug = {{4{1'b0}}, state[15:12]};
-
 always_ff @( posedge start or negedge reset_n ) begin
   if (~reset_n) begin
     start_reg <= 1'b0;
@@ -87,22 +90,26 @@ always_ff @( posedge clk or negedge reset_n ) begin
     case (state)
       START       : state <= INCREMENT_I;
       INCREMENT_I : state <= READ_S_I;
-      READ_S_I    : if (read_counter == 2'b10) state <= STORE_S_I;
+      READ_S_I    : if (delay == 2'b10) state <= STORE_S_I;
                     else state <= READ_S_I;
       STORE_S_I   : state <= UPDATE_J;
       UPDATE_J    : state <= READ_S_J;
-      READ_S_J    : if (read_counter == 2'b10) state <= STORE_S_J;
+      READ_S_J    : if (delay == 2'b10) state <= STORE_S_J;
                     else state <= READ_S_J;
       STORE_S_J   : state <= WRITE_S_J;
-      WRITE_S_J   : state <= ADDRESS_I;
+      WRITE_S_J   : if (write_finish) state <= ADDRESS_I;
+                    else state <= WRITE_S_J;
       ADDRESS_I   : state <= WRITE_S_I;
-      WRITE_S_I   : state <= READ_F;
-      READ_F      : if (read_counter == 2'b10) state <= WRITE_OUT;
+      WRITE_S_I   : if (write_finish) state <= READ_F;
+                    else state <= WRITE_S_I;
+      READ_F      : if (delay == 2'b10) state <= WRITE_OUT;
                     else state <= READ_F;
       WRITE_OUT   : state <= INCREMENT_K;
-      INCREMENT_K : if (!decrypt_finished) state <= INCREMENT_I;
+      INCREMENT_K : if (invalid_key) state <= HALT;
+                    else if (!decrypt_finished) state <= INCREMENT_I;
                     else state <= FINISH_LOOP;
       FINISH_LOOP : state <= FINISH_LOOP;
+      HALT        : state <= HALT;
       default : state <= START;
     endcase
   end
@@ -123,7 +130,7 @@ always_ff @( posedge clk or negedge reset_n ) begin
     if (ren_s_i) address <= index_i;
     else if (ren_s_j) address <= index_j;
     else if (addr_i) address <= index_i;
-    else if (ren_f) address <= (s_i + s_j);
+    else if (ren_f) address <= f;
   end
 end
 
@@ -131,8 +138,16 @@ always_comb
   case (address)
     index_i : data = s_j;
     index_j : data = s_i;
-    default : data = 8'hzz;
+    default : data = 8'h00;
   endcase
+
+always_ff @( posedge wren_d or negedge reset_n ) begin
+  if (~reset_n) begin
+    invalid_key <= 1'b0;
+  end else begin
+    invalid_key <= !(data_d == 8'd32 || (data_d >= 8'd97 && data_d <= 8'd122));
+  end
+end
 
 always_ff @( posedge ren_f or negedge reset_n ) begin
   if (~reset_n) begin
@@ -170,11 +185,11 @@ end
 
 always_ff @( posedge clk or negedge reset_n ) begin
   if (~reset_n) begin
-    read_counter <= 2'b00;
+    delay <= 2'b00;
   end else if (ren_s_i | ren_s_j | ren_f) begin
-    read_counter <= read_counter + 2'b01;
+    delay <= delay + 2'b01;
   end else begin
-    read_counter <= 2'b00;
+    delay <= 2'b00;
   end
 end
 
