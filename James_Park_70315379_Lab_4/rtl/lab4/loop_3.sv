@@ -55,12 +55,12 @@ logic index_j_reg;
 logic index_k_reg;
 logic [7:0] f;
 
-assign data_d = (q ^ q_m);
-assign f = s_i + s_j;
-assign write_finish = q == data;
+assign data_d = (q ^ q_m); // decreypted_output[k] is always xor of f and encrypted_input[k]
+assign f = s_i + s_j; // address of value f is always s[i] + s[j]
+assign write_finish = q == data; // signal that write finished
 
 logic decrypt_finished;
-assign decrypt_finished = index_i == MESSAGE_LENGTH[7:0];
+assign decrypt_finished = index_i == MESSAGE_LENGTH[7:0]; // loop 3 done if index_i is 32
 
 assign wren        = state[0];
 assign index_i_reg = state[1];
@@ -86,28 +86,28 @@ end
 always_ff @( posedge clk or negedge reset_n ) begin
   if (~reset_n) begin
     state <= START;
-  end else if (start_reg & ~finish) begin
+  end else if (start_reg & ~finish) begin // run and continue on start and until finish
     case (state)
       START       : state <= INCREMENT_I;
-      INCREMENT_I : state <= READ_S_I;
-      READ_S_I    : if (delay == 2'b10) state <= STORE_S_I;
+      INCREMENT_I : state <= READ_S_I; // i = i + 1
+      READ_S_I    : if (delay == 2'b10) state <= STORE_S_I; // read s[i]
                     else state <= READ_S_I;
-      STORE_S_I   : state <= UPDATE_J;
-      UPDATE_J    : state <= READ_S_J;
-      READ_S_J    : if (delay == 2'b10) state <= STORE_S_J;
+      STORE_S_I   : state <= UPDATE_J; // store value of s[i]
+      UPDATE_J    : state <= READ_S_J; // j = j + s[i]
+      READ_S_J    : if (delay == 2'b10) state <= STORE_S_J; // read s[j]
                     else state <= READ_S_J;
-      STORE_S_J   : state <= WRITE_S_J;
-      WRITE_S_J   : if (write_finish) state <= ADDRESS_I;
+      STORE_S_J   : state <= WRITE_S_J; // store value of s[j]
+      WRITE_S_J   : if (write_finish) state <= ADDRESS_I; // write s[j] = s[i]
                     else state <= WRITE_S_J;
-      ADDRESS_I   : state <= WRITE_S_I;
-      WRITE_S_I   : if (write_finish) state <= READ_F;
+      ADDRESS_I   : state <= WRITE_S_I; // set address to s[i]
+      WRITE_S_I   : if (write_finish) state <= READ_F; // write s[i] = s[j]
                     else state <= WRITE_S_I;
-      READ_F      : if (delay == 2'b10) state <= WRITE_OUT;
+      READ_F      : if (delay == 2'b10) state <= WRITE_OUT; // read q = s[ s[i] + s[j] ] also read q_m = encrypted_input[k]
                     else state <= READ_F;
-      WRITE_OUT   : state <= INCREMENT_K;
-      INCREMENT_K : if (invalid_key) state <= HALT;
-                    else if (!decrypt_finished) state <= INCREMENT_I;
-                    else state <= FINISH_LOOP;
+      WRITE_OUT   : state <= INCREMENT_K; // write decrypted_output[k] = q xor q_m
+      INCREMENT_K : if (invalid_key) state <= HALT; // if decrypted_output[k] is invalid goto halt
+                    else if (!decrypt_finished) state <= INCREMENT_I; // loop to beginning
+                    else state <= FINISH_LOOP; // send finish signal
       FINISH_LOOP : state <= FINISH_LOOP;
       HALT        : state <= HALT;
       default : state <= START;
@@ -127,10 +127,10 @@ always_ff @( posedge clk or negedge reset_n ) begin
   if (~reset_n) begin
     address <= 8'h00;
   end else begin
-    if (ren_s_i) address <= index_i;
-    else if (ren_s_j) address <= index_j;
-    else if (addr_i) address <= index_i;
-    else if (ren_f) address <= f;
+    if (ren_s_i) address <= index_i; // reading s[i]
+    else if (ren_s_j) address <= index_j; // reading s[j]
+    else if (addr_i) address <= index_i; // set address to s[i] for write
+    else if (ren_f) address <= f; // set address to s[i]+s[j] for write
   end
 end
 

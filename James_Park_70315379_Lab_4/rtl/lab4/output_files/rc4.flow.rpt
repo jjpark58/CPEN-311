@@ -1,5 +1,5 @@
 Flow report for rc4
-Tue Jun 20 00:43:07 2023
+Tue Jun 20 18:03:13 2023
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Jun 20 00:42:33 2023       ;
+; Flow Status                     ; Successful - Tue Jun 20 18:03:13 2023       ;
 ; Quartus Prime Version           ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                   ; rc4                                         ;
 ; Top-level Entity Name           ; ksa                                         ;
@@ -152,7 +152,11 @@ agreement for further details.
 ; Fitter                    ; 00:02:12     ; 1.3                     ; 7416 MB             ; 00:03:35                           ;
 ; Assembler                 ; 00:00:06     ; 1.0                     ; 4869 MB             ; 00:00:05                           ;
 ; TimeQuest Timing Analyzer ; 00:00:33     ; 1.5                     ; 5341 MB             ; 00:00:33                           ;
-; Total                     ; 00:03:12     ; --                      ; --                  ; 00:04:28                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4744 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4764 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4744 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4764 MB             ; 00:00:02                           ;
+; Total                     ; 00:03:21     ; --                      ; --                  ; 00:04:34                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -165,6 +169,10 @@ agreement for further details.
 ; Fitter                    ; DISBOARD         ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler                 ; DISBOARD         ; Windows 10 ; 10.0       ; x86_64         ;
 ; TimeQuest Timing Analyzer ; DISBOARD         ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DWARF            ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DWARF            ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DWARF            ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DWARF            ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 
@@ -175,6 +183,10 @@ quartus_map --read_settings_files=on --write_settings_files=off rc4 -c rc4
 quartus_fit --read_settings_files=off --write_settings_files=off rc4 -c rc4
 quartus_asm --read_settings_files=off --write_settings_files=off rc4 -c rc4
 quartus_sta rc4 -c rc4
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off rc4 -c rc4 --vector_source=C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/Waveform.vwf --testbench_file=C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/simulation/qsim/ rc4 -c rc4
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off rc4 -c rc4 --vector_source=C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/Waveform.vwf --testbench_file=C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/simulation/qsim/ rc4 -c rc4
 
 
 

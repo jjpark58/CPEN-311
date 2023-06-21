@@ -131,6 +131,7 @@ always_ff @( posedge clk or negedge reset_n) begin
   end
 end
 
+// block that increments secret_key
 always_ff @( posedge request_new_key or negedge reset_n ) begin
   if (~reset_n) begin
     secret_key <= 24'h000000;
@@ -139,7 +140,12 @@ always_ff @( posedge request_new_key or negedge reset_n ) begin
   end
 end
 
-fsm #(24'hFFFFFF) fsm_inst (
+/* fsm will run three loops to attempt decryption
+match found is high if match found
+all_keys_checked is high if no match found and 
+checked all secret_keys up to and including the key given in parameter
+*/
+fsm #(24'hFFFFFF) fsm_inst ( 
   .clk(clk),
   .reset_n(reset_n),
   .match_found(match_found),

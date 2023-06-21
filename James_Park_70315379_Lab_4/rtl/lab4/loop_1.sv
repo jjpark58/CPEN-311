@@ -26,10 +26,10 @@ assign finish = state[2];
 
 logic start_reg;
 logic s_memory_filled;
-assign s_memory_filled = &q;
-assign write_finish = q == data;
+assign s_memory_filled = &q; // loop 1 done if written data output is 8'hFF
+assign write_finish = q == data; // signal that write finished
 
-assign data = address;
+assign data = address; // data is same as address on loop 1
 
 always_ff @( posedge start or negedge reset_n ) begin
   if (~reset_n) begin
@@ -42,12 +42,12 @@ end
 always_ff @( posedge clk or negedge reset_n ) begin
   if (~reset_n) begin
     state <= START;
-  end else if (start_reg & ~finish) begin
+  end else if (start_reg & ~finish) begin // run and continue on start and until finish
     case (state)
       START     : state <= WRITE;
-      WRITE     : if (write_finish) state <= INCREMENT;
+      WRITE     : if (write_finish) state <= INCREMENT; // write data to address
                   else state <= WRITE;
-      INCREMENT : if (!s_memory_filled) state <= WRITE;
+      INCREMENT : if (!s_memory_filled) state <= WRITE; // increment address
                   else state <= FINISH_LOOP;
       FINISH_LOOP : state <= FINISH_LOOP;
       default : state <= START;

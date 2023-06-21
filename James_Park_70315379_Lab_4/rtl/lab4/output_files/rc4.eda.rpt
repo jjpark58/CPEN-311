@@ -1,5 +1,5 @@
 EDA Netlist Writer report for rc4
-Mon Jun 19 23:53:17 2023
+Tue Jun 20 18:03:13 2023
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Jun 19 23:53:17 2023 ;
+; EDA Netlist Writer Status ; Successful - Tue Jun 20 18:03:13 2023 ;
 ; Revision Name             ; rc4                                   ;
 ; Top-level Entity Name     ; ksa                                   ;
 ; Family                    ; Cyclone V                             ;
@@ -95,13 +95,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Mon Jun 19 23:53:15 2023
+    Info: Processing started: Tue Jun 20 18:03:11 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/simulation/qsim/ rc4 -c rc4
 Info (204019): Generated file rc4.vo in folder "C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4730 megabytes
-    Info: Processing ended: Mon Jun 19 23:53:17 2023
+    Info: Peak virtual memory: 4764 megabytes
+    Info: Processing ended: Tue Jun 20 18:03:13 2023
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -64,6 +64,7 @@ always_comb
     default : {address, data, wren} = {8'h00, 8'h00, 1'b0};
   endcase
 
+// match found is true if on finish signal, invalid key is false
 always_ff @( posedge finish or negedge reset_n ) begin
   if (~reset_n) begin
     match_found <= 1'b0;
@@ -78,14 +79,14 @@ always_ff @( posedge clk or negedge reset_n) begin
   end else begin
     case (state)
       START   : state <= LOOP_1;
-      LOOP_1  : if (finish_loop_1) state <= LOOP_2;
+      LOOP_1  : if (finish_loop_1) state <= LOOP_2; // stay on loop 1 until it returns finish_loop_1 signal
                 else state <= LOOP_1;
-      LOOP_2  : if (finish_loop_2) state <= LOOP_3;
+      LOOP_2  : if (finish_loop_2) state <= LOOP_3; // stay on loop 2 until it returns finish_loop_2 signal
                 else state <= LOOP_2;
-      LOOP_3  : if ((invalid_key & all_keys_checked) | finish_loop_3) state <= FINISH;
-                else if (invalid_key) state <= NEW_KEY;
-                else state <= LOOP_3;
-      NEW_KEY : state <= START;
+      LOOP_3  : if ((invalid_key & all_keys_checked) | finish_loop_3) state <= FINISH; // go to finish if all_keys_checked and invalid or finish_loop_3
+                else if (invalid_key) state <= NEW_KEY; // request for new key if current key is invalid
+                else state <= LOOP_3; // otherwise stay on loop 3
+      NEW_KEY : state <= START; // request new key
       FINISH  : state <= FINISH;
       default : state <= START;
     endcase
@@ -96,7 +97,7 @@ loop_1 loop_1_inst (
   .start(start_loop_1),
   .finish(finish_loop_1),
   .clk(clk),
-  .reset_n(reset_n & ~request_new_key),
+  .reset_n(reset_n & ~request_new_key), // reset loop if new key requested
   .address(address_1),
   .data(data_1),
   .wren(wren_1),
@@ -107,7 +108,7 @@ loop_2 loop_2_inst (
   .start(start_loop_2),
   .finish(finish_loop_2),
   .clk(clk),
-  .reset_n(reset_n & ~request_new_key),
+  .reset_n(reset_n & ~request_new_key), // reset loop if new key requested
   .secret_key(secret_key),
   .address(address_2),
   .data(data_2),
@@ -119,7 +120,7 @@ loop_3 loop_3_inst (
   .start(start_loop_3),
   .finish(finish_loop_3),
   .clk(clk),
-  .reset_n(reset_n & ~request_new_key),
+  .reset_n(reset_n & ~request_new_key), // reset loop if new key requested
   .invalid_key(invalid_key),
   .address(address_3),
   .data(data_3),

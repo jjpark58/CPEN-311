@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_4/rtl/lab4/simulation/qsim
 vksa
-Z1 !s110 1687243997
+Z1 !s110 1687309395
 !i10b 1
-!s100 KSS]9WAgl=ibJX]jK4IZC2
-IzoYz9n=NKCG07H35g3N^F3
+!s100 M3[@Z1^YJkC@BKgW92oO73
+IYK5TSS>OnB=hcafS9FlP^0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1687243997
+w1687309393
 8rc4.vo
 Frc4.vo
 L0 32
@@ -23,12 +23,12 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1687243997.000000
+!s108 1687309394.000000
 !s107 rc4.vo|
 !s90 -work|work|rc4.vo|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z4 o-work work
+Z5 tCvgOpt 0
 vksa_vlg_vec_tst
 R1
 !i10b 1
@@ -36,7 +36,7 @@ R1
 I7><iBBRX[b3YIhnA1VaP52
 R2
 R0
-w1687243995
+w1687309391
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 30
@@ -44,9 +44,9 @@ R3
 r1
 !s85 0
 31
-R4
+!s108 1687309395.000000
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
 !i113 1
+R4
 R5
-R6

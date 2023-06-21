@@ -48,16 +48,16 @@ logic start_reg;
 logic [1:0] delay;
 logic write_finish;
 
-logic [7:0] s_i;
-logic [7:0] s_j;
+logic [7:0] s_i; // holds s[i] value
+logic [7:0] s_j; // holds s[j] value
 logic [7:0] index_i;
 logic [7:0] index_j;
 
 logic [7:0] i_mod_keylength;
 logic all_swap_finished;
 assign i_mod_keylength = index_i % KEY_LENGTH[7:0];
-assign all_swap_finished = &address;
-assign write_finish = q == data;
+assign all_swap_finished = &address; // all swap complete if address is 8'hFF
+assign write_finish = q == data;  // signal that write finished
 
 always_ff @( posedge start or negedge reset_n ) begin
   if (~reset_n) begin
@@ -70,23 +70,23 @@ end
 always_ff @( posedge clk or negedge reset_n ) begin
   if (~reset_n) begin
     state <= START;
-  end else if (start_reg & ~finish) begin
+  end else if (start_reg & ~finish) begin // run and continue on start and until finish
     case (state)
       START       : state <= READ_S_I;
-      READ_S_I    : if (delay == 2'b10) state <= STORE_S_I;
+      READ_S_I    : if (delay == 2'b10) state <= STORE_S_I; // read s[i]
                     else state <= READ_S_I;
-      STORE_S_I   : state <= UPDATE_J;
-      UPDATE_J    : if (delay == 2'b10) state <= READ_S_J;
+      STORE_S_I   : state <= UPDATE_J; // store value of s[i]
+      UPDATE_J    : if (delay == 2'b10) state <= READ_S_J; // calculate index j
                     else state <= UPDATE_J;
-      READ_S_J    : if (delay == 2'b10) state <= STORE_S_J;
+      READ_S_J    : if (delay == 2'b10) state <= STORE_S_J; // read s[j]
                     else state <= READ_S_J;
-      STORE_S_J   : state <= WRITE_S_J;
-      WRITE_S_J   : if (write_finish) state <= ADDRESS_I;
+      STORE_S_J   : state <= WRITE_S_J; // store value of s[j]
+      WRITE_S_J   : if (write_finish) state <= ADDRESS_I; // write s[j] = s[i]
                     else state <= WRITE_S_J;
-      ADDRESS_I   : state <= WRITE_S_I;
-      WRITE_S_I   : if (write_finish) state <= INCREMENT_I;
+      ADDRESS_I   : state <= WRITE_S_I; // set address to s[i]
+      WRITE_S_I   : if (write_finish) state <= INCREMENT_I; // write s[i] = s[j]
                     else state <= WRITE_S_I;
-      INCREMENT_I : if (!all_swap_finished) state <= READ_S_I;
+      INCREMENT_I : if (!all_swap_finished) state <= READ_S_I; // increment index i
                     else state <= FINISH_LOOP;
       FINISH_LOOP : state <= FINISH_LOOP;
       default : state <= START;
@@ -95,30 +95,32 @@ always_ff @( posedge clk or negedge reset_n ) begin
 end
 
 always_ff @( posedge s_i_reg ) begin
-  s_i <= q;
+  s_i <= q; // store s[i] value
 end
 
 always_ff @( posedge s_j_reg ) begin
-  s_j <= q;
+  s_j <= q; // store s[j] value
 end
 
 always_ff @( posedge clk or negedge reset_n ) begin
   if (~reset_n) begin
     address <= 8'h00;
   end else begin
-    if (ren_s_i) address <= index_i;
-    else if (ren_s_j) address <= index_j;
-    else if (addr_i) address <= index_i;
+    if (ren_s_i) address <= index_i; // reading s[i]
+    else if (ren_s_j) address <= index_j; // reading s[j]
+    else if (addr_i) address <= index_i; // set address to s[i] for write
   end
 end
 
+// only ever use data during write for swap
 always_comb
   case (address)
-    index_i : data = s_j;
-    index_j : data = s_i;
+    index_i : data = s_j; // when writing to s[i], data should be value of s[j]
+    index_j : data = s_i; // when writing to s[j], data should be value of s[i]
     default : data = 8'h00;
   endcase
 
+// new index_i
 always_ff @( posedge index_i_reg or negedge reset_n ) begin
   if (~reset_n) begin
     index_i <= 8'h00;
@@ -127,6 +129,7 @@ always_ff @( posedge index_i_reg or negedge reset_n ) begin
   end
 end
 
+// new index_j
 always_ff @( posedge index_j_reg or negedge reset_n ) begin
   if (~reset_n) begin
     index_j <= 8'h00;
@@ -135,6 +138,7 @@ always_ff @( posedge index_j_reg or negedge reset_n ) begin
   end
 end
 
+// delay counter for reading from memory
 always_ff @( posedge clk or negedge reset_n ) begin
   if (~reset_n) begin
     delay <= 2'b00;
