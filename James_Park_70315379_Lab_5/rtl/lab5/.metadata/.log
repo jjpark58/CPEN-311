@@ -1,0 +1,13 @@
+!SESSION 2023-06-21 11:44:17.393 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -data C:\Users\Admin\Documents\GitHub\CPEN-311\James_Park_70315379_Lab_5\rtl\lab5\ -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-06-21 11:45:15.666
+!MESSAGE Indexed 'lab5' (22 sources, 10 headers) in 3.58 sec: 1,418 declarations; 3,963 references; 39 unresolved inclusions; 2 syntax errors; 97 unresolved names (1.77%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-06-21 11:46:30.649
+!MESSAGE Indexed 'lab5_bsp' (94 sources, 164 headers) in 1.80 sec: 6,755 declarations; 16,280 references; 35 unresolved inclusions; 5 syntax errors; 83 unresolved names (0.36%)
