@@ -4,46 +4,49 @@
 
 `timescale 1 ps / 1 ps
 module DE1_SoC_QSYS (
-		output wire [31:0] audio2fifo_0_data_divfrec_export,              //       audio2fifo_0_data_divfrec.export
-		input  wire        audio2fifo_0_empty_export,                     //              audio2fifo_0_empty.export
-		input  wire        audio2fifo_0_fifo_full_export,                 //          audio2fifo_0_fifo_full.export
-		input  wire [11:0] audio2fifo_0_fifo_used_export,                 //          audio2fifo_0_fifo_used.export
-		output wire [31:0] audio2fifo_0_out_data_audio_export,            //     audio2fifo_0_out_data_audio.export
-		output wire        audio2fifo_0_out_pause_export,                 //          audio2fifo_0_out_pause.export
-		output wire        audio2fifo_0_out_stop_export,                  //           audio2fifo_0_out_stop.export
-		output wire        audio2fifo_0_wrclk_export,                     //              audio2fifo_0_wrclk.export
-		output wire        audio2fifo_0_wrreq_export,                     //              audio2fifo_0_wrreq.export
-		output wire        audio_sel_export,                              //                       audio_sel.export
-		input  wire        clk_clk,                                       //                             clk.clk
-		output wire        clk_25_out_clk,                                //                      clk_25_out.clk
-		output wire        clk_sdram_clk,                                 //                       clk_sdram.clk
-		output wire [31:0] div_freq_export,                               //                        div_freq.export
-		input  wire [3:0]  key_external_connection_export,                //         key_external_connection.export
-		input  wire [31:0] keyboard_keys_export,                          //                   keyboard_keys.export
-		output wire [3:0]  modulation_selector_export,                    //             modulation_selector.export
-		input  wire [31:0] mouse_pos_export,                              //                       mouse_pos.export
-		output wire        pll_locked_export,                             //                      pll_locked.export
-		input  wire        reset_reset_n,                                 //                           reset.reset_n
-		output wire [12:0] sdram_wire_addr,                               //                      sdram_wire.addr
-		output wire [1:0]  sdram_wire_ba,                                 //                                .ba
-		output wire        sdram_wire_cas_n,                              //                                .cas_n
-		output wire        sdram_wire_cke,                                //                                .cke
-		output wire        sdram_wire_cs_n,                               //                                .cs_n
-		inout  wire [15:0] sdram_wire_dq,                                 //                                .dq
-		output wire [1:0]  sdram_wire_dqm,                                //                                .dqm
-		output wire        sdram_wire_ras_n,                              //                                .ras_n
-		output wire        sdram_wire_we_n,                               //                                .we_n
-		output wire [7:0]  signal_selector_export,                        //                 signal_selector.export
-		input  wire        vga_alt_vip_itc_0_clocked_video_vid_clk,       // vga_alt_vip_itc_0_clocked_video.vid_clk
-		output wire [23:0] vga_alt_vip_itc_0_clocked_video_vid_data,      //                                .vid_data
-		output wire        vga_alt_vip_itc_0_clocked_video_underflow,     //                                .underflow
-		output wire        vga_alt_vip_itc_0_clocked_video_vid_datavalid, //                                .vid_datavalid
-		output wire        vga_alt_vip_itc_0_clocked_video_vid_v_sync,    //                                .vid_v_sync
-		output wire        vga_alt_vip_itc_0_clocked_video_vid_h_sync,    //                                .vid_h_sync
-		output wire        vga_alt_vip_itc_0_clocked_video_vid_f,         //                                .vid_f
-		output wire        vga_alt_vip_itc_0_clocked_video_vid_h,         //                                .vid_h
-		output wire        vga_alt_vip_itc_0_clocked_video_vid_v,         //                                .vid_v
-		output wire        vga_vga_clk_clk                                //                     vga_vga_clk.clk
+		output wire [31:0] audio2fifo_0_data_divfrec_export,                  //                  audio2fifo_0_data_divfrec.export
+		input  wire        audio2fifo_0_empty_export,                         //                         audio2fifo_0_empty.export
+		input  wire        audio2fifo_0_fifo_full_export,                     //                     audio2fifo_0_fifo_full.export
+		input  wire [11:0] audio2fifo_0_fifo_used_export,                     //                     audio2fifo_0_fifo_used.export
+		output wire [31:0] audio2fifo_0_out_data_audio_export,                //                audio2fifo_0_out_data_audio.export
+		output wire        audio2fifo_0_out_pause_export,                     //                     audio2fifo_0_out_pause.export
+		output wire        audio2fifo_0_out_stop_export,                      //                      audio2fifo_0_out_stop.export
+		output wire        audio2fifo_0_wrclk_export,                         //                         audio2fifo_0_wrclk.export
+		output wire        audio2fifo_0_wrreq_export,                         //                         audio2fifo_0_wrreq.export
+		output wire        audio_sel_export,                                  //                                  audio_sel.export
+		input  wire        clk_clk,                                           //                                        clk.clk
+		output wire        clk_25_out_clk,                                    //                                 clk_25_out.clk
+		output wire        clk_sdram_clk,                                     //                                  clk_sdram.clk
+		output wire [31:0] dds_increment_external_connection_export,          //          dds_increment_external_connection.export
+		output wire [31:0] div_freq_export,                                   //                                   div_freq.export
+		input  wire [3:0]  key_external_connection_export,                    //                    key_external_connection.export
+		input  wire [31:0] keyboard_keys_export,                              //                              keyboard_keys.export
+		input  wire        lfsr_clk_interrupt_gen_external_connection_export, // lfsr_clk_interrupt_gen_external_connection.export
+		input  wire [31:0] lfsr_val_external_connection_export,               //               lfsr_val_external_connection.export
+		output wire [3:0]  modulation_selector_export,                        //                        modulation_selector.export
+		input  wire [31:0] mouse_pos_export,                                  //                                  mouse_pos.export
+		output wire        pll_locked_export,                                 //                                 pll_locked.export
+		input  wire        reset_reset_n,                                     //                                      reset.reset_n
+		output wire [12:0] sdram_wire_addr,                                   //                                 sdram_wire.addr
+		output wire [1:0]  sdram_wire_ba,                                     //                                           .ba
+		output wire        sdram_wire_cas_n,                                  //                                           .cas_n
+		output wire        sdram_wire_cke,                                    //                                           .cke
+		output wire        sdram_wire_cs_n,                                   //                                           .cs_n
+		inout  wire [15:0] sdram_wire_dq,                                     //                                           .dq
+		output wire [1:0]  sdram_wire_dqm,                                    //                                           .dqm
+		output wire        sdram_wire_ras_n,                                  //                                           .ras_n
+		output wire        sdram_wire_we_n,                                   //                                           .we_n
+		output wire [7:0]  signal_selector_export,                            //                            signal_selector.export
+		input  wire        vga_alt_vip_itc_0_clocked_video_vid_clk,           //            vga_alt_vip_itc_0_clocked_video.vid_clk
+		output wire [23:0] vga_alt_vip_itc_0_clocked_video_vid_data,          //                                           .vid_data
+		output wire        vga_alt_vip_itc_0_clocked_video_underflow,         //                                           .underflow
+		output wire        vga_alt_vip_itc_0_clocked_video_vid_datavalid,     //                                           .vid_datavalid
+		output wire        vga_alt_vip_itc_0_clocked_video_vid_v_sync,        //                                           .vid_v_sync
+		output wire        vga_alt_vip_itc_0_clocked_video_vid_h_sync,        //                                           .vid_h_sync
+		output wire        vga_alt_vip_itc_0_clocked_video_vid_f,             //                                           .vid_f
+		output wire        vga_alt_vip_itc_0_clocked_video_vid_h,             //                                           .vid_h
+		output wire        vga_alt_vip_itc_0_clocked_video_vid_v,             //                                           .vid_v
+		output wire        vga_vga_clk_clk                                    //                                vga_vga_clk.clk
 	);
 
 	wire         pll_outclk0_clk;                                           // pll:outclk_0 -> [audio:clk_clk, irq_synchronizer:receiver_clk, mm_interconnect_0:pll_outclk0_clk, rst_controller:clk, sdram:clk, vga:nios_clk_clk]
@@ -175,7 +178,7 @@ module DE1_SoC_QSYS (
 	wire         irq_mapper_receiver0_irq;                                  // irq_synchronizer:sender_irq -> irq_mapper:receiver0_irq
 	wire   [0:0] irq_synchronizer_receiver_irq;                             // vga:alt_vip_vfr_0_interrupt_sender_irq -> irq_synchronizer:receiver_irq
 	wire         rst_controller_reset_out_reset;                            // rst_controller:reset_out -> [audio:reset_reset_n, irq_synchronizer:receiver_reset, mm_interconnect_0:audio_reset_reset_bridge_in_reset_reset, mm_interconnect_0:vga_nios_clk_reset_reset_bridge_in_reset_reset, sdram:reset_n]
-	wire         rst_controller_001_reset_out_reset;                        // rst_controller_001:reset_out -> [audio_sel:reset_n, div_freq:reset_n, jtag_uart:rst_n, key:reset_n, mm_interconnect_0:jtag_uart_reset_reset_bridge_in_reset_reset, modulation_selector:reset_n, signal_selector:reset_n, sysid_qsys:reset_n, timer:reset_n]
+	wire         rst_controller_001_reset_out_reset;                        // rst_controller_001:reset_out -> [audio_sel:reset_n, dds_increment:reset_n, div_freq:reset_n, jtag_uart:rst_n, key:reset_n, lfsr_clk_interrupt_gen:reset_n, lfsr_val:reset_n, mm_interconnect_0:jtag_uart_reset_reset_bridge_in_reset_reset, modulation_selector:reset_n, signal_selector:reset_n, sysid_qsys:reset_n, timer:reset_n]
 	wire         rst_controller_002_reset_out_reset;                        // rst_controller_002:reset_out -> [cpu:reset_n, irq_mapper:reset, irq_synchronizer:sender_reset, mm_interconnect_0:cpu_reset_n_reset_bridge_in_reset_reset, rst_translator:in_reset]
 	wire         rst_controller_002_reset_out_reset_req;                    // rst_controller_002:reset_req -> [cpu:reset_req, rst_translator:reset_req_in]
 	wire         cpu_jtag_debug_module_reset_reset;                         // cpu:jtag_debug_module_resetrequest -> rst_controller_002:reset_in1
@@ -274,7 +277,18 @@ module DE1_SoC_QSYS (
 		.no_ci_readra                          ()                                                     // custom_instruction_master.readra
 	);
 
-	DE1_SoC_QSYS_div_freq div_freq (
+	DE1_SoC_QSYS_dds_increment dds_increment (
+		.clk        (clk_clk),                                  //                 clk.clk
+		.reset_n    (~rst_controller_001_reset_out_reset),      //               reset.reset_n
+		.address    (),                                         //                  s1.address
+		.write_n    (),                                         //                    .write_n
+		.writedata  (),                                         //                    .writedata
+		.chipselect (),                                         //                    .chipselect
+		.readdata   (),                                         //                    .readdata
+		.out_port   (dds_increment_external_connection_export)  // external_connection.export
+	);
+
+	DE1_SoC_QSYS_dds_increment div_freq (
 		.clk        (clk_clk),                                  //                 clk.clk
 		.reset_n    (~rst_controller_001_reset_out_reset),      //               reset.reset_n
 		.address    (mm_interconnect_0_div_freq_s1_address),    //                  s1.address
@@ -316,6 +330,26 @@ module DE1_SoC_QSYS (
 		.address  (mm_interconnect_0_keyboard_keys_s1_address),  //                  s1.address
 		.readdata (mm_interconnect_0_keyboard_keys_s1_readdata), //                    .readdata
 		.in_port  (keyboard_keys_export)                         // external_connection.export
+	);
+
+	DE1_SoC_QSYS_lfsr_clk_interrupt_gen lfsr_clk_interrupt_gen (
+		.clk        (clk_clk),                                           //                 clk.clk
+		.reset_n    (~rst_controller_001_reset_out_reset),               //               reset.reset_n
+		.address    (),                                                  //                  s1.address
+		.write_n    (),                                                  //                    .write_n
+		.writedata  (),                                                  //                    .writedata
+		.chipselect (),                                                  //                    .chipselect
+		.readdata   (),                                                  //                    .readdata
+		.in_port    (lfsr_clk_interrupt_gen_external_connection_export), // external_connection.export
+		.irq        ()                                                   //                 irq.irq
+	);
+
+	DE1_SoC_QSYS_lfsr_val lfsr_val (
+		.clk      (clk_clk),                             //                 clk.clk
+		.reset_n  (~rst_controller_001_reset_out_reset), //               reset.reset_n
+		.address  (),                                    //                  s1.address
+		.readdata (),                                    //                    .readdata
+		.in_port  (lfsr_val_external_connection_export)  // external_connection.export
 	);
 
 	DE1_SoC_QSYS_modulation_selector modulation_selector (
