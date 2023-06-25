@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchConfiguration">
+<stringAttribute key="byteStreamDeviceCableName" value="DE-SoC on localhost [USB-1]"/>
+<stringAttribute key="byteStreamDeviceDeviceID" value="2"/>
+<stringAttribute key="byteStreamDeviceInstanceID" value="0"/>
 <booleanAttribute key="downloadProgram" value="true"/>
 <stringAttribute key="elfFile" value="C:\Users\Admin\Documents\GitHub\CPEN-311\James_Park_70315379_Lab_5\rtl\lab5\software\lab5\lab5.elf"/>
 <stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=""/>
@@ -11,5 +14,8 @@
 <booleanAttribute key="org.eclipse.cdt.launch.ENABLE_VARIABLE_BOOKKEEPING" value="false"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="lab5.elf"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="lab5"/>
+<stringAttribute key="processorCableName" value="DE-SoC on localhost [USB-1]"/>
+<stringAttribute key="processorDeviceIndex" value="2"/>
+<stringAttribute key="processorInstanceId" value="0"/>
 <booleanAttribute key="runProgram" value="true"/>
 </launchConfiguration>

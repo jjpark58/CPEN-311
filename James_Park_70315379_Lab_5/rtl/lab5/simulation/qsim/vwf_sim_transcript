@@ -1,0 +1,250 @@
+Determining the location of the ModelSim executable...
+
+Using: c:/intelfpga_lite/16.1/modelsim_ase/win32aloem/
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off dds_and_nios_lab -c dds_and_nios_lab --vector_source="C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/Waveform2.vwf" --testbench_file="C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/simulation/qsim/Waveform2.vwf.vt"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Intel and sold by Intel or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Sat Jun 24 02:50:05 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off dds_and_nios_lab -c dds_and_nios_lab --vector_source=C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/Waveform2.vwf --testbench_file=C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/simulation/qsim/Waveform2.vwf.vt
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_audio_DATA_FREGEN" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "DE1_SoC_QSYS_audio_EMPTY" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_audio_OUT_PAUSE" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "DE1_SoC_QSYS_audio_fifo_used" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_audio_sel" -- entity does not exist in design
+Warning (20013): Ignored 117 assignments for entity "DE1_SoC_QSYS_cpu" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_div_freq" -- entity does not exist in design
+Warning (20013): Ignored 14 assignments for entity "DE1_SoC_QSYS_irq_mapper" -- entity does not exist in design
+Warning (20013): Ignored 24 assignments for entity "DE1_SoC_QSYS_jtag_uart" -- entity does not exist in design
+Warning (20013): Ignored 27 assignments for entity "DE1_SoC_QSYS_key" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "DE1_SoC_QSYS_keyboard_keys" -- entity does not exist in design
+Warning (20013): Ignored 12 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0" -- entity does not exist in design
+Warning (20013): Ignored 32 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_avalon_st_adapter" -- entity does not exist in design
+Warning (20013): Ignored 32 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_avalon_st_adapter_010" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_avalon_st_adapter_010_error_adapter_0" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_avalon_st_adapter_error_adapter_0" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_demux" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_demux_001" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_demux_002" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_mux" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_mux_006" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_mux_010" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_001" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_002" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_003" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_009" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_013" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_demux" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_demux_010" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_demux_015" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_demux_016" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_mux" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_mux_001" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_mux_002" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_modulation_selector" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "DE1_SoC_QSYS_mouse_pos" -- entity does not exist in design
+Warning (20013): Ignored 317 assignments for entity "DE1_SoC_QSYS_pll" -- entity does not exist in design
+Warning (20013): Ignored 34 assignments for entity "DE1_SoC_QSYS_sdram" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_signal_selector" -- entity does not exist in design
+Warning (20013): Ignored 10 assignments for entity "DE1_SoC_QSYS_sysid_qsys" -- entity does not exist in design
+Warning (20013): Ignored 26 assignments for entity "DE1_SoC_QSYS_timer" -- entity does not exist in design
+Warning (20013): Ignored 317 assignments for entity "DE1_SoC_QSYS_vga_vga_clk" -- entity does not exist in design
+Warning (20013): Ignored 44 assignments for entity "alt_vipitc131_IS2Vid" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "alt_vipvfr131_vfr" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "altera_avalon_sc_fifo" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "altera_avalon_st_handshake_clock_crosser" -- entity does not exist in design
+Warning (20013): Ignored 20 assignments for entity "altera_avalon_st_pipeline_stage" -- entity does not exist in design
+Warning (20013): Ignored 12 assignments for entity "altera_irq_clock_crosser" -- entity does not exist in design
+Warning (20013): Ignored 43 assignments for entity "altera_merlin_burst_adapter" -- entity does not exist in design
+Warning (20013): Ignored 64 assignments for entity "altera_merlin_master_agent" -- entity does not exist in design
+Warning (20013): Ignored 55 assignments for entity "altera_merlin_master_translator" -- entity does not exist in design
+Warning (20013): Ignored 53 assignments for entity "altera_merlin_slave_agent" -- entity does not exist in design
+Warning (20013): Ignored 68 assignments for entity "alter
+a_merlin_slave_translator" -- entity does not exist in design
+Warning (20013): Ignored 34 assignments for entity "altera_merlin_traffic_limiter" -- entity does not exist in design
+Warning (20013): Ignored 60 assignments for entity "altera_merlin_width_adapter" -- entity does not exist in design
+Warning (20013): Ignored 35 assignments for entity "altera_reset_controller" -- entity does not exist in design
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/simulation/qsim/" dds_and_nios_lab -c dds_and_nios_lab
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Intel and sold by Intel or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Sat Jun 24 02:50:06 2023
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/simulation/qsim/ dds_and_nios_lab -c dds_and_nios_lab
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_audio_DATA_FREGEN" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "DE1_SoC_QSYS_audio_EMPTY" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_audio_OUT_PAUSE" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "DE1_SoC_QSYS_audio_fifo_used" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_audio_sel" -- entity does not exist in design
+Warning (20013): Ignored 117 assignments for entity "DE1_SoC_QSYS_cpu" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_div_freq" -- entity does not exist in design
+Warning (20013): Ignored 14 assignments for entity "DE1_SoC_QSYS_irq_mapper" -- entity does not exist in design
+Warning (20013): Ignored 24 assignments for entity "DE1_SoC_QSYS_jtag_uart" -- entity does not exist in design
+Warning (20013): Ignored 27 assignments for entity "DE1_SoC_QSYS_key" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "DE1_SoC_QSYS_keyboard_keys" -- entity does not exist in design
+Warning (20013): Ignored 12 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0" -- entity does not exist in design
+Warning (20013): Ignored 32 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_avalon_st_adapter" -- entity does not exist in design
+Warning (20013): Ignored 32 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_avalon_st_adapter_010" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_avalon_st_adapter_010_error_adapter_0" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_avalon_st_adapter_error_adapter_0" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_demux" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_demux_001" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_demux_002" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_mux" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_mux_006" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_mux_010" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_001" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_002" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_003" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_009" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_013" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_demux" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_demux_010" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_demux_015" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_demux_016" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_mux" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_mux_001" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_mux_002" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_modulation_selector" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "DE1_SoC_QSYS_mouse_pos" -- entity does not exist in design
+Warning (20013): Ignored 317 assignments for entity "DE1_SoC_QSYS_pll" -- entity does not exist in design
+Warning (20013): Ignored 34 assignments for entity "DE1_SoC_QSYS_sdram" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_signal_selector" -- entity does not exist in design
+Warning (20013): Ignored 10 assignments for entity "DE1_SoC_QSYS_sysid_qsys" -- entity does not exist in design
+Warning (20013): Ignored 26 assignments for entity "DE1_SoC_QSYS_timer" -- entity does not exist in design
+Warning (20013): Ignored 317 assignments for entity "DE1_SoC_QSYS_vga_vga_clk" -- entity does not exist in design
+Warning (20013): Ignored 44 assignments for entity "alt_vipitc131_IS2Vid" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "alt_vipvfr131_vfr" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "altera_avalon_sc_fifo" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "altera_avalon_st_handshake_clock_crosser" -- entity does not exist in design
+Warning (20013): Ignored 20 assignments for entity "altera_avalon_st_pipeline_stage" -- entity does not exist in design
+Warning (20013): Ignored 12 assignments for entity "altera_irq_clock_crosser" -- entity does not exist in design
+Warning (20013): Ignored 43 assignments for entity "altera_merlin_burst_adapter" -- entity does not exist in design
+Warning (20013): Ignored 64 assignments for entity "altera_merlin_master_agent" -- entity does not exist in design
+Warning (20013): Ignored 55 assignments for entity "altera_merlin_master_translator" -- entity does not exist in design
+Warning (20013): Ignored 53 assignments for entity "altera_merlin_slave_agent" -- entity does not exist in design
+Warning (20013): Ignored 68 assignments for entity "altera_merlin_slave_translator" -- entity does not exist in design
+Warning (20013): Ignor
+ed 34 assignments for entity "altera_merlin_traffic_limiter" -- entity does not exist in design
+Warning (20013): Ignored 60 assignments for entity "altera_merlin_width_adapter" -- entity does not exist in design
+Warning (20013): Ignored 35 assignments for entity "altera_reset_controller" -- entity does not exist in design
+Info (204019): Generated file dds_and_nios_lab.vo in folder "C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 58 warnings
+    Info: Peak virtual memory: 4721 megabytes
+    Info: Processing ended: Sat Jun 24 02:50:07 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/simulation/qsim/dds_and_nios_lab.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+c:/intelfpga_lite/16.1/modelsim_ase/win32aloem//vsim -c -do dds_and_nios_lab.do
+
+Reading C:/intelFPGA_lite/16.1/modelsim_ase/tcl/vsim/pref.tcl
+
+# 10.5b
+
+
+# do dds_and_nios_lab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:50:08 on Jun 24,2023
+# vlog -work work dds_and_nios_lab.vo 
+# -- Compiling module LFSR
+# 
+# Top level modules:
+# 	LFSR
+# End time: 02:50:08 on Jun 24,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:50:08 on Jun 24,2023
+# vlog -work work Waveform2.vwf.vt 
+# -- Compiling module LFSR_vlg_vec_tst
+# 
+# Top level modules:
+# 	LFSR_vlg_vec_tst
+# End time: 02:50:08 on Jun 24,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.LFSR_vlg_vec_tst 
+# Start time: 02:50:08 on Jun 24,2023
+# Loading work.LFSR_vlg_vec_tst
+# Loading work.LFSR
+# Loading altera_ver.dffeas
+# Loading altera_ver.PRIM_GDFF_LOW
+# after#25
+# ** Note: $finish    : Waveform2.vwf.vt(47)
+#    Time: 1 us  Iteration: 0  Instance: /LFSR_vlg_vec_tst
+# End time: 02:50:08 on Jun 24,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/Waveform2.vwf...
+
+Reading C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/simulation/qsim/dds_and_nios_lab.msim.vcd...
+
+Processing channel transitions... 
+
+Writing the resulting VWF to C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/simulation/qsim/dds_and_nios_lab_20230624025008.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.
