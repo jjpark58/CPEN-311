@@ -350,6 +350,7 @@ assign LEDR[4:0] = LFSR;
 
 fsm fsm_inst (
   .clk(CLOCK_50),
+  .lfsr_clk(lfsr_clk),
   .outclk(sampler),
   .lfsr_0(LFSR[0]),
   .mod_sel(modulation_selector[1:0]),
