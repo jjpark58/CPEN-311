@@ -1,6 +1,6 @@
 `default_nettype none
 `include "scan_events.h"
-//`define ENABLE_AUDIO_DEMO
+// `define ENABLE_AUDIO_DEMO
 module dds_and_nios_lab(
 
       ///////// ADC /////////
@@ -277,49 +277,53 @@ logic [31:0] dds_increment;
 /// NIOS II Qsys
 
 DE1_SoC_QSYS U0( 
-		.clk_clk(CLOCK_50),                        //                     clk.clk
-		.reset_reset_n(1'b1),                  //                   reset.reset_n
-		.key_external_connection_export(KEY), // key_external_connection.export
-		
-		.clk_sdram_clk(DRAM_CLK),                  //               clk_sdram.clk
-	   .sdram_wire_addr(DRAM_ADDR),                //              sdram_wire.addr
-		.sdram_wire_ba(DRAM_BA),                  //                        .ba
-		.sdram_wire_cas_n(DRAM_CAS_N),               //                        .cas_n 
-		.sdram_wire_cke(DRAM_CKE),                 //                        .cke
-		.sdram_wire_cs_n(DRAM_CS_N),                //                        .cs_n
-		.sdram_wire_dq(DRAM_DQ),                  //                        .dq
-		.sdram_wire_dqm({DRAM_UDQM,DRAM_LDQM}),                 //                        .dqm
-		.sdram_wire_ras_n(DRAM_RAS_N),               //                        .ras_n
-		.sdram_wire_we_n(DRAM_WE_N) ,                //                        .we_n
-		.vga_alt_vip_itc_0_clocked_video_vid_clk       (video_clk_40Mhz),       // vga_alt_vip_itc_0_clocked_video.vid_clk
-	   .vga_alt_vip_itc_0_clocked_video_vid_data      ({vga_R[7:0],vga_G[7:0],vga_B[7:0]}),      //                                .vid_data
-	   .vga_alt_vip_itc_0_clocked_video_vid_datavalid (vga_de), //                                .vid_datavalid
-	   .vga_alt_vip_itc_0_clocked_video_vid_v_sync    (VGA_VS),    //                                .vid_v_sync
-	   .vga_alt_vip_itc_0_clocked_video_vid_h_sync    (VGA_HS),    //                                .vid_h_sync
-	   //.vga_vga_clk_clk                               (video_clk_40Mhz) ,
-		
-		//AUDIO 
-		.audio2fifo_0_data_divfrec_export              (DATA_DIV_FREG),              //       audio2fifo_0_data_divfrec.export
-	   .audio2fifo_0_empty_export                     (EMPTY),                     //              audio2fifo_0_empty.export
-	   .audio2fifo_0_fifo_full_export                 (FIFO_FULL),                 //          audio2fifo_0_fifo_full.export
-	   .audio2fifo_0_fifo_used_export                 (used_fifo),                 //          audio2fifo_0_fifo_used.export
-	   .audio2fifo_0_out_data_audio_export            (DATA_AUDIO),            //     audio2fifo_0_out_data_audio.export
-	   .audio2fifo_0_out_pause_export                 (PAUSE),                 //          audio2fifo_0_out_pause.export
-	   .audio2fifo_0_out_stop_export                  (STOP),                  //           audio2fifo_0_out_stop.export
-	   .audio2fifo_0_wrclk_export                     (WRCLK),                     //              audio2fifo_0_wrclk.export
-	   .audio2fifo_0_wrreq_export                     (WRREQ),                   //              audio2fifo_0_wrreq.export
-		
-		
-		//interfaces
-	   .signal_selector_export                        (signal_selector[7:0]),                        //                 signal_selector.export
-	   .modulation_selector_export                    (modulation_selector[3:0]),                    //             modulation_selector.export
-	   .keyboard_keys_export                          (keyboard_keys[31:0]),                          //                   keyboard_keys.export
-	   .mouse_pos_export                              ({12'd0,mouse_x[9:0],mouse_y[9:0]}),                              //                       mouse_pos.export
-	   .div_freq_export                               (nios_audio_syn_data[31:0]),                               //                        div_freq.export
-	   .audio_sel_export                              (audio_selector),                               //                       audio_sel.export
+  .clk_clk(CLOCK_50),                           //                     clk.clk
+  .reset_reset_n(1'b1),                         //                   reset.reset_n
+  .key_external_connection_export(KEY),         // key_external_connection.export
+  .lfsr_clk_interrupt_gen_external_connection_export(lfsr_clk),
+  .lfsr_val_external_connection_export({{27{1'b0}}, LFSR}),
+  .dds_increment_external_connection_export(dds_increment),
+  
+  .clk_sdram_clk(DRAM_CLK),                     //               clk_sdram.clk
+  .sdram_wire_addr(DRAM_ADDR),                  //              sdram_wire.addr
+  .sdram_wire_ba(DRAM_BA),                      //                        .ba
+  .sdram_wire_cas_n(DRAM_CAS_N),                //                        .cas_n 
+  .sdram_wire_cke(DRAM_CKE),                    //                        .cke
+  .sdram_wire_cs_n(DRAM_CS_N),                  //                        .cs_n
+  .sdram_wire_dq(DRAM_DQ),                      //                        .dq
+  .sdram_wire_dqm({DRAM_UDQM,DRAM_LDQM}),       //                        .dqm
+  .sdram_wire_ras_n(DRAM_RAS_N),                //                        .ras_n
+  .sdram_wire_we_n(DRAM_WE_N) ,                 //                        .we_n
+  .vga_alt_vip_itc_0_clocked_video_vid_clk       (video_clk_40Mhz),                       // vga_alt_vip_itc_0_clocked_video.vid_clk
+  .vga_alt_vip_itc_0_clocked_video_vid_data      ({vga_R[7:0],vga_G[7:0],vga_B[7:0]}),    //                                .vid_data
+  .vga_alt_vip_itc_0_clocked_video_vid_datavalid (vga_de),                                //                                .vid_datavalid
+  .vga_alt_vip_itc_0_clocked_video_vid_v_sync    (VGA_VS),                                //                                .vid_v_sync
+  .vga_alt_vip_itc_0_clocked_video_vid_h_sync    (VGA_HS),                                //                                .vid_h_sync
+  //.vga_vga_clk_clk                               (video_clk_40Mhz) ,
+  
+  //AUDIO 
+  .audio2fifo_0_data_divfrec_export              (DATA_DIV_FREG),                         //       audio2fifo_0_data_divfrec.export
+  .audio2fifo_0_empty_export                     (EMPTY),                                 //              audio2fifo_0_empty.export
+  .audio2fifo_0_fifo_full_export                 (FIFO_FULL),                             //          audio2fifo_0_fifo_full.export
+  .audio2fifo_0_fifo_used_export                 (used_fifo),                             //          audio2fifo_0_fifo_used.export
+  .audio2fifo_0_out_data_audio_export            (DATA_AUDIO),                            //     audio2fifo_0_out_data_audio.export
+  .audio2fifo_0_out_pause_export                 (PAUSE),                                 //          audio2fifo_0_out_pause.export
+  .audio2fifo_0_out_stop_export                  (STOP),                                  //           audio2fifo_0_out_stop.export
+  .audio2fifo_0_wrclk_export                     (WRCLK),                                 //              audio2fifo_0_wrclk.export
+  .audio2fifo_0_wrreq_export                     (WRREQ),                                 //              audio2fifo_0_wrreq.export
+  
+  
+  //interfaces
+  .signal_selector_export                        (signal_selector[7:0]),                  //                 signal_selector.export
+  .modulation_selector_export                    (modulation_selector[3:0]),              //             modulation_selector.export
+  .keyboard_keys_export                          (keyboard_keys[31:0]),                   //                   keyboard_keys.export
+  .mouse_pos_export                              ({12'd0,mouse_x[9:0],mouse_y[9:0]}),     //                       mouse_pos.export
+  .div_freq_export                               (nios_audio_syn_data[31:0]),             //                        div_freq.export
+  .audio_sel_export                              (audio_selector),                        //                       audio_sel.export
 
-      .vga_vga_clk_clk                               (video_clk_40Mhz),                               //                     vga_vga_clk.clk
-      .clk_25_out_clk                                (CLK_25MHZ)                                 //                      clk_25_out.clk
+  .vga_vga_clk_clk                               (video_clk_40Mhz),                       //                     vga_vga_clk.clk
+  .clk_25_out_clk                                (CLK_25MHZ)                              //                      clk_25_out.clk
+
 );
 
 ////////////////////////////////////////////////////////////////////
@@ -345,14 +349,12 @@ LFSR lfsr_inst (
 	.lfsr(LFSR)
 );
 
-assign LEDR[9] = lfsr_clk;
-assign LEDR[4:0] = LFSR;
-
-fsm fsm_inst (
+dds dds_inst (
   .clk(CLOCK_50),
   .lfsr_clk(lfsr_clk),
   .outclk(sampler),
   .lfsr_0(LFSR[0]),
+  .dds_increment(dds_increment),
   .mod_sel(modulation_selector[1:0]),
   .sig_sel(signal_selector[1:0]),
   .actual_sel_mod(actual_selected_modulation),

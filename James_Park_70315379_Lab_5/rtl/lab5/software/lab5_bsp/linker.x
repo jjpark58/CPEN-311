@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'DE1_SoC_QSYS'
  * SOPC Builder design path: ../../DE1_SoC_QSYS.sopcinfo
  *
- * Generated: Fri Jun 23 15:54:09 PDT 2023
+ * Generated: Sun Jun 25 19:52:45 PDT 2023
  */
 
 /*
@@ -50,13 +50,13 @@
 
 MEMORY
 {
-    reset : ORIGIN = 0x4000000, LENGTH = 32
-    sdram_BEFORE_EXCEPTION : ORIGIN = 0x4000020, LENGTH = 5760000
-    sdram : ORIGIN = 0x457e420, LENGTH = 61348832
+    reset : ORIGIN = 0x8000000, LENGTH = 32
+    sdram_BEFORE_EXCEPTION : ORIGIN = 0x8000020, LENGTH = 5760000
+    sdram : ORIGIN = 0x857e420, LENGTH = 61348832
 }
 
 /* Define symbols for each memory base-address */
-__alt_mem_sdram = 0x4000000;
+__alt_mem_sdram = 0x8000000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -368,7 +368,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x8000000;
+__alt_data_end = 0xc000000;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -384,4 +384,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x8000000 );
+PROVIDE( __alt_heap_limit    = 0xc000000 );

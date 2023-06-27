@@ -156,6 +156,18 @@ module DE1_SoC_QSYS (
 	wire   [1:0] mm_interconnect_0_audio_sel_s1_address;                    // mm_interconnect_0:audio_sel_s1_address -> audio_sel:address
 	wire         mm_interconnect_0_audio_sel_s1_write;                      // mm_interconnect_0:audio_sel_s1_write -> audio_sel:write_n
 	wire  [31:0] mm_interconnect_0_audio_sel_s1_writedata;                  // mm_interconnect_0:audio_sel_s1_writedata -> audio_sel:writedata
+	wire         mm_interconnect_0_lfsr_clk_interrupt_gen_s1_chipselect;    // mm_interconnect_0:lfsr_clk_interrupt_gen_s1_chipselect -> lfsr_clk_interrupt_gen:chipselect
+	wire  [31:0] mm_interconnect_0_lfsr_clk_interrupt_gen_s1_readdata;      // lfsr_clk_interrupt_gen:readdata -> mm_interconnect_0:lfsr_clk_interrupt_gen_s1_readdata
+	wire   [1:0] mm_interconnect_0_lfsr_clk_interrupt_gen_s1_address;       // mm_interconnect_0:lfsr_clk_interrupt_gen_s1_address -> lfsr_clk_interrupt_gen:address
+	wire         mm_interconnect_0_lfsr_clk_interrupt_gen_s1_write;         // mm_interconnect_0:lfsr_clk_interrupt_gen_s1_write -> lfsr_clk_interrupt_gen:write_n
+	wire  [31:0] mm_interconnect_0_lfsr_clk_interrupt_gen_s1_writedata;     // mm_interconnect_0:lfsr_clk_interrupt_gen_s1_writedata -> lfsr_clk_interrupt_gen:writedata
+	wire  [31:0] mm_interconnect_0_lfsr_val_s1_readdata;                    // lfsr_val:readdata -> mm_interconnect_0:lfsr_val_s1_readdata
+	wire   [1:0] mm_interconnect_0_lfsr_val_s1_address;                     // mm_interconnect_0:lfsr_val_s1_address -> lfsr_val:address
+	wire         mm_interconnect_0_dds_increment_s1_chipselect;             // mm_interconnect_0:dds_increment_s1_chipselect -> dds_increment:chipselect
+	wire  [31:0] mm_interconnect_0_dds_increment_s1_readdata;               // dds_increment:readdata -> mm_interconnect_0:dds_increment_s1_readdata
+	wire   [1:0] mm_interconnect_0_dds_increment_s1_address;                // mm_interconnect_0:dds_increment_s1_address -> dds_increment:address
+	wire         mm_interconnect_0_dds_increment_s1_write;                  // mm_interconnect_0:dds_increment_s1_write -> dds_increment:write_n
+	wire  [31:0] mm_interconnect_0_dds_increment_s1_writedata;              // mm_interconnect_0:dds_increment_s1_writedata -> dds_increment:writedata
 	wire  [31:0] mm_interconnect_0_vga_to_nios_2_datamaster_readdata;       // vga:to_nios_2_datamaster_readdata -> mm_interconnect_0:vga_to_nios_2_datamaster_readdata
 	wire   [4:0] mm_interconnect_0_vga_to_nios_2_datamaster_address;        // mm_interconnect_0:vga_to_nios_2_datamaster_address -> vga:to_nios_2_datamaster_address
 	wire         mm_interconnect_0_vga_to_nios_2_datamaster_read;           // mm_interconnect_0:vga_to_nios_2_datamaster_read -> vga:to_nios_2_datamaster_read
@@ -174,6 +186,7 @@ module DE1_SoC_QSYS (
 	wire         irq_mapper_receiver1_irq;                                  // jtag_uart:av_irq -> irq_mapper:receiver1_irq
 	wire         irq_mapper_receiver2_irq;                                  // timer:irq -> irq_mapper:receiver2_irq
 	wire         irq_mapper_receiver3_irq;                                  // key:irq -> irq_mapper:receiver3_irq
+	wire         irq_mapper_receiver4_irq;                                  // lfsr_clk_interrupt_gen:irq -> irq_mapper:receiver4_irq
 	wire  [31:0] cpu_d_irq_irq;                                             // irq_mapper:sender_irq -> cpu:d_irq
 	wire         irq_mapper_receiver0_irq;                                  // irq_synchronizer:sender_irq -> irq_mapper:receiver0_irq
 	wire   [0:0] irq_synchronizer_receiver_irq;                             // vga:alt_vip_vfr_0_interrupt_sender_irq -> irq_synchronizer:receiver_irq
@@ -278,14 +291,14 @@ module DE1_SoC_QSYS (
 	);
 
 	DE1_SoC_QSYS_dds_increment dds_increment (
-		.clk        (clk_clk),                                  //                 clk.clk
-		.reset_n    (~rst_controller_001_reset_out_reset),      //               reset.reset_n
-		.address    (),                                         //                  s1.address
-		.write_n    (),                                         //                    .write_n
-		.writedata  (),                                         //                    .writedata
-		.chipselect (),                                         //                    .chipselect
-		.readdata   (),                                         //                    .readdata
-		.out_port   (dds_increment_external_connection_export)  // external_connection.export
+		.clk        (clk_clk),                                       //                 clk.clk
+		.reset_n    (~rst_controller_001_reset_out_reset),           //               reset.reset_n
+		.address    (mm_interconnect_0_dds_increment_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_dds_increment_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_dds_increment_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_dds_increment_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_dds_increment_s1_readdata),   //                    .readdata
+		.out_port   (dds_increment_external_connection_export)       // external_connection.export
 	);
 
 	DE1_SoC_QSYS_dds_increment div_freq (
@@ -333,23 +346,23 @@ module DE1_SoC_QSYS (
 	);
 
 	DE1_SoC_QSYS_lfsr_clk_interrupt_gen lfsr_clk_interrupt_gen (
-		.clk        (clk_clk),                                           //                 clk.clk
-		.reset_n    (~rst_controller_001_reset_out_reset),               //               reset.reset_n
-		.address    (),                                                  //                  s1.address
-		.write_n    (),                                                  //                    .write_n
-		.writedata  (),                                                  //                    .writedata
-		.chipselect (),                                                  //                    .chipselect
-		.readdata   (),                                                  //                    .readdata
-		.in_port    (lfsr_clk_interrupt_gen_external_connection_export), // external_connection.export
-		.irq        ()                                                   //                 irq.irq
+		.clk        (clk_clk),                                                //                 clk.clk
+		.reset_n    (~rst_controller_001_reset_out_reset),                    //               reset.reset_n
+		.address    (mm_interconnect_0_lfsr_clk_interrupt_gen_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_lfsr_clk_interrupt_gen_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_lfsr_clk_interrupt_gen_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_lfsr_clk_interrupt_gen_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_lfsr_clk_interrupt_gen_s1_readdata),   //                    .readdata
+		.in_port    (lfsr_clk_interrupt_gen_external_connection_export),      // external_connection.export
+		.irq        (irq_mapper_receiver4_irq)                                //                 irq.irq
 	);
 
 	DE1_SoC_QSYS_lfsr_val lfsr_val (
-		.clk      (clk_clk),                             //                 clk.clk
-		.reset_n  (~rst_controller_001_reset_out_reset), //               reset.reset_n
-		.address  (),                                    //                  s1.address
-		.readdata (),                                    //                    .readdata
-		.in_port  (lfsr_val_external_connection_export)  // external_connection.export
+		.clk      (clk_clk),                                //                 clk.clk
+		.reset_n  (~rst_controller_001_reset_out_reset),    //               reset.reset_n
+		.address  (mm_interconnect_0_lfsr_val_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_lfsr_val_s1_readdata), //                    .readdata
+		.in_port  (lfsr_val_external_connection_export)     // external_connection.export
 	);
 
 	DE1_SoC_QSYS_modulation_selector modulation_selector (
@@ -541,6 +554,11 @@ module DE1_SoC_QSYS (
 		.cpu_jtag_debug_module_byteenable                (mm_interconnect_0_cpu_jtag_debug_module_byteenable),        //                                          .byteenable
 		.cpu_jtag_debug_module_waitrequest               (mm_interconnect_0_cpu_jtag_debug_module_waitrequest),       //                                          .waitrequest
 		.cpu_jtag_debug_module_debugaccess               (mm_interconnect_0_cpu_jtag_debug_module_debugaccess),       //                                          .debugaccess
+		.dds_increment_s1_address                        (mm_interconnect_0_dds_increment_s1_address),                //                          dds_increment_s1.address
+		.dds_increment_s1_write                          (mm_interconnect_0_dds_increment_s1_write),                  //                                          .write
+		.dds_increment_s1_readdata                       (mm_interconnect_0_dds_increment_s1_readdata),               //                                          .readdata
+		.dds_increment_s1_writedata                      (mm_interconnect_0_dds_increment_s1_writedata),              //                                          .writedata
+		.dds_increment_s1_chipselect                     (mm_interconnect_0_dds_increment_s1_chipselect),             //                                          .chipselect
 		.div_freq_s1_address                             (mm_interconnect_0_div_freq_s1_address),                     //                               div_freq_s1.address
 		.div_freq_s1_write                               (mm_interconnect_0_div_freq_s1_write),                       //                                          .write
 		.div_freq_s1_readdata                            (mm_interconnect_0_div_freq_s1_readdata),                    //                                          .readdata
@@ -560,6 +578,13 @@ module DE1_SoC_QSYS (
 		.key_s1_chipselect                               (mm_interconnect_0_key_s1_chipselect),                       //                                          .chipselect
 		.keyboard_keys_s1_address                        (mm_interconnect_0_keyboard_keys_s1_address),                //                          keyboard_keys_s1.address
 		.keyboard_keys_s1_readdata                       (mm_interconnect_0_keyboard_keys_s1_readdata),               //                                          .readdata
+		.lfsr_clk_interrupt_gen_s1_address               (mm_interconnect_0_lfsr_clk_interrupt_gen_s1_address),       //                 lfsr_clk_interrupt_gen_s1.address
+		.lfsr_clk_interrupt_gen_s1_write                 (mm_interconnect_0_lfsr_clk_interrupt_gen_s1_write),         //                                          .write
+		.lfsr_clk_interrupt_gen_s1_readdata              (mm_interconnect_0_lfsr_clk_interrupt_gen_s1_readdata),      //                                          .readdata
+		.lfsr_clk_interrupt_gen_s1_writedata             (mm_interconnect_0_lfsr_clk_interrupt_gen_s1_writedata),     //                                          .writedata
+		.lfsr_clk_interrupt_gen_s1_chipselect            (mm_interconnect_0_lfsr_clk_interrupt_gen_s1_chipselect),    //                                          .chipselect
+		.lfsr_val_s1_address                             (mm_interconnect_0_lfsr_val_s1_address),                     //                               lfsr_val_s1.address
+		.lfsr_val_s1_readdata                            (mm_interconnect_0_lfsr_val_s1_readdata),                    //                                          .readdata
 		.modulation_selector_s1_address                  (mm_interconnect_0_modulation_selector_s1_address),          //                    modulation_selector_s1.address
 		.modulation_selector_s1_write                    (mm_interconnect_0_modulation_selector_s1_write),            //                                          .write
 		.modulation_selector_s1_readdata                 (mm_interconnect_0_modulation_selector_s1_readdata),         //                                          .readdata
@@ -602,6 +627,7 @@ module DE1_SoC_QSYS (
 		.receiver1_irq (irq_mapper_receiver1_irq),           // receiver1.irq
 		.receiver2_irq (irq_mapper_receiver2_irq),           // receiver2.irq
 		.receiver3_irq (irq_mapper_receiver3_irq),           // receiver3.irq
+		.receiver4_irq (irq_mapper_receiver4_irq),           // receiver4.irq
 		.sender_irq    (cpu_d_irq_irq)                       //    sender.irq
 	);
 

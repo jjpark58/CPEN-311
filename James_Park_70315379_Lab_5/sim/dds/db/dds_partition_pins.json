@@ -1,0 +1,265 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "actual_sel_mod[0]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_mod[1]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_mod[2]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_mod[3]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_mod[4]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_mod[5]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_mod[6]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_mod[7]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_mod[8]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_mod[9]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_mod[10]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_mod[11]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_sig[0]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_sig[1]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_sig[2]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_sig[3]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_sig[4]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_sig[5]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_sig[6]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_sig[7]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_sig[8]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_sig[9]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_sig[10]",
+					"strict" : false
+				},
+				{
+					"name" : "actual_sel_sig[11]",
+					"strict" : false
+				},
+				{
+					"name" : "outclk",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "mod_sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mod_sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[20]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[21]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[22]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[23]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[24]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[25]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[26]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[27]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[28]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[29]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[30]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[31]",
+					"strict" : false
+				},
+				{
+					"name" : "lfsr_0",
+					"strict" : false
+				},
+				{
+					"name" : "lfsr_clk",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[19]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[18]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[17]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[16]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[15]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[14]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[13]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[12]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[11]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[10]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dds_increment[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'DE1_SoC_QSYS'
  * SOPC Builder design path: ../../DE1_SoC_QSYS.sopcinfo
  *
- * Generated: Fri Jun 23 15:54:09 PDT 2023
+ * Generated: Sun Jun 25 19:52:45 PDT 2023
  */
 
 /*
@@ -65,11 +65,11 @@
  *
  */
 
-#define RESET_REGION_BASE 0x4000000
+#define RESET_REGION_BASE 0x8000000
 #define RESET_REGION_SPAN 32
-#define SDRAM_BEFORE_EXCEPTION_REGION_BASE 0x4000020
+#define SDRAM_BEFORE_EXCEPTION_REGION_BASE 0x8000020
 #define SDRAM_BEFORE_EXCEPTION_REGION_SPAN 5760000
-#define SDRAM_REGION_BASE 0x457e420
+#define SDRAM_REGION_BASE 0x857e420
 #define SDRAM_REGION_SPAN 61348832
 
 

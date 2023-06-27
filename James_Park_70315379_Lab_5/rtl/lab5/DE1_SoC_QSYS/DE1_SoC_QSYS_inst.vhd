@@ -41,8 +41,8 @@
 			vga_alt_vip_itc_0_clocked_video_vid_v             : out   std_logic;                                        -- vid_v
 			vga_vga_clk_clk                                   : out   std_logic;                                        -- clk
 			lfsr_clk_interrupt_gen_external_connection_export : in    std_logic                     := 'X';             -- export
-			dds_increment_external_connection_export          : out   std_logic_vector(31 downto 0);                    -- export
-			lfsr_val_external_connection_export               : in    std_logic_vector(31 downto 0) := (others => 'X')  -- export
+			lfsr_val_external_connection_export               : in    std_logic_vector(31 downto 0) := (others => 'X'); -- export
+			dds_increment_external_connection_export          : out   std_logic_vector(31 downto 0)                     -- export
 		);
 	end component DE1_SoC_QSYS;
 
@@ -89,7 +89,7 @@
 			vga_alt_vip_itc_0_clocked_video_vid_v             => CONNECTED_TO_vga_alt_vip_itc_0_clocked_video_vid_v,             --                                           .vid_v
 			vga_vga_clk_clk                                   => CONNECTED_TO_vga_vga_clk_clk,                                   --                                vga_vga_clk.clk
 			lfsr_clk_interrupt_gen_external_connection_export => CONNECTED_TO_lfsr_clk_interrupt_gen_external_connection_export, -- lfsr_clk_interrupt_gen_external_connection.export
-			dds_increment_external_connection_export          => CONNECTED_TO_dds_increment_external_connection_export,          --          dds_increment_external_connection.export
-			lfsr_val_external_connection_export               => CONNECTED_TO_lfsr_val_external_connection_export                --               lfsr_val_external_connection.export
+			lfsr_val_external_connection_export               => CONNECTED_TO_lfsr_val_external_connection_export,               --               lfsr_val_external_connection.export
+			dds_increment_external_connection_export          => CONNECTED_TO_dds_increment_external_connection_export           --          dds_increment_external_connection.export
 		);
 

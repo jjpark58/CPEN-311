@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/sim/clk_up/simulation/qsim
+vclk_up
+Z1 !s110 1687839065
+!i10b 1
+!s100 5_c^gZCdc9Gz@[1W8_AHT2
+IoJGF?Sa@M9?zW6jzhEVZb1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1687839065
+8clk_up.vo
+Fclk_up.vo
+L0 32
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1687839065.000000
+!s107 clk_up.vo|
+!s90 -work|work|clk_up.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vclk_up_vlg_vec_tst
+R1
+!i10b 1
+!s100 fmjMGI;PAZGZLWK2G94LU2
+IG4I`NcE7dTZC]P2DCoajQ3
+R2
+R0
+w1687839064
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6

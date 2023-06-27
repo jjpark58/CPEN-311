@@ -1,5 +1,5 @@
 EDA Netlist Writer report for dds_and_nios_lab
-Sat Jun 24 02:50:07 2023
+Mon Jun 26 20:24:25 2023
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -8,9 +8,7 @@ Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 ---------------------
   1. Legal Notice
   2. EDA Netlist Writer Summary
-  3. Simulation Settings
-  4. Simulation Generated Files
-  5. EDA Netlist Writer Messages
+  3. EDA Netlist Writer Messages
 
 
 
@@ -34,45 +32,14 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------+
-; EDA Netlist Writer Summary                                        ;
-+---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat Jun 24 02:50:07 2023 ;
-; Revision Name             ; dds_and_nios_lab                      ;
-; Top-level Entity Name     ; LFSR                                  ;
-; Family                    ; Cyclone V                             ;
-; Simulation Files Creation ; Successful                            ;
-+---------------------------+---------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                           ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
-; Option                                                                                            ; Setting                   ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
-; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
-; Generate functional simulation netlist                                                            ; On                        ;
-; Truncate long hierarchy paths                                                                     ; Off                       ;
-; Map illegal HDL characters                                                                        ; Off                       ;
-; Flatten buses into individual nodes                                                               ; Off                       ;
-; Maintain hierarchy                                                                                ; Off                       ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
-; Enable glitch filtering                                                                           ; Off                       ;
-; Do not write top level VHDL entity                                                                ; Off                       ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
-; Architecture name in VHDL output netlist                                                          ; structure                 ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                       ;
-+------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                  ;
-+------------------------------------------------------------------------------------------------------------------+
-; C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/simulation/qsim//dds_and_nios_lab.vo ;
-+------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------+
+; EDA Netlist Writer Summary                                    ;
++---------------------------+-----------------------------------+
+; EDA Netlist Writer Status ; Failed - Mon Jun 26 20:24:25 2023 ;
+; Revision Name             ; dds_and_nios_lab                  ;
+; Top-level Entity Name     ; dds_and_nios_lab                  ;
+; Family                    ; Cyclone V                         ;
++---------------------------+-----------------------------------+
 
 
 +-----------------------------+
@@ -95,71 +62,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Sat Jun 24 02:50:06 2023
+    Info: Processing started: Mon Jun 26 20:24:22 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/simulation/qsim/ dds_and_nios_lab -c dds_and_nios_lab
-Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS" -- entity does not exist in design
-Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_audio_DATA_FREGEN" -- entity does not exist in design
-Warning (20013): Ignored 23 assignments for entity "DE1_SoC_QSYS_audio_EMPTY" -- entity does not exist in design
-Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_audio_OUT_PAUSE" -- entity does not exist in design
-Warning (20013): Ignored 23 assignments for entity "DE1_SoC_QSYS_audio_fifo_used" -- entity does not exist in design
-Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_audio_sel" -- entity does not exist in design
-Warning (20013): Ignored 117 assignments for entity "DE1_SoC_QSYS_cpu" -- entity does not exist in design
-Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_div_freq" -- entity does not exist in design
-Warning (20013): Ignored 14 assignments for entity "DE1_SoC_QSYS_irq_mapper" -- entity does not exist in design
-Warning (20013): Ignored 24 assignments for entity "DE1_SoC_QSYS_jtag_uart" -- entity does not exist in design
-Warning (20013): Ignored 27 assignments for entity "DE1_SoC_QSYS_key" -- entity does not exist in design
-Warning (20013): Ignored 23 assignments for entity "DE1_SoC_QSYS_keyboard_keys" -- entity does not exist in design
-Warning (20013): Ignored 12 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0" -- entity does not exist in design
-Warning (20013): Ignored 32 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_avalon_st_adapter" -- entity does not exist in design
-Warning (20013): Ignored 32 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_avalon_st_adapter_010" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_avalon_st_adapter_010_error_adapter_0" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_avalon_st_adapter_error_adapter_0" -- entity does not exist in design
-Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_demux" -- entity does not exist in design
-Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_demux_001" -- entity does not exist in design
-Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_demux_002" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_mux" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_mux_006" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_cmd_mux_010" -- entity does not exist in design
-Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router" -- entity does not exist in design
-Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_001" -- entity does not exist in design
-Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_002" -- entity does not exist in design
-Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_003" -- entity does not exist in design
-Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_009" -- entity does not exist in design
-Warning (20013): Ignored 36 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_router_013" -- entity does not exist in design
-Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_demux" -- entity does not exist in design
-Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_demux_010" -- entity does not exist in design
-Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_demux_015" -- entity does not exist in design
-Warning (20013): Ignored 17 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_demux_016" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_mux" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_mux_001" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "DE1_SoC_QSYS_mm_interconnect_0_rsp_mux_002" -- entity does not exist in design
-Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_modulation_selector" -- entity does not exist in design
-Warning (20013): Ignored 23 assignments for entity "DE1_SoC_QSYS_mouse_pos" -- entity does not exist in design
-Warning (20013): Ignored 317 assignments for entity "DE1_SoC_QSYS_pll" -- entity does not exist in design
-Warning (20013): Ignored 34 assignments for entity "DE1_SoC_QSYS_sdram" -- entity does not exist in design
-Warning (20013): Ignored 22 assignments for entity "DE1_SoC_QSYS_signal_selector" -- entity does not exist in design
-Warning (20013): Ignored 10 assignments for entity "DE1_SoC_QSYS_sysid_qsys" -- entity does not exist in design
-Warning (20013): Ignored 26 assignments for entity "DE1_SoC_QSYS_timer" -- entity does not exist in design
-Warning (20013): Ignored 317 assignments for entity "DE1_SoC_QSYS_vga_vga_clk" -- entity does not exist in design
-Warning (20013): Ignored 44 assignments for entity "alt_vipitc131_IS2Vid" -- entity does not exist in design
-Warning (20013): Ignored 22 assignments for entity "alt_vipvfr131_vfr" -- entity does not exist in design
-Warning (20013): Ignored 23 assignments for entity "altera_avalon_sc_fifo" -- entity does not exist in design
-Warning (20013): Ignored 23 assignments for entity "altera_avalon_st_handshake_clock_crosser" -- entity does not exist in design
-Warning (20013): Ignored 20 assignments for entity "altera_avalon_st_pipeline_stage" -- entity does not exist in design
-Warning (20013): Ignored 12 assignments for entity "altera_irq_clock_crosser" -- entity does not exist in design
-Warning (20013): Ignored 43 assignments for entity "altera_merlin_burst_adapter" -- entity does not exist in design
-Warning (20013): Ignored 64 assignments for entity "altera_merlin_master_agent" -- entity does not exist in design
-Warning (20013): Ignored 55 assignments for entity "altera_merlin_master_translator" -- entity does not exist in design
-Warning (20013): Ignored 53 assignments for entity "altera_merlin_slave_agent" -- entity does not exist in design
-Warning (20013): Ignored 68 assignments for entity "altera_merlin_slave_translator" -- entity does not exist in design
-Warning (20013): Ignored 34 assignments for entity "altera_merlin_traffic_limiter" -- entity does not exist in design
-Warning (20013): Ignored 60 assignments for entity "altera_merlin_width_adapter" -- entity does not exist in design
-Warning (20013): Ignored 35 assignments for entity "altera_reset_controller" -- entity does not exist in design
-Info (204019): Generated file dds_and_nios_lab.vo in folder "C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/simulation/qsim//" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 58 warnings
-    Info: Peak virtual memory: 4721 megabytes
-    Info: Processing ended: Sat Jun 24 02:50:07 2023
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+Error (204009): Can't generate netlist output files because the license for encrypted file "C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/DE1_SoC_QSYS/synthesis/submodules/DE1_SoC_QSYS_cpu.v" is not available
+Error: Quartus Prime EDA Netlist Writer was unsuccessful. 1 error, 0 warnings
+    Error: Peak virtual memory: 4859 megabytes
+    Error: Processing ended: Mon Jun 26 20:24:25 2023
+    Error: Elapsed time: 00:00:03
+    Error: Total CPU time (on all processors): 00:00:02
 
 
