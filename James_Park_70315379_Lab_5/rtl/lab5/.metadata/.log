@@ -254,3 +254,86 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.e
 
 !ENTRY com.altera.sbtgui.launch 1 0 2023-06-26 23:33:33.038
 !MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1d0 --id=0x0 --timestamp=1687747096 /cygdrive/c/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5/lab5.elf]
+!SESSION 2023-06-27 00:17:39.778 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 00:25:59.156
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1d0 --id=0x0 --timestamp=1687747096]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 00:26:00.748
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1d0 --id=0x0 --timestamp=1687747096 /cygdrive/c/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5/lab5.elf]
+!SESSION 2023-06-27 00:44:49.708 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 00:45:12.581
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1d0 --id=0x0 --timestamp=1687747096]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 00:45:14.172
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1d0 --id=0x0 --timestamp=1687747096 /cygdrive/c/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5/lab5.elf]
+!SESSION 2023-06-27 00:59:08.225 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 00:59:38.787
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1d0 --id=0x0 --timestamp=1687747096]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 00:59:40.366
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1d0 --id=0x0 --timestamp=1687747096 /cygdrive/c/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5/lab5.elf]
+!SESSION 2023-06-27 01:24:27.989 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 01:24:50.641
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1d0 --id=0x0 --timestamp=1687747096]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 01:24:52.218
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1d0 --id=0x0 --timestamp=1687747096 /cygdrive/c/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5/lab5.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 01:52:31.832
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 01:52:32.169
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1d0 --id=0x0 --timestamp=1687747096]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 01:52:33.728
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1d0 --id=0x0 --timestamp=1687747096 /cygdrive/c/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5/lab5.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 02:11:35.250
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 02:11:35.582
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1d0 --id=0x0 --timestamp=1687747096]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 02:11:37.165
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1d0 --id=0x0 --timestamp=1687747096 /cygdrive/c/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5/lab5.elf]
+!SESSION 2023-06-27 02:36:27.738 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 02:36:51.041
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1d0 --id=0x0 --timestamp=1687747096]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-06-27 02:36:52.614
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1d0 --id=0x0 --timestamp=1687747096 /cygdrive/c/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5/lab5.elf]

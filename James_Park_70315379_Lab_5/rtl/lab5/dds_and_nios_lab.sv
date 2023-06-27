@@ -349,13 +349,21 @@ LFSR lfsr_inst (
 	.lfsr(LFSR)
 );
 
+logic [4:0] LFSR_2;
+
+LFSR #(0, 3) lfsr_2_inst (
+	.clk(lfsr_clk),
+	.lfsr(LFSR_2)
+);
+
 dds dds_inst (
   .clk(CLOCK_50),
   .lfsr_clk(lfsr_clk),
   .outclk(sampler),
-  .lfsr_0(LFSR[0]),
+  .lfsr(LFSR),
+  .lfsr_2(LFSR_2),
   .dds_increment(dds_increment),
-  .mod_sel(modulation_selector[1:0]),
+  .mod_sel(modulation_selector[2:0]),
   .sig_sel(signal_selector[1:0]),
   .actual_sel_mod(actual_selected_modulation),
   .actual_sel_sig(actual_selected_signal)

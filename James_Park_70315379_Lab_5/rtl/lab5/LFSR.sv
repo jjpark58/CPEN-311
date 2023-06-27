@@ -1,5 +1,8 @@
 `default_nettype none
-module LFSR (
+module LFSR #(
+  parameter tap1 = 0, 
+  parameter tap2 = 2
+) (
   input tri           clk,
   output logic [4:0]  lfsr
 );
@@ -9,7 +12,7 @@ initial begin
 end
 
 tri feedback;
-assign feedback = lfsr[0] ^ lfsr[2];
+assign feedback = lfsr[tap1] ^ lfsr[tap2];
 
 always_ff @( posedge clk ) begin
   lfsr[0] <= lfsr[1];

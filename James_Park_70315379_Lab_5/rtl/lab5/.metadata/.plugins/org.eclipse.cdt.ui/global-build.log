@@ -1451,3 +1451,191 @@ Info: Building ../lab5_bsp/
 C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
 [BSP build complete]
 [lab5 build complete]
+00:25:49 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+Info: Compiling hello_ucosii.c to obj/default/hello_ucosii.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lab5_bsp//UCOSII/inc -I../lab5_bsp//HAL/inc -I../lab5_bsp/ -I../lab5_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -D__ucosii__    -O1 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_ucosii.o hello_ucosii.c
+hello_ucosii.c: In function 'send_audio_fifo':
+hello_ucosii.c:146:8: warning: implicit declaration of function 'audio_dac_fifo_full' [-Wimplicit-function-declaration]
+ while (audio_dac_fifo_full() == 1)
+        ^
+hello_ucosii.c: In function 'main':
+hello_ucosii.c:353:1: warning: implicit declaration of function 'init_lfsr_interrupt' [-Wimplicit-function-declaration]
+ init_lfsr_interrupt();
+ ^
+In file included from hello_ucosii.c:40:0:
+hello_ucosii.c: At top level:
+./graphic_lib/simple_graphics.h:173:16: warning: inline function 'alpha_blending' declared but never defined
+ __inline__ int alpha_blending ( int horiz_offset,
+                ^
+./graphic_lib/simple_graphics.h:166:16: warning: inline function 'read_from_frame' declared but never defined
+ __inline__ int read_from_frame (int horiz,
+                ^
+./graphic_lib/simple_graphics.h:160:16: warning: inline function 'merge_color_channels' declared but never defined
+ __inline__ int merge_color_channels(int color_depth,
+                ^
+./graphic_lib/simple_graphics.h:154:16: warning: inline function 'seperate_color_channels' declared but never defined
+ __inline__ int seperate_color_channels( int color_depth,
+                ^
+./graphic_lib/simple_graphics.h:116:13: warning: inline function 'vid_put_pixel_in_span_map' declared but never defined
+ inline void vid_put_pixel_in_span_map( int x, int y, int *span_array );
+             ^
+./graphic_lib/simple_graphics.h:112:12: warning: inline function 'min3' declared but never defined
+ inline int min3( int a, int b, int c );
+            ^
+./graphic_lib/simple_graphics.h:110:12: warning: inline function 'max3' declared but never defined
+ inline int max3( int a, int b, int c );
+            ^
+Info: Linking lab5.elf
+nios2-elf-g++  -T'../lab5_bsp//linker.x' -msys-crt0='../lab5_bsp//obj/HAL/src/crt0.o' -msys-lib=ucosii_bsp -L../lab5_bsp/   -Wl,-Map=lab5.map   -O1 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o lab5.elf obj/default/drivers/drivers.o obj/default/fonts/tahomabold_20.o obj/default/fonts/tahomabold_32.o obj/default/frame.o obj/default/graphic_lib/draw_gimps.o obj/default/graphic_lib/gimp_bmp.o obj/default/graphic_lib/simple_graphics.o obj/default/graphic_lib/simple_text.o obj/default/hello_ucosii.o obj/default/imagenes/back_down.o obj/default/imagenes/back_up.o obj/default/imagenes/ford_down.o obj/default/imagenes/ford_up.o obj/default/imagenes/pause_down.o obj/default/imagenes/pause_up.o obj/default/imagenes/play_down.o obj/default/imagenes/play_up.o obj/default/imagenes/stop_down.o obj/default/imagenes/stop_up.o obj/default/song/song.o obj/default/student_code/student_code.o obj/default/vip_fr.o -lm -msys-lib=m
+nios2-elf-insert lab5.elf --thread_model ucosii --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1d0 --timestamp 1687747096 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE1_SoC_QSYS --quartus_project_dir "C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5" --jdi C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5_bsp/../../dds_and_nios_lab.jdi --sopcinfo C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5_bsp/../../DE1_SoC_QSYS.sopcinfo
+Info: (lab5.elf) 1803 KBytes program size (code + initialized data).
+Info:            58093 KBytes free for stack + heap.
+[lab5 build complete]
+00:25:52 **** Incremental Build of configuration Nios II for project lab5_bsp ****
+make all 
+[BSP build complete]
+00:25:57 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]
+00:45:04 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+Info: Compiling hello_ucosii.c to obj/default/hello_ucosii.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lab5_bsp//UCOSII/inc -I../lab5_bsp//HAL/inc -I../lab5_bsp/ -I../lab5_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -D__ucosii__    -O1 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_ucosii.o hello_ucosii.c
+hello_ucosii.c: In function 'send_audio_fifo':
+hello_ucosii.c:146:8: warning: implicit declaration of function 'audio_dac_fifo_full' [-Wimplicit-function-declaration]
+ while (audio_dac_fifo_full() == 1)
+        ^
+hello_ucosii.c: In function 'main':
+hello_ucosii.c:362:1: warning: implicit declaration of function 'init_lfsr_interrupt' [-Wimplicit-function-declaration]
+ init_lfsr_interrupt();
+ ^
+In file included from hello_ucosii.c:40:0:
+hello_ucosii.c: At top level:
+./graphic_lib/simple_graphics.h:173:16: warning: inline function 'alpha_blending' declared but never defined
+ __inline__ int alpha_blending ( int horiz_offset,
+                ^
+./graphic_lib/simple_graphics.h:166:16: warning: inline function 'read_from_frame' declared but never defined
+ __inline__ int read_from_frame (int horiz,
+                ^
+./graphic_lib/simple_graphics.h:160:16: warning: inline function 'merge_color_channels' declared but never defined
+ __inline__ int merge_color_channels(int color_depth,
+                ^
+./graphic_lib/simple_graphics.h:154:16: warning: inline function 'seperate_color_channels' declared but never defined
+ __inline__ int seperate_color_channels( int color_depth,
+                ^
+./graphic_lib/simple_graphics.h:116:13: warning: inline function 'vid_put_pixel_in_span_map' declared but never defined
+ inline void vid_put_pixel_in_span_map( int x, int y, int *span_array );
+             ^
+./graphic_lib/simple_graphics.h:112:12: warning: inline function 'min3' declared but never defined
+ inline int min3( int a, int b, int c );
+            ^
+./graphic_lib/simple_graphics.h:110:12: warning: inline function 'max3' declared but never defined
+ inline int max3( int a, int b, int c );
+            ^
+Info: Linking lab5.elf
+nios2-elf-g++  -T'../lab5_bsp//linker.x' -msys-crt0='../lab5_bsp//obj/HAL/src/crt0.o' -msys-lib=ucosii_bsp -L../lab5_bsp/   -Wl,-Map=lab5.map   -O1 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o lab5.elf obj/default/drivers/drivers.o obj/default/fonts/tahomabold_20.o obj/default/fonts/tahomabold_32.o obj/default/frame.o obj/default/graphic_lib/draw_gimps.o obj/default/graphic_lib/gimp_bmp.o obj/default/graphic_lib/simple_graphics.o obj/default/graphic_lib/simple_text.o obj/default/hello_ucosii.o obj/default/imagenes/back_down.o obj/default/imagenes/back_up.o obj/default/imagenes/ford_down.o obj/default/imagenes/ford_up.o obj/default/imagenes/pause_down.o obj/default/imagenes/pause_up.o obj/default/imagenes/play_down.o obj/default/imagenes/play_up.o obj/default/imagenes/stop_down.o obj/default/imagenes/stop_up.o obj/default/song/song.o obj/default/student_code/student_code.o obj/default/vip_fr.o -lm -msys-lib=m
+nios2-elf-insert lab5.elf --thread_model ucosii --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1d0 --timestamp 1687747096 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE1_SoC_QSYS --quartus_project_dir "C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5" --jdi C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5_bsp/../../dds_and_nios_lab.jdi --sopcinfo C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5_bsp/../../DE1_SoC_QSYS.sopcinfo
+Info: (lab5.elf) 1804 KBytes program size (code + initialized data).
+Info:            58093 KBytes free for stack + heap.
+[lab5 build complete]
+00:45:05 **** Incremental Build of configuration Nios II for project lab5_bsp ****
+make all 
+[BSP build complete]
+00:45:11 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]
+00:59:31 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]
+00:59:32 **** Incremental Build of configuration Nios II for project lab5_bsp ****
+make all 
+[BSP build complete]
+00:59:37 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]
+01:24:43 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]
+01:24:44 **** Incremental Build of configuration Nios II for project lab5_bsp ****
+make all 
+[BSP build complete]
+01:24:49 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]
+01:52:26 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]
+01:52:27 **** Incremental Build of configuration Nios II for project lab5_bsp ****
+make all 
+[BSP build complete]
+01:52:30 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]
+02:11:27 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]
+02:11:28 **** Incremental Build of configuration Nios II for project lab5_bsp ****
+make all 
+[BSP build complete]
+02:11:34 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]
+02:36:42 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+Info: Compiling student_code/student_code.c to obj/default/student_code/student_code.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lab5_bsp//UCOSII/inc -I../lab5_bsp//HAL/inc -I../lab5_bsp/ -I../lab5_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -D__ucosii__    -O1 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/student_code/student_code.o student_code/student_code.c
+Info: Linking lab5.elf
+nios2-elf-g++  -T'../lab5_bsp//linker.x' -msys-crt0='../lab5_bsp//obj/HAL/src/crt0.o' -msys-lib=ucosii_bsp -L../lab5_bsp/   -Wl,-Map=lab5.map   -O1 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o lab5.elf obj/default/drivers/drivers.o obj/default/fonts/tahomabold_20.o obj/default/fonts/tahomabold_32.o obj/default/frame.o obj/default/graphic_lib/draw_gimps.o obj/default/graphic_lib/gimp_bmp.o obj/default/graphic_lib/simple_graphics.o obj/default/graphic_lib/simple_text.o obj/default/hello_ucosii.o obj/default/imagenes/back_down.o obj/default/imagenes/back_up.o obj/default/imagenes/ford_down.o obj/default/imagenes/ford_up.o obj/default/imagenes/pause_down.o obj/default/imagenes/pause_up.o obj/default/imagenes/play_down.o obj/default/imagenes/play_up.o obj/default/imagenes/stop_down.o obj/default/imagenes/stop_up.o obj/default/song/song.o obj/default/student_code/student_code.o obj/default/vip_fr.o -lm -msys-lib=m
+nios2-elf-insert lab5.elf --thread_model ucosii --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1d0 --timestamp 1687747096 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE1_SoC_QSYS --quartus_project_dir "C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5" --jdi C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5_bsp/../../dds_and_nios_lab.jdi --sopcinfo C:/Users/Admin/Documents/GitHub/CPEN-311/James_Park_70315379_Lab_5/rtl/lab5/software/lab5_bsp/../../DE1_SoC_QSYS.sopcinfo
+Info: (lab5.elf) 1804 KBytes program size (code + initialized data).
+Info:            58093 KBytes free for stack + heap.
+[lab5 build complete]
+02:36:44 **** Incremental Build of configuration Nios II for project lab5_bsp ****
+make all 
+[BSP build complete]
+02:36:49 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]

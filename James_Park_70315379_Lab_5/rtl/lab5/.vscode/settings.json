@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.v": "verilog",
+        "gimp_bmp.h": "c"
+    }
+}
